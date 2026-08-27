@@ -6,12 +6,12 @@ export default function Contact() {
   return (
     <main className="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
       <div className="mx-auto mb-14 max-w-3xl text-center">
-        <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
+        <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
           Contact Support
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
           <span className="block text-white">Get in Touch with</span>
-          <span className="mt-1 block text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">Our Support Team.</span>
+          <span className="mt-1 block text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">Our Support Team.</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-sm md:text-base leading-6 text-gray-400 font-medium">
           We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.
@@ -22,16 +22,16 @@ export default function Contact() {
         {/* Contact Info Sidebar */}
         <div className="lg:col-span-4 flex flex-col gap-6">
           <div className="bg-[#141414] shadow-[0_20px_40px_-15px_rgba(112,0,255,0.15)] border border-white/5 rounded-[2rem] p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
-            <div className="w-16 h-16 rounded-2xl bg-[#E50914]/10 flex items-center justify-center mb-6 group-hover:bg-[#E50914]/20 transition-colors">
-              <Mail className="text-[#E50914] w-8 h-8" />
+            <div className="w-16 h-16 rounded-2xl bg-[#36a9ff]/10 flex items-center justify-center mb-6 group-hover:bg-[#36a9ff]/20 transition-colors">
+              <Mail className="text-[#36a9ff] w-8 h-8" />
             </div>
             <h3 className="font-bold text-xl text-white mb-2">Email Us</h3>
             <p className="text-sm text-gray-400 mb-6 font-medium">For general inquiries and support.</p>
             <a
-              className="text-[#E50914] font-bold hover:text-[#B3000B] transition-colors"
-              href="mailto:support@zyminexiptv.vip"
+              className="text-[#36a9ff] font-bold hover:text-[#2196f3] transition-colors"
+              href="mailto:support@zyminexiptv.shop"
             >
-              support@zyminexiptv.vip
+              support@zyminexiptv.shop
             </a>
           </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
                     Name
                   </label>
                   <input
-                    className="bg-[#141414] border border-white/10 focus:border-[#E50914] focus:ring-1 focus:ring-[#E50914] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
+                    className="bg-[#141414] border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                     id="name"
                     name="name"
                     placeholder="John Doe"
@@ -89,7 +89,7 @@ export default function Contact() {
                     Email Address
                   </label>
                   <input
-                    className="bg-[#141414] border border-white/10 focus:border-[#E50914] focus:ring-1 focus:ring-[#E50914] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
+                    className="bg-[#141414] border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                     id="email"
                     name="email"
                     placeholder="john@example.com"
@@ -103,7 +103,7 @@ export default function Contact() {
                   Subject
                 </label>
                 <input
-                  className="bg-[#141414] border border-white/10 focus:border-[#E50914] focus:ring-1 focus:ring-[#E50914] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
+                  className="bg-[#141414] border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                   id="subject"
                   name="subject"
                   placeholder="How can we help?"
@@ -116,7 +116,7 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
-                  className="bg-[#141414] border border-white/10 focus:border-[#E50914] focus:ring-1 focus:ring-[#E50914] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all resize-none font-medium"
+                  className="bg-[#141414] border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-slate-400 focus:outline-none transition-all resize-none font-medium"
                   id="message"
                   name="message"
                   placeholder="Describe your issue or question in detail..."

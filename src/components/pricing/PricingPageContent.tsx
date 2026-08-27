@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, CheckCircle2, X, CreditCard, Headphones, HelpCircle, MonitorSmartphone, ShieldCheck, Sparkles, Tv, Zap, Bitcoin, Wallet } from "lucide-react";
+import { CheckCircle2, Gift, Tv, Headphones, HelpCircle, MonitorSmartphone, ShieldCheck, Sparkles, Zap, CreditCard, Bitcoin, Wallet } from "lucide-react";
 
 type PlanFeature = {
   text: string;
@@ -12,67 +12,54 @@ type PlanFeature = {
 type Plan = {
   id: string;
   name: string;
-  subtitle: string;
+  badge: string;
   price: number;
-  oldPrice?: number;
   durationLabel: string;
-  period: string;
-  saving?: string;
+  months: number;
   popular?: boolean;
-  features: PlanFeature[];
   buttonText: string;
 };
 
-const defaultFeatures: PlanFeature[] = [
-  { text: "4K, HD & SD Quality", included: true },
-  { text: "+30,000 Live TV Channels", included: true },
-  { text: "All Live Sports", included: true },
-  { text: "+150,000 Movies & Series (VOD)", included: true },
-  { text: "Anti-Freezing (No Buffering)", included: true },
-  { text: "Up to 4 Days Catch-Up", included: true },
-  { text: "TV Guide (EPG)", included: true },
-  { text: "Free Pay-Per-View (PPV)", included: true },
-  { text: "Built-in VPN Protection", included: true },
-  { text: "Adult Channels (Optional)", included: true },
-  { text: "3-Day Money-Back Guarantee", included: true },
-  { text: "24/7 Technical Support", included: true },
+const commonFeatures: PlanFeature[] = [
+  { text: "zyminex subscription for {devices} Device{s}", included: true },
+  { text: "Uncompressed Ultra HD & 4K", included: true },
+  { text: "25,000+ Premium Channels", included: true },
+  { text: "100,000+ VODs (Daily Update)", included: true },
+  { text: "Premium Sports & PPV Pass", included: true },
+  { text: "Full EPG & 7-Day Catch-up", included: true },
+  { text: "Advanced Anti-Freeze VIP", included: true },
+  { text: "VPN Included Free", included: true },
+  { text: "Direct WhatsApp VIP Support", included: true },
 ];
 
 const plans: Plan[] = [
   {
     id: "3-months",
-    name: "3 Months",
-    subtitle: "Perfect for trying out our premium service.",
+    name: "3 MONTHS",
+    badge: "STARTER",
     price: 35,
     durationLabel: "3 Months",
-    period: "/ 3 months",
-    saving: "Save 22%",
-    features: defaultFeatures,
-    buttonText: "Select Pro",
+    months: 3,
+    buttonText: "SELECT 3 MONTHS",
   },
   {
     id: "12-months",
-    name: "12 Months",
-    subtitle: "The ultimate entertainment experience for a full year.",
+    name: "12 MONTHS",
+    badge: "ULTIMATE",
     price: 69.99,
-    oldPrice: 80,
     durationLabel: "12 Months",
-    period: "/ year",
-    saving: "Save 61%",
+    months: 12,
     popular: true,
-    features: defaultFeatures,
-    buttonText: "Get Ultimate Pass",
+    buttonText: "GET 12 MONTHS",
   },
   {
     id: "6-months",
-    name: "6 Months",
-    subtitle: "A solid choice for half a year of uninterrupted joy.",
+    name: "6 MONTHS",
+    badge: "VALUE",
     price: 49.99,
     durationLabel: "6 Months",
-    period: "/ 6 months",
-    saving: "Save 44%",
-    features: defaultFeatures,
-    buttonText: "Select Basic",
+    months: 6,
+    buttonText: "SELECT 6 MONTHS",
   },
 ];
 
@@ -86,52 +73,80 @@ const includedFeatures = [
 ];
 
 const billingQuestions = [
-  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">Contact Zyminex IPTV support</Link> if you need help before purchasing.</> },
+  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact Zyminex IPTV support</Link> if you need help before purchasing.</> },
   { question: "2. Is my payment protected?", answer: "Please use the official Zyminex IPTV payment process and never share payment details through an unverified link or message." },
-  { question: "3. Will my subscription renew automatically?", answer: <>Renewal details are provided when you order. If you have any questions about your subscription period or renewal, <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">contact support</Link> before your plan expires.</> },
-  { question: "4. Can I change my plan or number of connections?", answer: <>Yes. <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">Contact the support team</Link> with your order email and the plan or connection change you need, and they will advise on the available options.</> },
+  { question: "3. Will my subscription renew automatically?", answer: <>Renewal details are provided when you order. If you have any questions about your subscription period or renewal, <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">contact support</Link> before your plan expires.</> },
+  { question: "4. Can I change my plan or number of connections?", answer: <>Yes. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact the support team</Link> with your order email and the plan or connection change you need, and they will advise on the available options.</> },
+];
+
+const planComparison = [
+  { feature: "LIVE CHANNELS", m3: "15,000+", m12: "25,000+", m6: "18,000+" },
+  { feature: "VOD LIBRARY", m3: "60,000+", m12: "100,000+", m6: "80,000+" },
+  { feature: "4K STREAMING", m3: "Yes", m12: "Yes", m6: "Yes" },
+  { feature: "SPORTS PPV", m3: "Basic", m12: "All Included", m6: "Premium" },
+  { feature: "EPG GUIDE", m3: "Standard", m12: "Full 7-Day", m6: "Full" },
+  { feature: "ANTI-FREEZE TECH", m3: "Standard", m12: "VIP Advanced", m6: "Pro" },
+  { feature: "VPN INCLUDED", m3: "No", m12: "Yes", m6: "No" },
+  { feature: "MULTI-SCREEN", m3: "1 Device ($35)", m12: "3 Devices ($150)", m6: "2 Devices ($80)" },
+  { feature: "SUPPORT", m3: "Standard", m12: "VIP Priority", m6: "Priority" },
 ];
 
 export default function PricingPageContent() {
   const [devices, setDevices] = useState(1);
   const priceFor = (plan: Plan) => (plan.price * devices).toFixed(2);
+  const monthlyPrice = (plan: Plan) => ((plan.price * devices) / plan.months).toFixed(2);
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to purchase the ${plan.name} plan (${plan.durationLabel}) with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to purchase the ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#141414] py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-transparent py-16 sm:py-20 lg:py-24">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        
+        {/* Header */}
         <header className="mx-auto max-w-3xl text-center mb-16">
-          <span className="inline-flex rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-600">Zyminex IPTV</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white uppercase">Choose Your Exclusive</span>
-            <span className="mt-1 block text-primary-500 uppercase">Subscription Plans.</span>
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#36a9ff] px-4 py-1 mb-6">
+            <Gift className="h-4 w-4 text-white" />
+            <span className="text-[10px] font-bold text-white tracking-widest uppercase">
+              BEST VALUE PLANS
+            </span>
+          </div>
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
+            <span className="block text-white">ZYMINEX IPTV</span>
+            <span className="mt-1 block text-[#36a9ff]">SUBSCRIPTION PLANS</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400 sm:text-base">Choose the Zyminex IPTV plan that fits you, with secure checkout and helpful 24/7 support.</p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-gray-400">Need help getting started? Visit our <Link className="font-semibold text-primary-500 hover:text-primary-600" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-primary-500 hover:text-primary-600" href="/channels">channel list</Link> before you order.</p>
+          <p className="mx-auto mt-6 text-base sm:text-lg text-white/90 font-medium leading-relaxed max-w-2xl">
+            Select your subscription duration. Enjoy larger discounts on longer plans, and share the ultimate entertainment experience across multiple devices simultaneously with Zyminex.
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-gray-400">
+            Need help getting started? Visit our <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/channels">channel list</Link> before you order.
+          </p>
         </header>
 
         {/* Device Selector */}
-        <div className="mx-auto mb-14 max-w-2xl" role="radiogroup" aria-label="Number of device connections">
-          <p className="mb-3 text-center text-xs font-bold uppercase tracking-[0.15em] text-gray-400">Choose your connections</p>
-          <div className="grid grid-cols-3 rounded-md border border-white/10 bg-[#1e1e1e] p-1.5 shadow-sm">
+        <div className="mx-auto mb-16 flex flex-col items-center">
+          <div className="flex items-center gap-2 mb-4">
+            <Tv className="h-4 w-4 text-[#36a9ff]" />
+            <p className="text-[11px] font-bold uppercase tracking-widest text-white">Select Number of Devices</p>
+          </div>
+          <div className="inline-flex rounded-full border border-[#36a9ff] p-1.5 bg-transparent shadow-[0_0_15px_rgba(54,169,255,0.2)]">
             {[1, 2, 3].map((count) => {
               const selected = devices === count;
               return (
                 <button
-                  aria-checked={selected}
-                  className={`rounded px-3 py-3 text-sm font-bold transition-all ${selected ? "bg-[#E50914] text-white" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
                   key={count}
                   onClick={() => setDevices(count)}
-                  role="radio"
-                  type="button"
+                  className={`rounded-full px-6 py-2.5 text-xs sm:text-sm font-bold transition-all uppercase tracking-wide ${
+                    selected
+                      ? "bg-[#36a9ff] text-white shadow-md"
+                      : "text-white hover:text-[#36a9ff]"
+                  }`}
                 >
-                  {count} Device{count > 1 ? "s" : ""}
+                  {count} Device{count > 1 ? "S" : ""}
                 </button>
               );
             })}
@@ -143,59 +158,59 @@ export default function PricingPageContent() {
           {plans.map((plan) => (
             <article
               key={plan.id}
-              className={`relative flex flex-col rounded-md bg-[#262626] p-8 text-left transition-transform duration-300 hover:-translate-y-1 ${plan.popular
-                  ? "border-t-[3px] border-t-[#E50914] md:scale-105 z-10 shadow-2xl"
-                  : "border border-white/5"
-                }`}
+              className={`relative flex flex-col rounded-2xl bg-[#fdf1c3] p-8 text-left transition-transform duration-300 border-[6px] border-[#36a9ff] ${
+                plan.popular ? "md:scale-105 z-10 shadow-[0_0_40px_rgba(54,169,255,0.6)]" : "hover:-translate-y-2 shadow-xl"
+              }`}
             >
-              {plan.popular && (
-                <div className="absolute top-0 right-0 bg-[#E50914] text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
-                  MOST POPULAR
-                </div>
-              )}
-
-              <div className="pb-6 border-b border-white/10">
-                <h3 className="text-3xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-sm text-gray-400 min-h-[40px]">{plan.subtitle}</p>
-
-                <div className="mt-6 flex items-baseline gap-2">
-                  <span className="text-5xl font-bold tracking-tight text-white">${priceFor(plan)}</span>
-                  <span className="text-sm font-medium text-gray-400">{plan.period}</span>
-                </div>
-
-                <div className="min-h-[20px] mt-2 flex items-center gap-2">
-                  {plan.saving && (
-                    <p className="text-xs font-bold text-[#E50914]">{plan.saving}</p>
+              {/* Card Header Row */}
+              <div className="flex items-center justify-between mb-4">
+                <span className="block text-[#36a9ff] font-black uppercase tracking-widest text-sm">
+                  {plan.badge}
+                </span>
+                <div className="flex items-center gap-2">
+                  {plan.popular && (
+                    <span className="bg-[#36a9ff] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      MOST POPULAR
+                    </span>
                   )}
-                  {plan.oldPrice && (
-                    <p className="text-xs font-medium text-gray-500 line-through">${(plan.oldPrice * devices).toFixed(2)}</p>
-                  )}
+                  <Tv className="h-5 w-5 text-[#36a9ff]" />
                 </div>
               </div>
 
-              <ul className="mt-8 flex-grow space-y-4">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    {feature.included ? (
-                      <Check className="h-5 w-5 shrink-0 text-[#E50914]" strokeWidth={3} />
-                    ) : (
-                      <X className="h-5 w-5 shrink-0 text-gray-500" strokeWidth={3} />
-                    )}
-                    <span className={`text-sm ${feature.included ? "text-gray-200" : "text-gray-500"}`}>
-                      {feature.text}
+              <div className="pb-6">
+                <h3 className="text-[28px] font-black text-[#051f33] uppercase leading-none mb-4">{plan.name}</h3>
+                
+                <div className="flex items-baseline gap-1 mb-4">
+                  <span className="text-[46px] font-black tracking-tighter text-[#051f33] leading-none">${priceFor(plan)}</span>
+                </div>
+
+                <div className="inline-flex rounded-full bg-[#36a9ff] px-4 py-1.5">
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
+                    JUST ${monthlyPrice(plan)} / MONTH
+                  </span>
+                </div>
+              </div>
+
+              <ul className="mt-6 mb-8 flex-grow space-y-3.5">
+                {commonFeatures.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-[18px] w-[18px] shrink-0 text-[#36a9ff] fill-white" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#051f33]">
+                      {feature.text.replace('{devices}', devices.toString()).replace('{s}', devices > 1 ? 's' : '')}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-10">
+              <div className="mt-auto pt-4">
                 <button
                   type="button"
                   onClick={() => handleOrder(plan)}
-                  className={`w-full py-4 text-sm font-bold text-white transition-all duration-300 rounded-sm transform active:scale-95 hover:-translate-y-1 hover:shadow-lg ${plan.popular
-                      ? "bg-[#E50914] hover:bg-[#B3000B] hover:shadow-[#E50914]/40"
-                      : "bg-transparent border border-gray-600 hover:border-gray-400 hover:bg-white/5 hover:shadow-white/5"
-                    }`}
+                  className={`w-full py-4 text-sm font-black uppercase tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-md ${
+                    plan.popular
+                      ? "bg-[#051f33] text-white hover:bg-[#082a45] hover:shadow-[#051f33]/50"
+                      : "bg-[#36a9ff] text-white hover:bg-[#2196f3] hover:shadow-[#36a9ff]/50"
+                  }`}
                 >
                   {plan.buttonText}
                 </button>
@@ -204,11 +219,31 @@ export default function PricingPageContent() {
           ))}
         </div>
 
+        {/* Free Trial Banner */}
+        <div className="mx-auto mt-16 max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-full bg-[#fdf1c3] p-2 pl-6 sm:pl-8 shadow-xl border-4 border-[#36a9ff]/30">
+          <div className="flex items-center gap-3">
+            <div className="bg-[#36a9ff] p-2 rounded-full">
+              <Gift className="h-5 w-5 text-white" />
+            </div>
+            <h3 className="text-sm sm:text-base font-black text-[#051f33] uppercase">
+              NEED FREE TRIAL 24H?
+            </h3>
+          </div>
+          <a
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial."
+            target="_blank"
+            rel="noreferrer"
+            className="bg-[#36a9ff] hover:bg-[#2196f3] text-white text-sm font-black px-10 py-3.5 rounded-full uppercase transition-all shadow-md hover:scale-105 whitespace-nowrap"
+          >
+            TRY NOW
+          </a>
+        </div>
+
         {/* Bottom Security Banner */}
         <div className="mx-auto mt-16 max-w-4xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-[#141414] p-6 shadow-sm border border-white/5 border-l-4 border-l-orange-500">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-[#051f33] p-6 shadow-sm border border-[#36a9ff]/20 border-l-4 border-l-[#36a9ff]">
             <div>
-              <h4 className="text-lg font-bold text-white">Secure Payments & Instant Access</h4>
+              <h3 className="text-lg font-bold text-white">Secure Payments & Instant Access</h3>
               <p className="mt-1 text-sm text-gray-400 font-medium">Pay safely using Crypto, Credit Card, or PayPal. Your details are encrypted instantly.</p>
             </div>
             <div className="flex shrink-0 items-center gap-4 text-gray-400">
@@ -219,33 +254,81 @@ export default function PricingPageContent() {
           </div>
         </div>
 
-        <section className="mt-24">
-          <h2 className="text-center text-3xl font-bold text-white uppercase">Every plan includes</h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Plan Comparison Table */}
+        <div className="mt-32 max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+             <h2 className="text-3xl md:text-[42px] font-black uppercase tracking-tight text-white mb-4">
+               COMPARE <span className="text-[#36a9ff]">ZYMINEX PLANS</span>
+             </h2>
+             <p className="text-[#ffc107] font-bold text-sm tracking-widest uppercase">FIND THE PERFECT PLAN FOR YOUR STREAMING NEEDS</p>
+          </div>
+
+          <div className="bg-[#fdf1c3] rounded-[2rem] border-[4px] border-[#36a9ff] p-4 sm:p-8 relative overflow-hidden shadow-[0_0_40px_rgba(54,169,255,0.2)]">
+            
+            {/* Desktop Center Column Dark Background */}
+            <div className="absolute top-0 bottom-0 left-[50%] w-[25%] bg-[#051f33] shadow-2xl rounded-2xl z-0 hidden md:block" />
+            
+            <div className="overflow-x-auto relative z-10">
+              <table className="w-full text-left min-w-[700px] border-collapse relative">
+                <thead>
+                  <tr>
+                    <th className="py-6 px-4 text-[#051f33] font-black uppercase text-sm tracking-widest w-1/4 border-b border-[#051f33]/10">FEATURE</th>
+                    <th className="py-6 px-4 text-[#36a9ff] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10">3 MONTHS</th>
+                    <th className="py-6 px-4 text-[#ffc107] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10 md:border-b md:border-white/10 md:bg-transparent bg-[#051f33] md:rounded-t-2xl rounded-t-2xl">12 MONTHS</th>
+                    <th className="py-6 px-4 text-[#36a9ff] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10">6 MONTHS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {planComparison.map((row, idx) => (
+                    <tr key={idx}>
+                      <td className={`py-5 px-4 font-bold text-[#051f33] text-[13px] uppercase ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
+                        {row.feature}
+                      </td>
+                      <td className={`py-5 px-4 text-center font-bold text-[#051f33]/80 text-[13px] ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
+                        {row.m3}
+                      </td>
+                      <td className={`py-5 px-4 text-center font-bold text-[#ffc107] text-[13px] md:bg-transparent bg-[#051f33] 
+                        ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10 md:border-b md:border-white/10' : 'md:border-b-0 rounded-b-2xl'}`}>
+                        {row.m12}
+                      </td>
+                      <td className={`py-5 px-4 text-center font-bold text-[#051f33]/80 text-[13px] ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
+                        {row.m6}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <section className="mt-32">
+          <h2 className="text-center text-3xl font-black text-white uppercase drop-shadow-sm">Every plan includes</h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {includedFeatures.map(({ icon: Icon, title, text }) => (
-              <article className="rounded-2xl border border-white/5 bg-[#141414] p-6 text-center shadow-sm" key={title}>
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-primary-500">
-                  <Icon className="h-6 w-6" />
+              <article className="rounded-2xl border border-white/5 bg-[#051f33]/80 backdrop-blur-sm p-6 text-center shadow-sm" key={title}>
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#36a9ff]/10 text-[#36a9ff]">
+                  <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-gray-400">{text}</p>
+                <h3 className="mt-5 text-lg font-bold text-white uppercase tracking-wide">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-gray-400 font-medium">{text}</p>
               </article>
             ))}
           </div>
         </section>
 
         <section className="mx-auto mt-24 max-w-4xl">
-          <h2 className="text-center text-3xl font-black text-white uppercase">Billing &amp; Subscription FAQ</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <h2 className="text-center text-3xl font-black text-white uppercase drop-shadow-sm">Billing &amp; Subscription FAQ</h2>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
             {billingQuestions.map((item) => (
-              <div className="flex flex-col rounded-xl overflow-hidden border border-white/10 bg-[#141414] shadow-sm hover:border-orange-200 transition-colors" key={item.question}>
-                <div className="bg-[#141414] border-b border-white/5 px-5 py-4 flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+              <div className="flex flex-col rounded-xl overflow-hidden border border-white/10 bg-[#051f33]/80 backdrop-blur-sm shadow-sm hover:border-[#36a9ff]/50 transition-colors" key={item.question}>
+                <div className="border-b border-white/5 px-5 py-4 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-[#36a9ff] shrink-0 mt-0.5" />
                   <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
                     {item.question}
                   </h3>
                 </div>
-                <div className="p-5 text-sm text-gray-400 leading-relaxed bg-[#141414] flex-1">
+                <div className="p-5 text-sm text-gray-400 leading-relaxed flex-1 font-medium">
                   <p>{item.answer}</p>
                 </div>
               </div>
@@ -254,7 +337,7 @@ export default function PricingPageContent() {
         </section>
 
         <div className="mt-16 flex items-center justify-center gap-2 text-sm text-gray-400">
-          <ShieldCheck className="h-5 w-5 text-primary-500" />
+          <ShieldCheck className="h-5 w-5 text-[#36a9ff]" />
           <span className="font-semibold text-white">Secure ordering</span> and friendly Zyminex IPTV support.
         </div>
       </div>

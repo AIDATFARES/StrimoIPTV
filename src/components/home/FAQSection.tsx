@@ -21,14 +21,14 @@ const faqs: FAQ[] = [
         Zyminex IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link
           href="/channels-list"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           live TV channels
         </Link>{" "}
         and{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           IPTV subscription plans
         </a>
@@ -47,14 +47,14 @@ const faqs: FAQ[] = [
           href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
           target="_blank"
           rel="noreferrer"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           free trial
         </a>{" "}
         so you can test the service before committing to our{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           subscription plans
         </a>
@@ -71,7 +71,7 @@ const faqs: FAQ[] = [
         Zyminex IPTV works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
         <Link
           href="/installation"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           installation guides
         </Link>{" "}
@@ -88,7 +88,7 @@ const faqs: FAQ[] = [
         Yes, we offer multi-device support. You can choose an{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           IPTV subscription plan
         </a>{" "}
@@ -105,7 +105,7 @@ const faqs: FAQ[] = [
         Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}
         <Link
           href="/channels-list"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           channels catalog
         </Link>
@@ -122,7 +122,7 @@ const faqs: FAQ[] = [
         We accept PayPal, cryptocurrency (such as Bitcoin), credit cards, and instant bank transfers for quick and secure payments. Contact our{" "}
         <Link
           href="/contact"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           support team
         </Link>{" "}
@@ -139,7 +139,7 @@ const faqs: FAQ[] = [
         The service includes live TV channels, sports, movies, TV series, kids&apos; content, international channels, and more – all in HD or 4K quality. Learn more in our{" "}
         <Link
           href="/blog"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           IPTV articles & guides
         </Link>
@@ -156,7 +156,7 @@ const faqs: FAQ[] = [
         A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Read our{" "}
         <Link
           href="/faq"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
         >
           FAQ knowledge base
         </Link>{" "}
@@ -179,16 +179,16 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 bg-[#141414] text-white relative z-10 border-t border-white/10 overflow-hidden">
+    <section className="py-20 bg-transparent text-white relative z-10 border-t border-white/10 overflow-hidden">
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20 animate-fade-up">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20 animate-fade-up">
             SUPPORT & HELP
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
             Frequently Asked <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
               Questions (FAQ)
             </span>
           </h2>
@@ -196,7 +196,7 @@ export default function FAQSection() {
             Find answers to common questions about our IPTV service. If you need further help, our{" "}
             <Link
               href="/contact"
-              className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+              className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
             >
               Contact Support
             </Link>{" "}
@@ -208,7 +208,7 @@ export default function FAQSection() {
         <div className="flex flex-col md:flex-row gap-8 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           
           {/* Left Column: Categories */}
-          <div className="w-full md:w-64 shrink-0 bg-[#262626] rounded-xl p-6 h-fit border border-white/5">
+          <div className="w-full md:w-64 shrink-0 bg-[#051f33]/80 backdrop-blur-sm rounded-xl p-6 h-fit border border-[#36a9ff]/20 shadow-[0_0_20px_rgba(54,169,255,0.05)]">
             <h3 className="text-xl font-bold text-white mb-6">Categories</h3>
             <div className="flex flex-col gap-2">
               {categories.map((cat) => {
@@ -222,8 +222,8 @@ export default function FAQSection() {
                     }}
                     className={`text-left px-4 py-3 rounded-md text-sm font-bold transition-all flex items-center ${
                       isActive 
-                        ? "bg-[#1e1e1e] border-l-2 border-[#E50914] text-[#E50914]" 
-                        : "text-gray-300 hover:bg-[#1e1e1e]/50 hover:text-white"
+                        ? "bg-[#36a9ff]/10 border-l-2 border-[#36a9ff] text-[#36a9ff]" 
+                        : "text-gray-300 hover:bg-[#36a9ff]/5 hover:text-white"
                     }`}
                   >
                     {cat}
@@ -246,7 +246,7 @@ export default function FAQSection() {
                 return (
                   <div 
                     key={faq.id} 
-                    className="bg-[#1e1e1e] rounded-md border border-white/5 overflow-hidden transition-all duration-300 hover:border-white/10"
+                    className="bg-[#051f33]/80 backdrop-blur-sm rounded-md border border-[#36a9ff]/20 overflow-hidden transition-all duration-300 hover:border-[#36a9ff]/50 shadow-sm"
                   >
                     <button
                       onClick={() => toggleFaq(faq.id)}
@@ -285,7 +285,7 @@ export default function FAQSection() {
         <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#E50914] text-white font-bold text-xs sm:text-sm hover:bg-[#B3000B] transition-all duration-300 shadow-lg"
+            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#36a9ff] text-white font-bold text-xs sm:text-sm hover:bg-[#2196f3] transition-all duration-300 shadow-lg"
           >
             <span>View Complete FAQ Knowledge Base</span>
             <ArrowRight className="w-4 h-4" />

@@ -23,32 +23,23 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-  metadataBase: new URL("https://www.zyminexiptv.vip"),
+  description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+  metadataBase: new URL("https://www.zyminexiptv.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-    url: "https://www.zyminexiptv.vip",
+    description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+    url: "https://www.zyminexiptv.shop",
     siteName: "Zyminex IPTV",
-    images: [
-      {
-        url: "/og-image-zyminexiptv-v2.webp",
-        width: 1200,
-        height: 630,
-        alt: "Zyminex IPTV Premium IPTV Service",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-    images: ["/og-image-zyminexiptv-v2.webp"],
+    description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
   },
 };
 
@@ -68,7 +59,7 @@ export default function RootLayout({
         <div className="flex-grow pt-[124px] flex flex-col">{children}</div>
 
         {/* Footer */}
-        <footer className="w-full mt-auto border-t border-white/10 bg-[#141414]">
+        <footer className="w-full mt-auto border-t border-white/10 bg-[#051f33]">
           <div className="grid max-w-[1400px] grid-cols-2 gap-x-4 gap-y-12 px-6 py-16 sm:grid-cols-4 sm:gap-x-8 sm:px-10 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] xl:gap-10 xl:px-12 mx-auto">
             <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
               <Link href="/"><BrandLogo /></Link>
@@ -90,33 +81,33 @@ export default function RootLayout({
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#E50914] pb-1.5">NAVIGATION</span></p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#36a9ff] pb-1.5">NAVIGATION</span></p>
               <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/">Home</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/pricing">Pricing</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/how-it-works">How It Works</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/channels">Channels</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/reseller">Reseller</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/">Home</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/pricing">Pricing</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/how-it-works">How It Works</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/channels">Channels</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/reseller">Reseller</Link></li>
               </ul>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#E50914] pb-1.5">SERVICE</span></p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#36a9ff] pb-1.5">SERVICE</span></p>
               <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/pricing">Get Started</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/contact">Contact Support</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/faq">FAQ</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/blog">Blog</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/installation">Setup Guide</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/pricing">Get Started</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/contact">Contact Support</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/faq">FAQ</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/blog">Blog</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/installation">Setup Guide</Link></li>
               </ul>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
               <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-primary-500 pb-1.5">LEGAL</span></p>
               <ul className="space-y-3 text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/privacy-policy">Privacy Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/refund-policy">Refund Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/dmca">DMCA</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/refund-policy">Refund Policy</Link></li>
+                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#36a9ff]" href="/dmca">DMCA</Link></li>
               </ul>
             </div>
             
@@ -132,9 +123,9 @@ export default function RootLayout({
             
             <div className="col-span-2 mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 text-xs text-gray-400 sm:col-span-4 md:flex-row md:items-center md:justify-between xl:col-span-5">
               <div className="flex flex-wrap gap-3">
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/privacy-policy">Privacy Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/refund-policy">Refund Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/dmca">DMCA</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#36a9ff]/10 hover:text-[#36a9ff] hover:border-[#36a9ff]/20" href="/privacy-policy">Privacy Policy</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#36a9ff]/10 hover:text-[#36a9ff] hover:border-[#36a9ff]/20" href="/refund-policy">Refund Policy</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#36a9ff]/10 hover:text-[#36a9ff] hover:border-[#36a9ff]/20" href="/dmca">DMCA</Link>
               </div>
             </div>
           </div>

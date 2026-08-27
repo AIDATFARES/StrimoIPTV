@@ -5,91 +5,71 @@ import TopFeatureBar from "./TopFeatureBar";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-black overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center bg-black overflow-hidden pt-28 pb-20">
 
-      {/* Background Image */}
+      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-custom-astronaut.webp"
-          alt="Zyminex IPTV Cinematic Space Background"
+          src="/step_2_generated.png"
+          alt="Zyminex IPTV Cinematic Background"
           priority
           fill
           quality={85}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover opacity-70"
         />
-        {/* Dark overlay gradient to ensure text readability on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-[#031726]/50" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col items-start justify-center">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center justify-center text-center">
 
-        {/* Top Tag */}
-        <div className="inline-flex items-center border border-[#E50914] rounded-full px-4 py-1.5 bg-black/60 backdrop-blur-md mb-6">
-          <span className="text-[10px] sm:text-xs font-bold text-[#E50914] tracking-widest uppercase">
-            +7,500 Satisfied customers
+        {/* Top Badge */}
+        <div className="inline-flex items-center rounded-full px-5 py-1.5 bg-[#36a9ff] mb-8">
+          <span className="text-[11px] sm:text-[13px] font-bold text-white tracking-widest uppercase flex items-center gap-2">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            TOP RATED 4K STREAMING NETWORK
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-[72px] lg:text-[84px] font-black tracking-tight leading-[1.05] text-white drop-shadow-2xl max-w-5xl">
-          <span className="text-[#E50914]">Zyminex IPTV</span> The Best IPTV<br />
-          Service Provider for<br />
-          2026
+        <h1 className="text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] font-black tracking-tighter leading-[1] drop-shadow-2xl max-w-5xl uppercase">
+          <span className="text-[#f9ebc7]">ZYMINEX IPTV - PREMIUM</span><br />
+          <span className="text-[#36a9ff]">4K STREAMING</span>
         </h1>
 
-        {/* Pricing Subheadline */}
-        <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold text-white mt-8 drop-shadow-md tracking-tight">
-          Get High-Quality Streaming for Just <span className="text-[#FFC107]">$4.2/Month!</span>
-        </h2>
-
         {/* Subtitle / Paragraph */}
-        <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium max-w-[800px] mt-6 drop-shadow-lg leading-relaxed">
-          Choose from <span className="text-[#E50914] font-bold">50,000+ Live Channels</span>, +120,000 Films & Series, and 200,000+ VODs.<br className="hidden md:block" />
-          Enjoy your time with excellent image quality up to 4K on <span className="text-[#E50914] font-bold">any device of your choice</span><br className="hidden md:block" />
-          including Smart TV, Android Box, PC, tablet, and smartphone—anytime and anywhere.
+        <p className="text-base sm:text-xl md:text-[22px] text-white/90 font-medium max-w-[850px] mt-8 drop-shadow-lg leading-relaxed">
+          Unlock the ultimate entertainment experience with Zyminex IPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.
+        </p>
+
+        {/* Secondary Subtitle */}
+        <p className="text-sm sm:text-base font-bold text-[#ffc107] max-w-[700px] mt-6 leading-relaxed">
+          Join thousands of cord-cutters who trust Zyminex IPTV for zero-buffering 60 FPS sports playback and affordable, multi-device subscription plans.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 mt-10 w-full sm:w-auto">
-          <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
-            target="_blank"
-            rel="noreferrer"
-            className="group bg-[#E50914] text-white py-4 px-8 text-sm sm:text-base font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-[#B3000B] hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E50914]/50 active:scale-95 animate-button-pulse rounded-xl"
-          >
-            GET 12 MONTHS — 2 MONTHS FREE <span className="ml-2 group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
-          </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-12 w-full sm:w-auto">
           <a
             href="#pricing"
-            className="group py-4 px-8 text-sm sm:text-base font-bold text-white bg-transparent border border-white/50 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2 hover:bg-white/10 hover:border-white hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/10 active:scale-95 animate-button-pulse-white rounded-xl"
+            className="group bg-[#36a9ff] text-white py-4 px-10 text-sm sm:text-base font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-[#2196f3] hover:scale-105 rounded-full uppercase"
           >
-            <Play className="w-5 h-5 fill-current group-hover:scale-125 transition-transform duration-300" /> View Plans
+            VIEW ZYMINEX IPTV PLANS
+          </a>
+          <a
+            href="/channels"
+            className="group py-4 px-10 text-sm sm:text-base font-bold text-[#051f33] bg-[#f9ebc7] transition-all duration-300 flex items-center justify-center gap-2 hover:bg-[#ffe39f] hover:scale-105 rounded-full uppercase"
+          >
+            <Play className="w-5 h-5 fill-transparent stroke-[#36a9ff] stroke-2" /> 
+            <span className="text-[#36a9ff]">EXPLORE CHANNEL LINEUP</span>
           </a>
         </div>
         
-        {/* Bottom Icons - spread across width */}
-        <div className="flex w-full flex-wrap items-center justify-between sm:justify-around text-white/80 mt-14 mb-4">
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Monitor className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Smart TV</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Laptop className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Laptop / PC</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Smartphone className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Android</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Tablet className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">IOS</span>
-          </div>
+        {/* Bottom Feature Bar */}
+        <div className="mt-16 w-full">
+          <TopFeatureBar />
         </div>
-
-        {/* Embedded Features */}
-        <TopFeatureBar />
 
       </div>
     </section>

@@ -39,7 +39,7 @@ export default function DeviceSetupGuide() {
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-primary-600 bg-[#E50914] text-white shadow-lg shadow-primary-600/30" : "border-black/15 bg-[#141414] text-gray-400 hover:border-primary-500/60 hover:text-white hover:bg-orange-50"}`} 
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-primary-600 bg-[#36a9ff] text-white shadow-lg shadow-primary-600/30" : "border-black/15 bg-[#141414] text-gray-400 hover:border-primary-500/60 hover:text-white hover:bg-orange-50"}`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
@@ -50,12 +50,12 @@ export default function DeviceSetupGuide() {
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#E50914] bg-[#141414] p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#36a9ff] bg-[#141414] p-6 sm:p-10 shadow-2xl overflow-hidden">
         
         {/* Device Header */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-white/5 pb-6 mb-8">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-50 shrink-0">
-            <DeviceIcon className="h-8 w-8 text-[#E50914]" />
+            <DeviceIcon className="h-8 w-8 text-[#36a9ff]" />
           </div>
           <div>
             <h3 className="text-2xl font-black text-white sm:text-3xl">{device.title}</h3>
@@ -66,7 +66,7 @@ export default function DeviceSetupGuide() {
         {/* Important Note */}
         {device.note && (
           <div className="mb-8 rounded-2xl border border-orange-200 bg-orange-50/50 p-5 flex items-start gap-4">
-            <HelpCircle className="h-6 w-6 text-[#E50914] shrink-0" />
+            <HelpCircle className="h-6 w-6 text-[#36a9ff] shrink-0" />
             <div>
               <h4 className="font-bold text-white mb-1">Important Note</h4>
               <p className="text-sm leading-relaxed text-gray-300">{device.note}</p>
@@ -108,7 +108,7 @@ export default function DeviceSetupGuide() {
           {faqs.map((faq) => (
             <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#141414] shadow-sm hover:border-orange-200 transition-colors" key={faq.question}>
               <div className="bg-[#141414] border-b border-white/5 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-[#E50914] shrink-0" />
+                <HelpCircle className="w-5 h-5 text-[#36a9ff] shrink-0" />
                 <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
                   {faq.question}
                 </h3>
@@ -130,7 +130,7 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
       
       {/* Content */}
       <div className="flex flex-1 gap-5 items-start">
-         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E50914] text-lg font-extrabold text-white shadow-md">
+         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#36a9ff] text-lg font-extrabold text-white shadow-md">
            {number}
          </span>
          <div className="flex-1 mt-1">
@@ -148,7 +148,7 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
 function CodeLine({ label, text }: { label: string; text: string }) {
   return (
     <div className="rounded-xl bg-[#141414] border border-white/10 px-4 py-3 font-mono text-xs text-gray-300 break-all">
-      <span className="font-bold text-[#E50914] mr-2">{label}:</span> 
+      <span className="font-bold text-[#36a9ff] mr-2">{label}:</span> 
       {text}
     </div>
   );

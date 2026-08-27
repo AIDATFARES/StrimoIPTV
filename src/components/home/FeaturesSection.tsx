@@ -8,7 +8,7 @@ export default function FeaturesSection() {
     {
       icon: Cpu,
       title: "Anti-Freeze 10.0 Tech",
-      desc: "Custom H.265/HEVC encoding guarantees 0% buffering, even during high-demand live sports broadcasts.",
+      desc: "Our Zyminex IPTV servers utilize custom encoding to guarantee zero buffering, even during high-demand live sports.",
       color: "text-primary",
     },
     {
@@ -37,8 +37,8 @@ export default function FeaturesSection() {
     },
     {
       icon: Sparkles,
-      title: "Complete EPG Guide",
-      desc: "Full Electronic Program Guide with schedule times, match info, and movie descriptions.",
+      title: "Complete IPTV EPG Guide",
+      desc: "Navigate channels easily with our full Electronic Program Guide featuring schedules, match info, and details.",
       color: "text-tertiary",
     },
   ];
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-xs block"
           >
-            Built for Extreme Performance
+            Premium IPTV Performance
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -69,7 +69,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="font-body-lg text-body-lg text-on-surface-variant"
           >
-            Experience the future of IPTV technology with Next-Gen infrastructure designed specifically for live sports events.
+            Experience the future of IPTV streaming with our next-generation server infrastructure, specifically optimized for seamless live TV, movies, and major sports events.
           </motion.p>
         </div>
 

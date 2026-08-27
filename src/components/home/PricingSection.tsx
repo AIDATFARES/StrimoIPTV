@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Check, X, CreditCard, Bitcoin, Wallet, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Gift, Tv } from "lucide-react";
 
 type PlanFeature = {
   text: string;
@@ -12,67 +11,54 @@ type PlanFeature = {
 type Plan = {
   id: string;
   name: string;
-  subtitle: string;
+  badge: string;
   price: number;
-  oldPrice?: number;
   durationLabel: string;
-  period: string;
-  saving?: string;
+  months: number;
   popular?: boolean;
-  features: PlanFeature[];
   buttonText: string;
 };
 
-const defaultFeatures: PlanFeature[] = [
-  { text: "4K, HD & SD Quality", included: true },
-  { text: "+30,000 Live TV Channels", included: true },
-  { text: "All Live Sports", included: true },
-  { text: "+150,000 Movies & Series (VOD)", included: true },
-  { text: "Anti-Freezing (No Buffering)", included: true },
-  { text: "Up to 4 Days Catch-Up", included: true },
-  { text: "TV Guide (EPG)", included: true },
-  { text: "Free Pay-Per-View (PPV)", included: true },
-  { text: "Built-in VPN Protection", included: true },
-  { text: "Adult Channels (Optional)", included: true },
-  { text: "3-Day Money-Back Guarantee", included: true },
-  { text: "24/7 Technical Support", included: true },
+const commonFeatures: PlanFeature[] = [
+  { text: "Zyminex IPTV for {devices} Device{s}", included: true },
+  { text: "Uncompressed Ultra HD & 4K", included: true },
+  { text: "25,000+ Premium Channels", included: true },
+  { text: "100,000+ VODs (Daily Update)", included: true },
+  { text: "Premium Sports & PPV Pass", included: true },
+  { text: "Full EPG & 7-Day Catch-up", included: true },
+  { text: "Advanced Anti-Freeze VIP", included: true },
+  { text: "VPN Included Free", included: true },
+  { text: "Direct WhatsApp VIP Support", included: true },
 ];
 
 const plans: Plan[] = [
   {
     id: "3-months",
-    name: "3 Months",
-    subtitle: "Perfect for trying out our premium service.",
+    name: "3 MONTHS",
+    badge: "STARTER",
     price: 35,
     durationLabel: "3 Months",
-    period: "/ 3 months",
-    saving: "Save 22%",
-    features: defaultFeatures,
-    buttonText: "Select Pro",
+    months: 3,
+    buttonText: "SELECT 3 MONTHS",
   },
   {
     id: "12-months",
-    name: "12 Months",
-    subtitle: "The ultimate entertainment experience for a full year.",
+    name: "12 MONTHS",
+    badge: "ULTIMATE",
     price: 69.99,
-    oldPrice: 80,
     durationLabel: "12 Months",
-    period: "/ year",
-    saving: "Save 61%",
+    months: 12,
     popular: true,
-    features: defaultFeatures,
-    buttonText: "Get Ultimate Pass",
+    buttonText: "GET 12 MONTHS",
   },
   {
     id: "6-months",
-    name: "6 Months",
-    subtitle: "A solid choice for half a year of uninterrupted joy.",
+    name: "6 MONTHS",
+    badge: "VALUE",
     price: 49.99,
     durationLabel: "6 Months",
-    period: "/ 6 months",
-    saving: "Save 44%",
-    features: defaultFeatures,
-    buttonText: "Select Basic",
+    months: 6,
+    buttonText: "SELECT 6 MONTHS",
   },
 ];
 
@@ -80,48 +66,56 @@ export default function PricingSection() {
   const [devices, setDevices] = useState(1);
 
   const priceFor = (plan: Plan) => (plan.price * devices).toFixed(2);
+  const monthlyPrice = (plan: Plan) => ((plan.price * devices) / plan.months).toFixed(2);
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to purchase the ${plan.name} plan (${plan.durationLabel}) with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to purchase the ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section id="pricing" className="relative bg-[#141414] py-24">
+    <section id="pricing" className="relative bg-transparent py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
-        <header className="mx-auto max-w-3xl text-center mb-10">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
-            IPTV SUBSCRIPTION PLANS
-          </span>
-          <h2 className="mt-5 text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
-            Choose Your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
-              Premium IPTV Plan
+        {/* Header */}
+        <header className="mx-auto max-w-3xl text-center mb-12">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#36a9ff] px-4 py-1 mb-6">
+            <Gift className="h-4 w-4 text-white" />
+            <span className="text-[10px] font-bold text-white tracking-widest uppercase">
+              BEST VALUE PLANS
             </span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
+            <span className="text-white">CHOOSE YOUR </span>
+            <span className="text-[#36a9ff]">ZYMINEX IPTV PLAN</span>
           </h2>
-          <p className="mt-5 text-xl font-bold tracking-wide text-white sm:text-2xl">Affordable, Buffer-Free Streaming</p>
-          <p className="mt-2 text-sm text-gray-400 sm:text-base">No hidden fees. Instant activation. Unlock unlimited <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">live TV and VOD</Link> today.</p>
+          <p className="mt-6 text-base sm:text-lg text-white/90 font-medium leading-relaxed max-w-2xl mx-auto">
+            Select your Zyminex IPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
+          </p>
         </header>
 
         {/* Device Selector */}
-        <div className="mx-auto mb-14 max-w-2xl" role="radiogroup" aria-label="Number of device connections">
-          <p className="mb-3 text-center text-xs font-bold uppercase tracking-[0.15em] text-gray-400">Choose your connections</p>
-          <div className="grid grid-cols-3 rounded-md border border-white/10 bg-[#1e1e1e] p-1.5 shadow-sm">
+        <div className="mx-auto mb-16 flex flex-col items-center">
+          <div className="flex items-center gap-2 mb-4">
+            <Tv className="h-4 w-4 text-[#36a9ff]" />
+            <p className="text-[11px] font-bold uppercase tracking-widest text-white">Select Number of Devices</p>
+          </div>
+          <div className="inline-flex rounded-full border border-[#36a9ff] p-1.5 bg-transparent shadow-[0_0_15px_rgba(54,169,255,0.2)]">
             {[1, 2, 3].map((count) => {
               const selected = devices === count;
               return (
                 <button
-                  aria-checked={selected}
-                  className={`rounded px-3 py-3 text-sm font-bold transition-all ${selected ? "bg-[#E50914] text-white" : "text-gray-400 hover:text-white hover:bg-white/5"}`}
                   key={count}
                   onClick={() => setDevices(count)}
-                  role="radio"
-                  type="button"
+                  className={`rounded-full px-6 py-2.5 text-xs sm:text-sm font-bold transition-all uppercase tracking-wide ${
+                    selected
+                      ? "bg-[#36a9ff] text-white shadow-md"
+                      : "text-white hover:text-[#36a9ff]"
+                  }`}
                 >
-                  {count} Device{count > 1 ? "s" : ""}
+                  {count} Device{count > 1 ? "S" : ""}
                 </button>
               );
             })}
@@ -133,59 +127,59 @@ export default function PricingSection() {
           {plans.map((plan) => (
             <article
               key={plan.id}
-              className={`relative flex flex-col rounded-md bg-[#262626] p-8 text-left transition-transform duration-300 hover:-translate-y-1 ${plan.popular
-                  ? "border-t-[3px] border-t-[#E50914] md:scale-105 z-10 shadow-2xl"
-                  : "border border-white/5"
-                }`}
+              className={`relative flex flex-col rounded-2xl bg-[#fdf1c3] p-8 text-left transition-transform duration-300 border-[6px] border-[#36a9ff] ${
+                plan.popular ? "md:scale-105 z-10 shadow-[0_0_40px_rgba(54,169,255,0.6)]" : "hover:-translate-y-2 shadow-xl"
+              }`}
             >
-              {plan.popular && (
-                <div className="absolute top-0 right-0 bg-[#E50914] text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
-                  MOST POPULAR
-                </div>
-              )}
-
-              <div className="pb-6 border-b border-white/10">
-                <h3 className="text-3xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-sm text-gray-400 min-h-[40px]">{plan.subtitle}</p>
-
-                <div className="mt-6 flex items-baseline gap-2">
-                  <span className="text-5xl font-bold tracking-tight text-white">${priceFor(plan)}</span>
-                  <span className="text-sm font-medium text-gray-400">{plan.period}</span>
-                </div>
-
-                <div className="min-h-[20px] mt-2 flex items-center gap-2">
-                  {plan.saving && (
-                    <p className="text-xs font-bold text-[#E50914]">{plan.saving}</p>
+              {/* Card Header Row */}
+              <div className="flex items-center justify-between mb-4">
+                <span className="block text-[#36a9ff] font-black uppercase tracking-widest text-sm">
+                  {plan.badge}
+                </span>
+                <div className="flex items-center gap-2">
+                  {plan.popular && (
+                    <span className="bg-[#36a9ff] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      MOST POPULAR
+                    </span>
                   )}
-                  {plan.oldPrice && (
-                    <p className="text-xs font-medium text-gray-500 line-through">${(plan.oldPrice * devices).toFixed(2)}</p>
-                  )}
+                  <Tv className="h-5 w-5 text-[#36a9ff]" />
                 </div>
               </div>
 
-              <ul className="mt-8 flex-grow space-y-4">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    {feature.included ? (
-                      <Check className="h-5 w-5 shrink-0 text-[#E50914]" strokeWidth={3} />
-                    ) : (
-                      <X className="h-5 w-5 shrink-0 text-gray-500" strokeWidth={3} />
-                    )}
-                    <span className={`text-sm ${feature.included ? "text-gray-200" : "text-gray-500"}`}>
-                      {feature.text}
+              <div className="pb-6">
+                <h3 className="text-[28px] font-black text-[#051f33] uppercase leading-none mb-4">{plan.name}</h3>
+                
+                <div className="flex items-baseline gap-1 mb-4">
+                  <span className="text-[46px] font-black tracking-tighter text-[#051f33] leading-none">${priceFor(plan)}</span>
+                </div>
+
+                <div className="inline-flex rounded-full bg-[#36a9ff] px-4 py-1.5">
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
+                    JUST ${monthlyPrice(plan)} / MONTH
+                  </span>
+                </div>
+              </div>
+
+              <ul className="mt-6 mb-8 flex-grow space-y-3.5">
+                {commonFeatures.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-[18px] w-[18px] shrink-0 text-[#36a9ff] fill-white" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#051f33]">
+                      {feature.text.replace('{devices}', devices.toString()).replace('{s}', devices > 1 ? 's' : '')}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-10">
+              <div className="mt-auto pt-4">
                 <button
                   type="button"
                   onClick={() => handleOrder(plan)}
-                  className={`w-full py-4 text-sm font-bold text-white transition-all duration-300 rounded-sm transform active:scale-95 hover:-translate-y-1 hover:shadow-lg ${plan.popular
-                      ? "bg-[#E50914] hover:bg-[#B3000B] hover:shadow-[#E50914]/40"
-                      : "bg-transparent border border-gray-600 hover:border-gray-400 hover:bg-white/5 hover:shadow-white/5"
-                    }`}
+                  className={`w-full py-4 text-sm font-black uppercase tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-md ${
+                    plan.popular
+                      ? "bg-[#051f33] text-white hover:bg-[#082a45] hover:shadow-[#051f33]/50"
+                      : "bg-[#36a9ff] text-white hover:bg-[#2196f3] hover:shadow-[#36a9ff]/50"
+                  }`}
                 >
                   {plan.buttonText}
                 </button>
@@ -194,25 +188,24 @@ export default function PricingSection() {
           ))}
         </div>
 
-        {/* Payment Methods & Guarantee */}
-        <div className="mx-auto mt-20 max-w-4xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-md bg-[#1e1e1e] border border-white/10 p-6 shadow-sm">
-
-            <div className="flex flex-col gap-2 text-center sm:text-left">
-              <h4 className="text-base font-bold text-white flex items-center justify-center sm:justify-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-[#E50914]" />
-                Secure Payments & Instant Access
-              </h4>
-              <p className="text-sm text-gray-400">Pay safely using Crypto, Credit Card, or PayPal. Your details are encrypted instantly.</p>
+        {/* Free Trial Banner */}
+        <div className="mx-auto mt-16 max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-full bg-[#fdf1c3] p-2 pl-6 sm:pl-8 shadow-xl border-4 border-[#36a9ff]/30">
+          <div className="flex items-center gap-3">
+            <div className="bg-[#36a9ff] p-2 rounded-full">
+              <Gift className="h-5 w-5 text-white" />
             </div>
-
-            <div className="flex items-center gap-4 text-gray-400">
-              <CreditCard className="h-8 w-8 hover:text-[#E50914] transition-colors" />
-              <Bitcoin className="h-8 w-8 hover:text-[#E50914] transition-colors" />
-              <Wallet className="h-8 w-8 hover:text-[#E50914] transition-colors" />
-            </div>
-
+            <h3 className="text-sm sm:text-base font-black text-[#051f33] uppercase">
+              NEED FREE TRIAL 24H?
+            </h3>
           </div>
+          <a
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial."
+            target="_blank"
+            rel="noreferrer"
+            className="bg-[#36a9ff] hover:bg-[#2196f3] text-white text-sm font-black px-10 py-3.5 rounded-full uppercase transition-all shadow-md hover:scale-105 whitespace-nowrap"
+          >
+            TRY NOW
+          </a>
         </div>
 
       </div>

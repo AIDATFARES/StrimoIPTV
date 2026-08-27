@@ -30,15 +30,15 @@ export default function Navbar() {
   const getLinkClass = (path: string) => {
     const isActive = pathname === path;
     return isActive 
-      ? "text-[#E50914] border-b-2 border-[#E50914] pb-1 transition-colors duration-200" 
-      : "text-gray-400 hover:text-[#E50914] pb-1 transition-colors duration-200 whitespace-nowrap";
+      ? "text-[#36a9ff] border-b-2 border-[#36a9ff] pb-1 transition-colors duration-200" 
+      : "text-gray-400 hover:text-[#36a9ff] pb-1 transition-colors duration-200 whitespace-nowrap";
   };
 
   const getMobileLinkClass = (path: string) => {
     const isActive = pathname === path;
     return isActive
-      ? "text-[#E50914] py-1 font-bold"
-      : "hover:text-[#E50914] py-1 transition-colors text-gray-300";
+      ? "text-[#36a9ff] py-1 font-bold"
+      : "hover:text-[#36a9ff] py-1 transition-colors text-gray-300";
   };
 
   return (
@@ -74,25 +74,32 @@ export default function Navbar() {
           <BrandLogo />
         </Link>
 
-        {/* Nav Links */}
-        <nav className="hidden lg:flex relative z-10 items-center gap-6 xl:gap-8 px-6 text-sm font-semibold">
-          <Link href="/" onClick={handleLogoClick} className={getLinkClass("/")}>
+        {/* Nav Links Container */}
+        <nav className="hidden lg:flex relative z-10 items-center justify-center p-1.5 border border-[#36a9ff] rounded-full bg-transparent text-sm font-bold tracking-wide">
+          <Link 
+            href="/" 
+            onClick={handleLogoClick} 
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+          >
             Home
           </Link>
-          <Link href="/pricing" className={getLinkClass("/pricing")}>
+          <Link 
+            href="/pricing" 
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/pricing' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+          >
             Pricing
           </Link>
-          <Link href="/how-it-works" className={getLinkClass("/how-it-works")}>
-            How It Works
+          <Link 
+            href="/installation" 
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/installation' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+          >
+            Setup
           </Link>
-          <Link href="/channels" className={getLinkClass("/channels")}>
-            Channels
-          </Link>
-          <Link href="/contact" className={getLinkClass("/contact")}>
-            Contact Support
-          </Link>
-          <Link href="/reseller" className={getLinkClass("/reseller")}>
-            Reseller
+          <Link 
+            href="/blog" 
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/blog' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+          >
+            Blog
           </Link>
         </nav>
 
@@ -102,9 +109,9 @@ export default function Navbar() {
             href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="btn-primary-voltra px-6 py-2.5 text-sm"
+            className="btn-secondary-voltra px-6 py-2.5 text-sm shadow-[0_0_15px_rgba(249,235,199,0.3)] hover:shadow-[0_0_25px_rgba(249,235,199,0.5)]"
           >
-            Get Started
+            GET STARTED
           </a>
         </div>
 

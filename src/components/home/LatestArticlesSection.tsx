@@ -13,7 +13,7 @@ export default function LatestArticlesSection() {
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <span className="inline-block py-1 px-4 rounded-full bg-[#E50914]/10 border border-[#E50914]/30 text-[#E50914] text-xs font-bold tracking-widest uppercase mb-4">
+          <span className="inline-block py-1 px-4 rounded-full bg-[#36a9ff]/10 border border-[#36a9ff]/30 text-[#36a9ff] text-xs font-bold tracking-widest uppercase mb-4">
             Guides & News
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">
@@ -27,7 +27,7 @@ export default function LatestArticlesSection() {
         <div className={`grid gap-8 mb-14 ${displayPosts.length === 1 ? 'grid-cols-1 max-w-lg mx-auto' : displayPosts.length === 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
           {displayPosts.map((post) => (
             <Link href={`/blog/${post.slug}`} key={post.id}>
-              <article className="bg-[#141414] rounded-2xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-all duration-300 h-full border border-white/10 hover:border-[#E50914]/50">
+              <article className="bg-[#141414] rounded-2xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-all duration-300 h-full border border-white/10 hover:border-[#36a9ff]/50">
                 <div className="h-48 relative overflow-hidden shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -41,7 +41,7 @@ export default function LatestArticlesSection() {
                   </span>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-lg font-bold leading-snug text-white group-hover:text-[#E50914] transition-colors mb-3 line-clamp-2">
+                  <h3 className="text-lg font-bold leading-snug text-white group-hover:text-[#36a9ff] transition-colors mb-3 line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-grow leading-relaxed">
@@ -49,7 +49,7 @@ export default function LatestArticlesSection() {
                   </p>
                   <div className="mt-auto text-gray-400 text-xs font-medium flex items-center justify-between border-t border-white/10 pt-4">
                     <span>{post.date}</span>
-                    <span className="flex items-center text-[#E50914] group-hover:translate-x-1 transition-transform font-bold text-sm">
+                    <span className="flex items-center text-[#36a9ff] group-hover:translate-x-1 transition-transform font-bold text-sm">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </span>
@@ -62,7 +62,7 @@ export default function LatestArticlesSection() {
 
         <div className="text-center">
           <Link href="/blog">
-            <button className="bg-black/5 hover:bg-[#E50914] text-white border border-black/15 hover:border-[#E50914] px-8 py-3.5 rounded-full font-bold text-sm transition-all duration-300 flex items-center justify-center mx-auto gap-2">
+            <button className="bg-black/5 hover:bg-[#36a9ff] text-white border border-black/15 hover:border-[#36a9ff] px-8 py-3.5 rounded-full font-bold text-sm transition-all duration-300 flex items-center justify-center mx-auto gap-2">
               View All Articles
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>

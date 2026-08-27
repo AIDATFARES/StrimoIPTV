@@ -91,7 +91,7 @@ export default function DmcaPage() {
           <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Legal information</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
             <span className="block text-white">Legal Disclaimer</span>
-            <span className="mt-1 block text-[#E50914]">&amp; DMCA Notice.</span>
+            <span className="mt-1 block text-[#36a9ff]">&amp; DMCA Notice.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Last updated: {currentDate}</p>
         </header>

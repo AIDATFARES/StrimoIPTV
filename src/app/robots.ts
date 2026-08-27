@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.zyminexiptv.vip/sitemap.xml',
+    sitemap: 'https://www.zyminexiptv.shop/sitemap.xml',
   };
 }

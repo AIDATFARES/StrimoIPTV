@@ -23,40 +23,54 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* 50,000+ Premium Live Channels Tape */}
+      <div className="w-full bg-transparent pt-12 relative z-20">
+        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-2">50,000+ Premium Live Channels</span>
+        <BrandMarquee />
+      </div>
+
+      <ChannelCategories />
+
+      <PricingSection />
       <MovieStrips />
 
       {/* Sports Tape */}
-      <div className="w-full bg-[#141414] pt-12 pb-2 relative z-20">
-        <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</h3>
+      <div className="w-full bg-transparent pt-12 pb-2 relative z-20">
+        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</span>
       </div>
       <BrandMarquee
-        imagesFolder="dawryate2"
+        imagesFolder="sports_new"
         images={[
-          "Untitled-design-50.webp", "Untitled-design-51.webp", "Untitled-design-52.webp",
-          "Untitled-design-53.webp", "Untitled-design-54.webp", "Untitled-design-55.webp",
-          "Untitled-design-56.webp", "Untitled-design-57.webp", "Untitled-design-58.webp"
+          "Zyminex-sports-01.webp",
+          "Zyminex-sports-02.webp",
+          "imggt1 (1).webp",
+          "imggt1 (2).webp",
+          "imggt1 (3).webp",
+          "imggt1 (4).webp",
+          "imggt1 (5).webp",
+          "imggt1 (6).webp",
+          "imggt1 (7).webp",
+          "imggt1 (8).webp",
+          "imggt1.webp"
         ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#141414] hover:border-[#E50914]/60 transition-all duration-300 group"
+        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-[#36a9ff]/20 bg-[#051f33]/80 hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 group"
         imageClassName="object-cover rounded-xl"
       />
 
       {/* Channel & Installation Quick Links */}
-      <div className="w-full bg-[#141414] py-6 px-4 text-center border-t border-white/5 relative z-20">
+      <div className="w-full bg-transparent py-6 px-4 text-center border-t border-[#36a9ff]/10 relative z-20">
         <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/channels">Zyminex IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/installation">Zyminex IPTV Installation Guide</Link> for a quick start.
+          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">Zyminex IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">Zyminex IPTV Installation Guide</Link> for a quick start.
         </p>
       </div>
-
-      <PricingSection />
-      <ChannelCategories />
 
       {/* Device Support & How It Works */}
       <ComparisonSection />
       <DeviceSupport />
 
       {/* Device Logos Marquee */}
-      <div className="w-full bg-[#141414] border-t border-black/[0.05] pt-12 pb-6 relative z-10">
-        <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Supported on all your favorite devices</h3>
+      <div className="w-full bg-transparent border-t border-[#36a9ff]/10 pt-12 pb-6 relative z-10">
+        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Supported on all your favorite devices</span>
         <BrandMarquee
           imagesFolder="devices"
           images={[
@@ -72,7 +86,7 @@ export default function Home() {
             "Windows-krooz-tv.webp",
             "xbox-live-krooz-tv.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-black/10 rounded-2xl p-4 md:p-6 hover:bg-slate-50 hover:border-primary-300 transition-all duration-300 shadow-md flex items-center justify-center"
+          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-[#36a9ff]/20 rounded-2xl p-4 md:p-6 hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 shadow-sm flex items-center justify-center"
           imageClassName="object-contain drop-shadow-sm"
         />
       </div>

@@ -185,8 +185,10 @@ export default function ResellerPageContent() {
           </span>
 
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
-            <span className="block text-white">Become an IPTV Reseller</span>
-            <span className="mt-1 block text-[#E50914]">And Start Earning Easy Money.</span>
+            ZYMINEX IPTV <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">
+              RESELLER PROGRAM
+            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-gray-300 sm:text-base sm:leading-8">
@@ -196,7 +198,7 @@ export default function ResellerPageContent() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={handleFreeTrial}
-              className="rounded-full bg-[#E50914] px-8 py-3.5 text-base font-bold text-white shadow-[0_0_25px_rgba(255,107,0,0.4)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_0_35px_rgba(255,107,0,0.6)] active:scale-[0.98]"
+              className="rounded-full bg-[#36a9ff] px-8 py-3.5 text-base font-bold text-white shadow-[0_0_25px_rgba(255,107,0,0.4)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_0_35px_rgba(255,107,0,0.6)] active:scale-[0.98]"
             >
               Free Trial
             </button>
@@ -208,7 +210,7 @@ export default function ResellerPageContent() {
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight">
               <span className="block text-white">Our Exclusive</span>
-              <span className="mt-1 block text-[#E50914]">IPTV Reseller Plans.</span>
+              <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Plans.</span>
             </h2>
             <p className="mt-3 text-base font-bold text-gray-300">
               We provide you with the best servers at the right price
@@ -221,14 +223,14 @@ export default function ResellerPageContent() {
                 key={plan.id}
                 className={`relative flex flex-col rounded-3xl bg-[#141414] p-6 shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
                   plan.popular
-                    ? "border-4 border-[#E50914] shadow-[0_10px_40px_rgba(255,107,0,0.25)] scale-102 z-10"
+                    ? "border-4 border-[#36a9ff] shadow-[0_10px_40px_rgba(255,107,0,0.25)] scale-102 z-10"
                     : plan.bestValue
                     ? "border-4 border-secondary-500 shadow-[0_10px_40px_rgba(16,185,129,0.2)] z-10"
                     : "border-2 border-white/5"
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#E50914] px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#36a9ff] px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md">
                     Most Popular
                   </span>
                 )}
@@ -239,7 +241,7 @@ export default function ResellerPageContent() {
                 )}
 
                 <div className="text-center">
-                  <span className="text-xs font-black uppercase tracking-widest text-[#E50914]">
+                  <span className="text-xs font-black uppercase tracking-widest text-[#36a9ff]">
                     PREMIUM IPTV
                   </span>
                   <h3 className="mt-1 text-2xl font-black text-white">
@@ -248,7 +250,7 @@ export default function ResellerPageContent() {
                 </div>
 
                 <div className="my-5 rounded-2xl bg-[#141414] border border-white/5 py-4 text-center">
-                  <span className="text-4xl font-black text-[#E50914]">
+                  <span className="text-4xl font-black text-[#36a9ff]">
                     ${plan.price}
                   </span>
                 </div>
@@ -256,7 +258,7 @@ export default function ResellerPageContent() {
                 <ul className="flex-grow space-y-3 border-t border-white/5 pt-4 text-xs font-semibold text-gray-400">
                   {planFeatures.map((feature) => (
                     <li className="flex items-center gap-2" key={feature}>
-                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-orange-100 text-[#E50914]">
+                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-orange-100 text-[#36a9ff]">
                         <Check className="h-3 w-3 stroke-[3]" />
                       </span>
                       <span>{feature}</span>
@@ -267,7 +269,7 @@ export default function ResellerPageContent() {
                 <button
                   type="button"
                   onClick={() => handleOrderPanel(plan)}
-                  className="mt-6 w-full rounded-2xl bg-[#E50914] py-3.5 text-sm font-extrabold text-white shadow-[0_4px_15px_rgba(255,107,0,0.3)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_6px_20px_rgba(255,107,0,0.4)] active:scale-[0.98]"
+                  className="mt-6 w-full rounded-2xl bg-[#36a9ff] py-3.5 text-sm font-extrabold text-white shadow-[0_4px_15px_rgba(255,107,0,0.3)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_6px_20px_rgba(255,107,0,0.4)] active:scale-[0.98]"
                 >
                   Get A Panel
                 </button>
@@ -280,7 +282,7 @@ export default function ResellerPageContent() {
         <div className="mt-28">
           <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
             <span className="block text-white">Advantages of</span>
-            <span className="mt-1 block text-[#E50914]">IPTV Reseller Program.</span>
+            <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Program.</span>
           </h2>
 
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -294,9 +296,9 @@ export default function ResellerPageContent() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-500 mb-5">
                     <Icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">
+                  <span className="block text-sm font-extrabold uppercase tracking-wider text-white">
                     {item.title}
-                  </h3>
+                  </span>
                   <p className="mt-3 text-xs leading-5 text-gray-400">
                     {item.description}
                   </p>
@@ -310,7 +312,7 @@ export default function ResellerPageContent() {
         <div className="mx-auto mt-28 max-w-4xl">
           <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
             <span className="block text-white">Frequently Asked</span>
-            <span className="mt-1 block text-[#E50914]">Questions & Answers.</span>
+            <span className="mt-1 block text-[#36a9ff]">Questions & Answers.</span>
           </h2>
 
           <div className="mt-10 space-y-3">

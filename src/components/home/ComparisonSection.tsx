@@ -15,53 +15,53 @@ export default function ComparisonSection() {
   ];
 
   return (
-    <section className="bg-[#141414] text-white relative z-10 border-b border-white/10 overflow-hidden py-24">
+    <section className="bg-transparent text-white relative z-10 border-b border-white/10 overflow-hidden py-24">
       <div className="max-w-[1200px] mx-auto px-6">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
             IPTV vs Cable TV
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
             Why Zyminex IPTV is the <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
               Best Cable Alternative
             </span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
-            Discover why thousands of users are cutting the cord. Our premium IPTV service offers <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">more channels</Link>, better 4K quality, and reliable anti-freeze technology at a fraction of the cost.
+            Discover why thousands of users are cutting the cord for Zyminex IPTV. Our premium IPTV service offers an expansive <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">channel lineup</Link>, superior 4K quality, and reliable anti-freeze technology at a fraction of the cost of traditional television.
           </p>
         </div>
 
         {/* Desktop Comparison Table */}
         <div className="hidden md:block relative max-w-5xl mx-auto">
-          <div className="bg-[#141414] rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(112,0,255,0.15)] border border-white/5 p-8 pb-10 relative overflow-hidden">
+          <div className="bg-[#051f33]/40 backdrop-blur-md rounded-3xl border border-[#36a9ff]/30 p-8 pb-10 relative overflow-hidden">
             
-            {/* Highlight Background for Zyminex IPTV Column */}
-            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] bg-gradient-to-b from-[#E50914]/5 to-[#B3000B]/5 border-x border-[#E50914]/20 shadow-[0_0_50px_rgba(112,0,255,0.05)]"></div>
+            {/* Vertical Borders for Zyminex IPTV Column */}
+            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] border-x border-[#36a9ff]/30 z-0"></div>
 
             {/* Table Header */}
-            <div className="grid grid-cols-4 gap-4 mb-6 relative z-10">
-              <div className="text-left font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end pb-4">Features</div>
+            <div className="grid grid-cols-4 gap-4 mb-2 relative z-10">
+              <div className="text-left font-black text-slate-400 uppercase tracking-widest text-xs flex items-center pb-4 pl-4">Features</div>
               
-              <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#E50914] to-[#B3000B] text-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(112,0,255,0.3)] transform -translate-y-4 scale-105 border-2 border-white">
-                <span className="text-[10px] uppercase tracking-widest font-bold opacity-80 mb-1">Premium Choice</span>
-                <span className="text-2xl font-black tracking-tight">Zyminex IPTV</span>
+              <div className="flex flex-col items-center justify-center bg-[#36a9ff] text-white rounded-2xl py-3 shadow-[0_0_20px_rgba(54,169,255,0.4)] border border-white/40 transform -translate-y-2 relative z-20 mx-2">
+                <span className="text-[8px] uppercase tracking-widest font-black opacity-90 mb-0.5">Premium Choice</span>
+                <span className="text-[22px] font-black tracking-tight leading-none">Zyminex IPTV</span>
               </div>
               
-              <div className="text-center font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end justify-center pb-4">Cable / Satellite</div>
-              <div className="text-center font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end justify-center pb-4">Other IPTV</div>
+              <div className="text-center font-black text-slate-400 uppercase tracking-widest text-xs flex items-center justify-center pb-4">Cable / Satellite</div>
+              <div className="text-center font-black text-slate-400 uppercase tracking-widest text-xs flex items-center justify-center pb-4">Other IPTV</div>
             </div>
 
             {/* Table Rows */}
             <div className="relative z-10">
               {rows.map((row, idx) => (
-                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-white/5 last:border-0 items-center group hover:bg-[#141414]/50 transition-colors rounded-xl px-2 -mx-2">
-                  <div className="font-bold text-gray-300 text-sm sm:text-base">{row.feature}</div>
-                  <div className="font-black text-[#E50914] text-center text-base sm:text-lg group-hover:scale-105 transition-transform">{row.fiesta}</div>
-                  <div className="font-medium text-gray-400 text-center text-sm">{row.cable}</div>
-                  <div className="font-medium text-gray-400 text-center text-sm">{row.other}</div>
+                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-[#36a9ff]/20 last:border-0 items-center">
+                  <div className="font-bold text-gray-200 text-sm md:text-[15px] pl-4">{row.feature}</div>
+                  <div className="font-black text-[#36a9ff] text-center text-[15px] md:text-[17px]">{row.fiesta}</div>
+                  <div className="font-medium text-slate-400 text-center text-xs md:text-[13px]">{row.cable}</div>
+                  <div className="font-medium text-slate-400 text-center text-xs md:text-[13px]">{row.other}</div>
                 </div>
               ))}
             </div>
@@ -70,7 +70,7 @@ export default function ComparisonSection() {
 
         {/* Mobile Comparison (Cards) */}
         <div className="md:hidden space-y-8">
-          <div className="bg-gradient-to-br from-[#E50914] to-[#B3000B] rounded-3xl p-1 relative shadow-xl">
+          <div className="bg-gradient-to-br from-[#36a9ff] to-[#2196f3] rounded-3xl p-1 relative shadow-xl">
             <div className="bg-black/20 text-white rounded-[1.35rem] p-6 backdrop-blur-sm">
               <h3 className="text-2xl font-black mb-6 text-center">Zyminex IPTV</h3>
               <div className="space-y-4">
@@ -84,7 +84,7 @@ export default function ComparisonSection() {
             </div>
           </div>
 
-          <div className="bg-[#141414] rounded-3xl shadow-lg border border-white/10 p-6">
+          <div className="bg-[#051f33]/80 backdrop-blur-sm rounded-3xl shadow-lg border border-[#36a9ff]/20 p-6">
             <h3 className="text-xl font-bold mb-6 text-center text-slate-400">Cable / Satellite</h3>
             <div className="space-y-4">
               {rows.map((row, idx) => (
@@ -100,7 +100,7 @@ export default function ComparisonSection() {
         <div className="mt-16 text-center">
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center bg-black text-white font-bold px-10 py-5 rounded-xl hover:bg-[#E50914] shadow-lg hover:shadow-[0_10px_30px_rgba(112,0,255,0.3)] transition-all hover:-translate-y-1 gap-2"
+            className="inline-flex items-center justify-center bg-[#051f33] border border-[#36a9ff]/30 text-white font-black uppercase text-sm px-10 py-5 rounded-full hover:bg-[#082a45] hover:shadow-[0_0_20px_rgba(54,169,255,0.4)] transition-all hover:-translate-y-1 gap-2"
           >
             View Plans & Pricing <span aria-hidden="true">&rarr;</span>
           </Link>
