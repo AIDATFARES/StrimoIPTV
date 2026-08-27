@@ -1,67 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #141414;
-  --color-surface-dim: #dadada;
-  --color-surface-bright: #f9f9f9;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f3f3f4;
-  --color-surface-container: #F4F4F4;
-  --color-surface-container-high: #E5E5E5;
-  --color-surface-container-highest: #e2e2e2;
-  --color-on-surface: #ffffff;
-  --color-on-surface-variant: #5a4136;
-  --color-inverse-surface: #2f3131;
-  --color-inverse-on-surface: #f0f1f1;
-  --color-outline: #D1D1D1;
-  --color-outline-variant: #e2bfb0;
-  --color-surface-tint: #a04100;
-  --color-primary: #a04100;
+  --color-surface: #051f33;
+  --color-surface-dim: #082a45;
+  --color-surface-bright: #0c395c;
+  --color-surface-container-lowest: #031726;
+  --color-surface-container-low: #051f33;
+  --color-surface-container: #082a45;
+  --color-surface-container-high: #0c395c;
+  --color-surface-container-highest: #114c77;
+  --color-on-surface: #f8fafc;
+  --color-on-surface-variant: #94a3b8;
+  --color-inverse-surface: #f1f5f9;
+  --color-inverse-on-surface: #051f33;
+  --color-outline: #114c77;
+  --color-outline-variant: #0c395c;
+  --color-surface-tint: #36a9ff;
+  --color-primary: #36a9ff;
   --color-on-primary: #ffffff;
-  --color-primary-container: #E50914;
-  --color-on-primary-container: #572000;
-  --color-inverse-primary: #ffb693;
-  --color-secondary: #5e5e5e;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #e2e2e2;
-  --color-on-secondary-container: #646464;
-  --color-tertiary: #0062a1;
+  --color-primary-container: #082a45;
+  --color-on-primary-container: #e0f2fe;
+  --color-inverse-primary: #bae6fd;
+  --color-secondary: #f9ebc7;
+  --color-on-secondary: #051f33;
+  --color-secondary-container: #082a45;
+  --color-on-secondary-container: #fdf1c3;
+  --color-tertiary: #14b8a6;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #059eff;
-  --color-on-tertiary-container: #003357;
-  --color-error: #DE3730;
+  --color-tertiary-container: #0f766e;
+  --color-on-tertiary-container: #ccfbf1;
+  --color-error: #ef4444;
   --color-on-error: #ffffff;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
-  --color-primary-fixed: #ffdbcc;
-  --color-primary-fixed-dim: #ffb693;
-  --color-on-primary-fixed: #351000;
-  --color-on-primary-fixed-variant: #7a3000;
-  --color-secondary-fixed: #e2e2e2;
-  --color-secondary-fixed-dim: #c6c6c6;
-  --color-on-secondary-fixed: #1b1b1b;
-  --color-on-secondary-fixed-variant: #474747;
-  --color-tertiary-fixed: #d0e4ff;
-  --color-tertiary-fixed-dim: #9ccaff;
-  --color-on-tertiary-fixed: #001d35;
-  --color-on-tertiary-fixed-variant: #00497b;
-  --color-background: #141414;
-  --color-on-background: #ffffff;
-  --color-surface-variant: #e2e2e2;
+  --color-error-container: #991b1b;
+  --color-on-error-container: #fecaca;
+  --color-primary-fixed: #e0f2fe;
+  --color-primary-fixed-dim: #bae6fd;
+  --color-on-primary-fixed: #082f49;
+  --color-on-primary-fixed-variant: #075985;
+  --color-secondary-fixed: #fdf1c3;
+  --color-secondary-fixed-dim: #f9ebc7;
+  --color-on-secondary-fixed: #051f33;
+  --color-on-secondary-fixed-variant: #082a45;
+  --color-tertiary-fixed: #ccfbf1;
+  --color-tertiary-fixed-dim: #99f6e4;
+  --color-on-tertiary-fixed: #042f2e;
+  --color-on-tertiary-fixed-variant: #115e59;
+  --color-background: #031726;
+  --color-on-background: #f8fafc;
+  --color-surface-variant: #082a45;
 
-  /* Brand Colors Override - Neon Violet Palette */
-  --color-primary-300: #a78bfa;
-  --color-primary-400: #8b5cf6;
-  --color-primary-500: #7c3aed;
-  --color-primary-600: #6d28d9;
-  
-  --color-secondary-400: #f472b6;
-  --color-secondary-500: #ec4899;
-  --color-secondary-600: #db2777;
+  /* Brand Colors Override - Midnight Neon Blue Palette */
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
 
-  --color-accent-400: #38bdf8;
-  --color-accent-500: #0ea5e9;
-  --color-accent-600: #0284c7;
+  --color-secondary-400: #818cf8;
+  --color-secondary-500: #6366f1;
+  --color-secondary-600: #4f46e5;
+
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
 
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
@@ -132,28 +132,33 @@
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .text-glow {
-    text-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
   }
+
   .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
   }
 
   .btn-primary-voltra {
-    background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
     color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.04em;
-    border-radius: var(--radius-xl); /* Softer, consistent rounded buttons */
-    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+    border-radius: var(--radius-xl);
+    /* Softer, consistent rounded buttons */
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation: buttonPulseScale 2s infinite ease-in-out;
   }
+
   .btn-primary-voltra:hover {
-    box-shadow: 0 6px 30px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 6px 30px rgba(14, 165, 233, 0.6);
     transform: translateY(-2px);
     animation-play-state: paused;
   }
+
   .btn-primary-voltra:active {
     transform: translateY(0);
   }
@@ -162,12 +167,13 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(124, 58, 237, 0.2);
-    color: #7c3aed;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    color: #0ea5e9;
     font-weight: 600;
     border-radius: var(--radius-xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   .btn-secondary-voltra:hover {
     border-color: rgba(255, 255, 255, 0.35);
     color: #ffffff;
@@ -177,28 +183,34 @@
   /* -------------------------------------------------------------
      Page-Type Specific Typography & Text Formatting System
      ------------------------------------------------------------- */
-  
+
   /* 1. MARKETING / SALES PAGES (Home, Pricing, Reseller, Channels) */
   .text-format-marketing h1 {
     @apply font-black uppercase tracking-tight text-white leading-tight text-3xl sm:text-5xl lg:text-6xl;
   }
+
   .text-format-marketing h2 {
     @apply font-black uppercase tracking-tight text-white text-2xl sm:text-4xl;
   }
+
   .text-format-marketing h3 {
     @apply font-extrabold uppercase tracking-wide text-white text-lg sm:text-xl;
   }
+
   .text-format-marketing p {
     @apply text-gray-400 leading-relaxed text-sm sm:text-base font-normal;
   }
-  .text-format-marketing strong, 
+
+  .text-format-marketing strong,
   .text-format-marketing b {
     @apply font-bold text-white;
   }
+
   .text-format-marketing mark,
   .text-format-marketing .text-highlight {
     @apply bg-transparent text-primary-500 font-extrabold;
   }
+
   .text-format-marketing .badge-text {
     @apply inline-flex items-center gap-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-primary-600;
   }
@@ -207,23 +219,29 @@
   .text-format-blog h1 {
     @apply font-bold tracking-tight text-white leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
   }
+
   .text-format-blog h2 {
     @apply font-bold text-white tracking-normal mt-10 mb-4 text-xl sm:text-2xl border-b border-white/10 pb-2.5;
   }
+
   .text-format-blog h3 {
     @apply font-semibold text-white tracking-normal mt-7 mb-3 text-lg sm:text-xl;
   }
+
   .text-format-blog p {
     @apply text-gray-300 leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
   }
-  .text-format-blog strong, 
+
+  .text-format-blog strong,
   .text-format-blog b {
     @apply font-bold text-white bg-black/[0.04] px-1 py-0.5 rounded;
   }
+
   .text-format-blog em,
   .text-format-blog i {
     @apply italic text-gray-400;
   }
+
   .text-format-blog a {
     @apply text-primary-500 font-medium underline underline-offset-4 decoration-primary-500/40 hover:text-primary-600 hover:decoration-primary-500 transition-colors;
   }
@@ -232,19 +250,24 @@
   .text-format-technical h1 {
     @apply font-black uppercase tracking-tight text-white text-3xl sm:text-5xl;
   }
+
   .text-format-technical h2 {
     @apply font-extrabold tracking-tight text-white text-xl sm:text-3xl mt-8 mb-4 flex items-center gap-3;
   }
+
   .text-format-technical h3 {
     @apply font-bold text-white text-lg sm:text-xl mt-6 mb-2;
   }
+
   .text-format-technical p {
     @apply text-gray-400 leading-7 text-sm sm:text-base mb-4 font-normal;
   }
+
   .text-format-technical code,
   .text-format-technical pre {
     @apply font-mono text-primary-600 bg-[#1a1a1a] px-2.5 py-1 rounded-md border border-white/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
   }
+
   .text-format-technical strong,
   .text-format-technical b {
     @apply font-bold text-white underline decoration-secondary-500/50 decoration-2 underline-offset-2;
@@ -254,29 +277,43 @@
   .text-format-legal h1 {
     @apply font-black uppercase tracking-tight text-white text-3xl sm:text-4xl lg:text-5xl;
   }
+
   .text-format-legal h2 {
     @apply font-bold text-white text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-primary-500 pl-3;
   }
+
   .text-format-legal p {
     @apply text-gray-400 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
   }
+
   .text-format-legal strong,
   .text-format-legal b {
     @apply font-semibold text-white;
   }
+
   .text-format-legal a {
     @apply font-semibold text-primary-500 hover:text-primary-600 transition-colors underline underline-offset-2;
   }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .animate-marquee {
@@ -296,6 +333,7 @@
     opacity: 0;
     transform: translateY(28px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -307,9 +345,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-16px);
   }
@@ -320,9 +361,17 @@
 }
 
 @keyframes buttonPulseScale {
-  0% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+  }
 }
 
 .animate-button-pulse {
@@ -330,16 +379,24 @@
 }
 
 @keyframes buttonPulseWhite {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 
 .animate-button-pulse-white {
   animation: buttonPulseWhite 2s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
-.animate-button-pulse:hover, .animate-button-pulse-white:hover {
+.animate-button-pulse:hover,
+.animate-button-pulse-white:hover {
   animation-play-state: paused;
 }
-
