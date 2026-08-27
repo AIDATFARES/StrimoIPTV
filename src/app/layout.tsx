@@ -22,23 +22,23 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-  metadataBase: new URL("https://www.orexetv.vip"),
+  title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+  description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+  metadataBase: new URL("https://www.zyminexiptv.vip"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-    url: "https://www.orexetv.vip",
-    siteName: "Orexetv",
+    title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+    url: "https://www.zyminexiptv.vip",
+    siteName: "Zyminex IPTV",
     images: [
       {
-        url: "/og-image-orexetv-v2.webp",
+        url: "/og-image-zyminexiptv-v2.webp",
         width: 1200,
         height: 630,
-        alt: "Orexetv Premium IPTV Service",
+        alt: "Zyminex IPTV Premium IPTV Service",
       },
     ],
     locale: "en_US",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
-    images: ["/og-image-orexetv-v2.webp"],
+    title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Experience the ultimate 4K IPTV service with Zyminex IPTV. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+    images: ["/og-image-zyminexiptv-v2.webp"],
   },
 };
 
@@ -73,7 +73,7 @@ export default function RootLayout({
             <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
               <Link href="/"><BrandLogo /></Link>
               <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-gray-300">
-                © 2024 orexetv. Premium 4K IPTV Streaming Services. All rights reserved.
+                © 2024 zyminexiptv. Premium 4K IPTV Streaming Services. All rights reserved.
               </p>
               <a href="https://wa.me/213552069874" target="_blank" rel="noreferrer" className="flex max-w-[270px] items-center gap-3 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/[0.08] p-3.5 transition-colors hover:bg-[#25D366]/[0.15] group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20 transition-transform group-hover:scale-105">

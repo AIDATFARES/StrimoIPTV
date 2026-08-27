@@ -29,9 +29,9 @@ export default function Contact() {
             <p className="text-sm text-gray-400 mb-6 font-medium">For general inquiries and support.</p>
             <a
               className="text-[#E50914] font-bold hover:text-[#B3000B] transition-colors"
-              href="mailto:support@orexetv.vip"
+              href="mailto:support@zyminexiptv.vip"
             >
-              support@orexetv.vip
+              support@zyminexiptv.vip
             </a>
           </div>
 
@@ -45,7 +45,7 @@ export default function Contact() {
             </p>
             <a
               className="text-[#25D366] font-bold hover:text-[#20bd5a] transition-colors flex items-center gap-2"
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20Orexetv."
+              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20Zyminex IPTV."
               target="_blank"
               rel="noreferrer"
             >

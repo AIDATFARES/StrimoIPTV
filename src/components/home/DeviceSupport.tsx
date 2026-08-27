@@ -51,7 +51,7 @@ export default function DeviceSupport() {
                 </span>
               </h2>
               <p className="text-gray-400 text-lg md:text-xl leading-relaxed w-full">
-                Orexetv is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">premium viewing experience</Link> anywhere.
+                Zyminex IPTV is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">premium viewing experience</Link> anywhere.
               </p>
             </div>
 

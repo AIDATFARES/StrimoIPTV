@@ -43,7 +43,7 @@ export default function Home() {
       {/* Channel & Installation Quick Links */}
       <div className="w-full bg-[#141414] py-6 px-4 text-center border-t border-white/5 relative z-20">
         <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/channels">Orexetv Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/installation">Orexetv Installation Guide</Link> for a quick start.
+          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/channels">Zyminex IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/installation">Zyminex IPTV Installation Guide</Link> for a quick start.
         </p>
       </div>
 

@@ -80,14 +80,14 @@ const includedFeatures = [
   { icon: Tv, title: "+50,000 Channels", text: "Explore live channels from around the world, including sports, news and entertainment." },
   { icon: MonitorSmartphone, title: "200,000+ VODs", text: "Enjoy +120,000 Films & Series and a massive, regularly refreshed video-on-demand library." },
   { icon: Zap, title: "Anti-freeze Technology", text: "Optimized streaming technology helps deliver a smoother experience at busy times." },
-  { icon: Headphones, title: "24/7 Support", text: "The Orexetv support team is here to help with setup and streaming questions." },
-  { icon: Sparkles, title: "Fast Setup", text: "Your Orexetv details are sent after payment so you can start setting up quickly." },
+  { icon: Headphones, title: "24/7 Support", text: "The Zyminex IPTV support team is here to help with setup and streaming questions." },
+  { icon: Sparkles, title: "Fast Setup", text: "Your Zyminex IPTV details are sent after payment so you can start setting up quickly." },
   { icon: CreditCard, title: "TV Guide (EPG)", text: "Browse your channel schedule more easily with an electronic programme guide." },
 ];
 
 const billingQuestions = [
-  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">Contact Orexetv support</Link> if you need help before purchasing.</> },
-  { question: "2. Is my payment protected?", answer: "Please use the official Orexetv payment process and never share payment details through an unverified link or message." },
+  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">Contact Zyminex IPTV support</Link> if you need help before purchasing.</> },
+  { question: "2. Is my payment protected?", answer: "Please use the official Zyminex IPTV payment process and never share payment details through an unverified link or message." },
   { question: "3. Will my subscription renew automatically?", answer: <>Renewal details are provided when you order. If you have any questions about your subscription period or renewal, <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">contact support</Link> before your plan expires.</> },
   { question: "4. Can I change my plan or number of connections?", answer: <>Yes. <Link className="font-semibold text-primary-500 hover:text-primary-600 transition-colors" href="/contact">Contact the support team</Link> with your order email and the plan or connection change you need, and they will advise on the available options.</> },
 ];
@@ -107,12 +107,12 @@ export default function PricingPageContent() {
     <section className="relative overflow-hidden bg-[#141414] py-16 sm:py-20 lg:py-24">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <header className="mx-auto max-w-3xl text-center mb-16">
-          <span className="inline-flex rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-600">Orexetv</span>
+          <span className="inline-flex rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-600">Zyminex IPTV</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
             <span className="block text-white uppercase">Choose Your Exclusive</span>
             <span className="mt-1 block text-primary-500 uppercase">Subscription Plans.</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400 sm:text-base">Choose the Orexetv plan that fits you, with secure checkout and helpful 24/7 support.</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400 sm:text-base">Choose the Zyminex IPTV plan that fits you, with secure checkout and helpful 24/7 support.</p>
           <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-gray-400">Need help getting started? Visit our <Link className="font-semibold text-primary-500 hover:text-primary-600" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-primary-500 hover:text-primary-600" href="/channels">channel list</Link> before you order.</p>
         </header>
 
@@ -255,7 +255,7 @@ export default function PricingPageContent() {
 
         <div className="mt-16 flex items-center justify-center gap-2 text-sm text-gray-400">
           <ShieldCheck className="h-5 w-5 text-primary-500" />
-          <span className="font-semibold text-white">Secure ordering</span> and friendly Orexetv support.
+          <span className="font-semibold text-white">Secure ordering</span> and friendly Zyminex IPTV support.
         </div>
       </div>
     </section>

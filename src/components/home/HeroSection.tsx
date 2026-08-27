@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-custom-astronaut.webp"
-          alt="Orexetv Cinematic Space Background"
+          alt="Zyminex IPTV Cinematic Space Background"
           priority
           fill
           quality={85}
@@ -33,7 +33,7 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl md:text-[72px] lg:text-[84px] font-black tracking-tight leading-[1.05] text-white drop-shadow-2xl max-w-5xl">
-          <span className="text-[#E50914]">Orexetv</span> The Best IPTV<br />
+          <span className="text-[#E50914]">Zyminex IPTV</span> The Best IPTV<br />
           Service Provider for<br />
           2026
         </h1>
@@ -53,7 +53,7 @@ export default function HeroSection() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-5 mt-10 w-full sm:w-auto">
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
             target="_blank"
             rel="noreferrer"
             className="group bg-[#E50914] text-white py-4 px-8 text-sm sm:text-base font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-[#B3000B] hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E50914]/50 active:scale-95 animate-button-pulse rounded-xl"

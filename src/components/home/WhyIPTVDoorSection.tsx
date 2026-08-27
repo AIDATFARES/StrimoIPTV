@@ -12,7 +12,7 @@ const primaryFeatures = [
 const benefits = [
   { icon: Bolt, title: "Instant Activation", text: "Your subscription is activated within minutes.", color: "text-primary-400" },
   { icon: Smartphone, title: "All Devices Supported", text: "Smart TV, Android, iOS, Mac, Fire Stick, PC, and more.", color: "text-sky-400" },
-  { icon: Globe2, title: "Works Worldwide", text: "Enjoy Orexetv wherever you are, on any connection.", color: "text-primary-400" },
+  { icon: Globe2, title: "Works Worldwide", text: "Enjoy Zyminex IPTV wherever you are, on any connection.", color: "text-primary-400" },
   { icon: ShieldCheck, title: "99.9% Uptime", text: "Reliable servers with stable, buffer-free streaming.", color: "text-primary-300" },
 ];
 
@@ -21,8 +21,8 @@ export default function WhyIPTVFiestaSection() {
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,rgba(74,53,155,0.13),transparent_42%)] pointer-events-none" />
     <div className="relative mx-auto max-w-[1120px] px-5 sm:px-8">
       <div className="mx-auto mb-14 max-w-3xl text-center">
-        <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Why choose Orexetv?</span>
-        <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl"><span className="block">The Ultimate</span><span className="mt-1 block bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">Orexetv Experience</span></h2>
+        <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Why choose Zyminex IPTV?</span>
+        <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl"><span className="block">The Ultimate</span><span className="mt-1 block bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">Zyminex IPTV Experience</span></h2>
         <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Everything you need for premium live television and on-demand entertainment—on any device, anywhere in the world.</p>
       </div>
 

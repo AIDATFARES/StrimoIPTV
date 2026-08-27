@@ -35,7 +35,7 @@ export default function MovieStrips() {
           href="/channels"
           className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-[#E50914] text-white text-sm md:text-base font-medium bg-black/20 hover:bg-[#E50914]/10 transition-colors duration-300 gap-2"
         >
-          View Orexetv Channel List <span aria-hidden="true">&rarr;</span>
+          View Zyminex IPTV Channel List <span aria-hidden="true">&rarr;</span>
         </Link>
       </div>
 

@@ -15,10 +15,10 @@ const faqs: FAQ[] = [
   {
     id: 1,
     category: "General",
-    question: "What is Orexetv?",
+    question: "What is Zyminex IPTV?",
     answer: (
       <>
-        Orexetv is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        Zyminex IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link
           href="/channels-list"
           className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
@@ -39,12 +39,12 @@ const faqs: FAQ[] = [
   {
     id: 2,
     category: "General",
-    question: "Do I need a subscription to use Orexetv?",
+    question: "Do I need a subscription to use Zyminex IPTV?",
     answer: (
       <>
         Yes, a subscription is required. However, we offer a{" "}
         <a
-          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
+          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
           target="_blank"
           rel="noreferrer"
           className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
@@ -65,10 +65,10 @@ const faqs: FAQ[] = [
   {
     id: 3,
     category: "Technical",
-    question: "What devices are compatible with Orexetv?",
+    question: "What devices are compatible with Zyminex IPTV?",
     answer: (
       <>
-        Orexetv works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
+        Zyminex IPTV works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
         <Link
           href="/installation"
           className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
@@ -99,7 +99,7 @@ const faqs: FAQ[] = [
   {
     id: 5,
     category: "General",
-    question: "Can I watch sports on Orexetv?",
+    question: "Can I watch sports on Zyminex IPTV?",
     answer: (
       <>
         Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}

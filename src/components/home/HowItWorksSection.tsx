@@ -7,7 +7,7 @@ export default function HowItWorksSection() {
       <div className="max-w-[1240px] mx-auto px-6">
 
         {/* ========================================================================= */}
-        {/* PART 1: How does it work? Orexetv Timeline */}
+        {/* PART 1: How does it work? Zyminex IPTV Timeline */}
         {/* ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
@@ -20,7 +20,7 @@ export default function HowItWorksSection() {
             </span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-            Setting up your Orexetv account is quick and simple. Follow our 3-step process to get instant access to <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] transition-colors">live TV, movies, and series</Link>.
+            Setting up your Zyminex IPTV account is quick and simple. Follow our 3-step process to get instant access to <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] transition-colors">live TV, movies, and series</Link>.
           </p>
         </div>
 

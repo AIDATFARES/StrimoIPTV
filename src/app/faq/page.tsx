@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, CircleHelp, Clock3, CreditCard, HelpCircle, Mail, MessageCircle, MonitorPlay, Send, Settings2, UserRound } from "lucide-react";
 
-type Category = "About orexetv" | "Setup & streaming" | "Plans & access" | "Payments & support";
+type Category = "About zyminexiptv" | "Setup & streaming" | "Plans & access" | "Payments & support";
 
 type FAQItem = {
   category: Category;
@@ -13,7 +13,7 @@ type FAQItem = {
 };
 
 const categories: { label: Category; icon: typeof CircleHelp }[] = [
-  { label: "About orexetv", icon: CircleHelp },
+  { label: "About zyminexiptv", icon: CircleHelp },
   { label: "Setup & streaming", icon: Settings2 },
   { label: "Plans & access", icon: UserRound },
   { label: "Payments & support", icon: CreditCard },
@@ -21,73 +21,73 @@ const categories: { label: Category; icon: typeof CircleHelp }[] = [
 
 const faqs: FAQItem[] = [
   {
-    category: "About orexetv",
-    question: "1. What is Orexetv?",
+    category: "About zyminexiptv",
+    question: "1. What is Zyminex IPTV?",
     answer: (
       <>
-        Orexetv is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        Zyminex IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">live TV channels</Link> and{" "}
         <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">IPTV subscription plans</Link>.
       </>
     ),
   },
   {
-    category: "About orexetv",
-    question: "2. Is Orexetv authorized?",
+    category: "About zyminexiptv",
+    question: "2. Is Zyminex IPTV authorized?",
     answer: (
       <>
-        Orexetv is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
+        Zyminex IPTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
       </>
     ),
   },
   {
-    category: "About orexetv",
-    question: "3. What channels and content are included with Orexetv?",
+    category: "About zyminexiptv",
+    question: "3. What channels and content are included with Zyminex IPTV?",
     answer: (
       <>
-        Orexetv includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">full channels catalog</Link>.
+        Zyminex IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">full channels catalog</Link>.
       </>
     ),
   },
   {
-    category: "About orexetv",
-    question: "4. Can I watch live sports and PPV events on Orexetv?",
+    category: "About zyminexiptv",
+    question: "4. Can I watch live sports and PPV events on Zyminex IPTV?",
     answer: (
       <>
-        Orexetv includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">live sports section</Link>.
+        Zyminex IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">live sports section</Link>.
       </>
     ),
   },
   {
-    category: "About orexetv",
+    category: "About zyminexiptv",
     question: "5. Which devices can I use?",
     answer: (
       <>
-        Orexetv works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> to get started.
+        Zyminex IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> to get started.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "1. How do I install Orexetv on my device?",
+    question: "1. How do I install Zyminex IPTV on my device?",
     answer: (
       <>
-        Start by installing a compatible IPTV player on your device. Enter the Orexetv credentials from your email. View our step-by-step <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> for detailed instructions.
+        Start by installing a compatible IPTV player on your device. Enter the Zyminex IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> for detailed instructions.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "2. Can I use Orexetv on a Smart TV?",
+    question: "2. Can I use Zyminex IPTV on a Smart TV?",
     answer: (
       <>
-        Yes, Orexetv can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
+        Yes, Zyminex IPTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "3. What internet speed do I need for smooth Orexetv streaming?",
+    question: "3. What internet speed do I need for smooth Zyminex IPTV streaming?",
     answer: (
       <>
         For reliable playback, allow at least 10 Mbps per stream for HD and 25 Mbps per stream for 4K. Ethernet or 5 GHz Wi-Fi is recommended.
@@ -96,7 +96,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Setup & streaming",
-    question: "4. Why is Orexetv buffering or freezing?",
+    question: "4. Why is Zyminex IPTV buffering or freezing?",
     answer: (
       <>
         Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">contact support</Link> for quick assistance.
@@ -105,7 +105,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Setup & streaming",
-    question: "5. Do I need a VPN to use Orexetv?",
+    question: "5. Do I need a VPN to use Zyminex IPTV?",
     answer: (
       <>
         A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">support team</Link> for VPN setup recommendations.
@@ -114,7 +114,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "1. Are there any hidden fees or contracts with Orexetv?",
+    question: "1. Are there any hidden fees or contracts with Zyminex IPTV?",
     answer: (
       <>
         No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
@@ -123,7 +123,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "2. Can I use Orexetv on multiple devices?",
+    question: "2. Can I use Zyminex IPTV on multiple devices?",
     answer: (
       <>
         Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">pricing page</Link>.
@@ -132,7 +132,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "3. What are Orexetv M3U and Xtream Codes details?",
+    question: "3. What are Zyminex IPTV M3U and Xtream Codes details?",
     answer: (
       <>
         Your welcome email includes both M3U playlist URLs and Xtream Codes credentials for fast setup in any IPTV app.
@@ -141,16 +141,16 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Payments & support",
-    question: "1. Does Orexetv offer a free trial?",
+    question: "1. Does Zyminex IPTV offer a free trial?",
     answer: (
       <>
-        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV." target="_blank" rel="noreferrer" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">free trial</a> so you can test our service before subscribing.
+        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV." target="_blank" rel="noreferrer" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">free trial</a> so you can test our service before subscribing.
       </>
     ),
   },
   {
     category: "Payments & support",
-    question: "2. Which payment methods does Orexetv accept?",
+    question: "2. Which payment methods does Zyminex IPTV accept?",
     answer: (
       <>
         We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">support team</Link>.
@@ -169,7 +169,7 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState<Category>("About orexetv");
+  const [activeCategory, setActiveCategory] = useState<Category>("About zyminexiptv");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const visibleFaqs = faqs.filter((faq) => faq.category === activeCategory);
 
@@ -183,7 +183,7 @@ export default function FAQ() {
     const email = String(formData.get("email") || "").trim();
     const subject = String(formData.get("subject") || "General support").trim();
     const message = String(formData.get("message") || "").trim();
-    const text = encodeURIComponent(`Hello Orexetv support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
+    const text = encodeURIComponent(`Hello Zyminex IPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
@@ -279,13 +279,13 @@ export default function FAQ() {
           </header>
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="mailto:support@orexetv.vip">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="mailto:support@zyminexiptv.vip">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-500/20 text-primary-400"><Mail className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-white">Email Us</span>
                 <span className="mt-2 block text-xs leading-5 text-gray-400">For general inquiries and support.</span>
-                <span className="mt-3 block text-xs font-semibold text-primary-400">support@orexetv.vip</span>
+                <span className="mt-3 block text-xs font-semibold text-primary-400">support@zyminexiptv.vip</span>
               </a>
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="https://wa.me/213552069874?text=Hello%20orexetv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="https://wa.me/213552069874?text=Hello%20zyminexiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/20 text-[#25D366]"><MessageCircle className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-white">WhatsApp Support</span>
                 <span className="mt-2 block text-xs leading-5 text-gray-400">Fastest way to reach us for technical issues.</span>

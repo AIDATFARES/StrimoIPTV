@@ -56,7 +56,7 @@ export default function Navbar() {
             <span key={i} className="flex items-center gap-2 px-8 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
               🎁 Special Offer: We offer a <span className="font-extrabold underline uppercase tracking-widest">Free Trial</span> to test our service! 
               <a 
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV." 
+                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV." 
                 target="_blank" 
                 rel="noreferrer"
                 className="inline-block ml-2 bg-black text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold hover:bg-[#141414] hover:text-white transition-colors shadow-sm animate-button-pulse-white"
@@ -99,7 +99,7 @@ export default function Navbar() {
         {/* RIGHT ACTIONS */}
         <div className="hidden lg:flex items-center gap-4 shrink-0 z-20">
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
             target="_blank"
             rel="noreferrer"
             className="btn-primary-voltra px-6 py-2.5 text-sm"
@@ -131,7 +131,7 @@ export default function Navbar() {
           </nav>
           <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
+              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
               target="_blank"
               rel="noreferrer"
               className="w-full text-center py-3 btn-primary-voltra text-sm"
