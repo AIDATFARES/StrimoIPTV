@@ -92,7 +92,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 mb-6 space-y-2" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    a: ({ node, ...props }: any) => <a className="text-blue-600 hover:text-blue-500 no-underline font-semibold transition-colors" {...props} />,
+    a: ({ node, ...props }: any) => <a className="text-blue-500 hover:text-blue-400 underline underline-offset-2 font-semibold transition-colors" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     blockquote: ({ node, ...props }: any) => <blockquote className="border-l-4 border-primary pl-4 py-1 mb-6 italic bg-surface-container/30 rounded-r" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -153,7 +153,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
         <div className="prose prose-lg max-w-none text-on-surface-variant 
           prose-headings:text-on-surface prose-headings:font-headline-md 
-          prose-a:text-primary hover:prose-a:text-primary-container
+          prose-a:text-blue-500 hover:prose-a:text-blue-400 prose-a:underline prose-a:font-semibold
           prose-strong:text-on-surface prose-strong:font-bold
           prose-code:text-secondary prose-code:bg-surface-container/50 prose-code:px-1 prose-code:rounded
           prose-pre:bg-surface-container prose-pre:border prose-pre:border-outline-variant
