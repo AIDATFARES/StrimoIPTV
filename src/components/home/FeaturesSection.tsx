@@ -8,7 +8,7 @@ export default function FeaturesSection() {
     {
       icon: Cpu,
       title: "Anti-Freeze 10.0 Tech",
-      desc: "Our Zyminex IPTV servers utilize custom encoding to guarantee zero buffering, even during high-demand live sports.",
+      desc: "Our Realm IPTV servers utilize custom encoding to guarantee zero buffering, even during high-demand live sports.",
       color: "text-primary",
     },
     {
@@ -61,7 +61,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-background mb-sm"
           >
-            Zyminex IPTV for Flawless Streaming
+            Realm IPTV for Flawless Streaming
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}

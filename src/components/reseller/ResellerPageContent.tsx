@@ -185,7 +185,7 @@ export default function ResellerPageContent() {
           </span>
 
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
-            ZYMINEX IPTV <br />
+            REALM IPTV <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">
               RESELLER PROGRAM
             </span>

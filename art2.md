@@ -1,6 +1,6 @@
 When your stream goes down, it is frustrating. However, the vast majority of streaming issues can be resolved at home without needing technical support. Before you assume the provider is offline, you should systematically eliminate local network and device issues.
 
-Here are 20 things to check when your [**ZYMINEX IPTV service**](/) is not working as expected.
+Here are 20 things to check when your [**REALM IPTV service**](/) is not working as expected.
 
 <cta></cta>
 
@@ -14,7 +14,7 @@ Your router handles all network traffic. Over time, its memory fills up, leading
 
 ## 3. Restart the Streaming Device
 
-Whether you are using a Smart TV, a Firestick via our [**ZYMINEX installation guide**](/installation), or an Android TV Box, restarting the device clears its temporary memory and resolves underlying network-state problems. Turn the device completely off and back on.
+Whether you are using a Smart TV, a Firestick via our [**REALM installation guide**](/installation), or an Android TV Box, restarting the device clears its temporary memory and resolves underlying network-state problems. Turn the device completely off and back on.
 
 ![IPTV Not Working Troubleshooting](/iptv-not-working-troubleshooting-guide.png)
 
@@ -50,7 +50,7 @@ Typos happen. Verify your username, password, and portal URL. Ensure there are n
 
 ## 11. Verify Your Account Status
 
-Has your subscription expired? Did your payment fail to process? Log into your provider's dashboard or check your emails to ensure your account is active and in good standing. You can manage your subscription easily on the [**ZYMINEX pricing**](/pricing) page.
+Has your subscription expired? Did your payment fail to process? Log into your provider's dashboard or check your emails to ensure your account is active and in good standing. You can manage your subscription easily on the [**REALM pricing**](/pricing) page.
 
 ## 12. Check for Simultaneous Connections
 
@@ -94,4 +94,4 @@ If you have systematically completed all 19 steps above and the problem persists
 
 When reaching out, provide the details of your diagnostic process. Tell them what device you are using, what app you are using, and what specific steps you have already taken. 
 
-At **ZYMINEX IPTV**, we are dedicated to providing a highly stable streaming experience. If you are experiencing issues with the ZYMINEX service, our [**contact ZYMINEX support**](/contact) team is ready to help 24/7. Before reaching out, check our [**ZYMINEX FAQ**](/faq) and make sure your [**ZYMINEX supported devices**](/installation) are configured correctly. We provide reliable streams and massive libraries of content, and we want to ensure you get the absolute best out of your [**choose the best IPTV service**](/blog/how-to-choose-best-iptv-service-2026) plan.`
+At **REALM IPTV**, we are dedicated to providing a highly stable streaming experience. If you are experiencing issues with the REALM service, our [**contact REALM support**](/contact) team is ready to help 24/7. Before reaching out, check our [**REALM FAQ**](/faq) and make sure your [**REALM supported devices**](/installation) are configured correctly. We provide reliable streams and massive libraries of content, and we want to ensure you get the absolute best out of your [**choose the best IPTV service**](/blog/how-to-choose-best-iptv-service-2026) plan.`

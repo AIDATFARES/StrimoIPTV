@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Zyminex IPTV",
-  description: "Learn how Zyminex IPTV collects, uses, and protects personal information.",
+  title: "Privacy Policy | Realm IPTV",
+  description: "Learn how Realm IPTV collects, uses, and protects personal information.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
         </header>
 
         <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
-          <p>Welcome to Zyminex IPTV. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</p>
+          <p>Welcome to Realm IPTV. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</p>
           {sections.map((section) => (
             <section key={section.title}>
               <h2 className="text-2xl font-bold text-white">{section.title}</h2>

@@ -17,10 +17,10 @@ export default function Installation() {
       <header className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
         <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Installation Guide</span>
         <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white uppercase drop-shadow-md">
-          ZYMINEX IPTV INSTALLATION GUIDE
+          REALM IPTV INSTALLATION GUIDE
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-6 text-gray-400">Comprehensive step-by-step instructions to configure Zyminex IPTV on all your devices.</p>
-        <p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-gray-400">Zyminex IPTV works on Smart TVs, Firestick, Android, iOS, MAG, and more. New to Zyminex IPTV? Check <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/pricing">Zyminex IPTV Pricing</Link>, or browse the <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/channels">Zyminex IPTV Channel List</Link> before you start.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-6 text-gray-400">Comprehensive step-by-step instructions to configure Realm IPTV on all your devices.</p>
+        <p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-gray-400">Realm IPTV works on Smart TVs, Firestick, Android, iOS, MAG, and more. New to Realm IPTV? Check <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/pricing">Realm IPTV Pricing</Link>, or browse the <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/channels">Realm IPTV Channel List</Link> before you start.</p>
         <div className="mt-10 flex flex-wrap justify-center gap-x-9 gap-y-4 text-sm font-semibold text-gray-300">
           <span className="inline-flex items-center gap-2"><Monitor className="h-4 w-4 text-primary-400" />15+ Devices Supported</span>
           <span className="inline-flex items-center gap-2"><Clock3 className="h-4 w-4 text-primary-300" />5–15 Minutes Setup</span>
@@ -32,11 +32,11 @@ export default function Installation() {
         <div className="mx-auto max-w-[1000px] px-5">
           <header className="mx-auto mb-10 max-w-[560px] text-center">
             <h2 className="text-3xl font-extrabold tracking-tight text-white">Quick Start Guide</h2>
-            <p className="mt-3 text-gray-400">Get started with Zyminex IPTV quickly and easily in three straightforward steps.</p>
+            <p className="mt-3 text-gray-400">Get started with Realm IPTV quickly and easily in three straightforward steps.</p>
           </header>
           <div className="grid gap-8 md:grid-cols-3">
             <QuickStartCard icon={Download} step="1" title="Download App">Download and install a suitable IPTV player app on your device from the app store or the official site.</QuickStartCard>
-            <QuickStartCard icon={Link2} step="2" title="Add M3U URL">Input your Zyminex IPTV M3U playlist URL and EPG URL, which are included in your welcome email.</QuickStartCard>
+            <QuickStartCard icon={Link2} step="2" title="Add M3U URL">Input your Realm IPTV M3U playlist URL and EPG URL, which are included in your welcome email.</QuickStartCard>
             <QuickStartCard icon={PlayCircle} step="3" title="Start Streaming">Gain immediate access to live channels, movies and TV shows in stunning 4K quality.</QuickStartCard>
           </div>
 

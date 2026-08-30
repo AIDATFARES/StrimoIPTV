@@ -36,7 +36,7 @@ export default function ChannelCategories() {
     {
       icon: Globe2,
       title: "Works Worldwide",
-      desc: "Enjoy Zyminex IPTV wherever you are, on any connection.",
+      desc: "Enjoy Realm IPTV wherever you are, on any connection.",
     },
     {
       icon: ShieldCheck,

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Zyminex IPTV",
-  description: "Learn about the refund policy, eligibility, and process for Zyminex IPTV.",
+  title: "Refund Policy | Realm IPTV",
+  description: "Learn about the refund policy, eligibility, and process for Realm IPTV.",
   alternates: {
     canonical: "/refund-policy",
   },
@@ -13,7 +13,7 @@ const sections = [
   {
     title: "Our Commitment to You",
     content: [
-      "At Zyminex IPTV, we uphold the standard of our IPTV subscription service. This policy specifies when refunds may be applicable, ensuring that we maintain a transparent and just process for every customer.",
+      "At Realm IPTV, we uphold the standard of our IPTV subscription service. This policy specifies when refunds may be applicable, ensuring that we maintain a transparent and just process for every customer.",
     ],
   },
   {

@@ -41,8 +41,8 @@ export default function Home() {
       <BrandMarquee
         imagesFolder="sports_new"
         images={[
-          "Zyminex-sports-01.webp",
-          "Zyminex-sports-02.webp",
+          "Realm-sports-01.webp",
+          "Realm-sports-02.webp",
           "imggt1 (1).webp",
           "imggt1 (2).webp",
           "imggt1 (3).webp",
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Channel & Installation Quick Links */}
       <div className="w-full bg-transparent py-6 px-4 text-center border-t border-[#36a9ff]/10 relative z-20">
         <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">Zyminex IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">Zyminex IPTV Installation Guide</Link> for a quick start.
+          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">Realm IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">Realm IPTV Installation Guide</Link> for a quick start.
         </p>
       </div>
 

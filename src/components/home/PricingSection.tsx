@@ -20,7 +20,7 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "Zyminex IPTV for {devices} Device{s}", included: true },
+  { text: "Realm IPTV for {devices} Device{s}", included: true },
   { text: "Uncompressed Ultra HD & 4K", included: true },
   { text: "25,000+ Premium Channels", included: true },
   { text: "100,000+ VODs (Daily Update)", included: true },
@@ -89,10 +89,10 @@ export default function PricingSection() {
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
             <span className="text-white">CHOOSE YOUR </span>
-            <span className="text-[#36a9ff]">ZYMINEX IPTV PLAN</span>
+            <span className="text-[#36a9ff]">REALM IPTV PLAN</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-white/90 font-medium leading-relaxed max-w-2xl mx-auto">
-            Select your Zyminex IPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
+            Select your Realm IPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
           </p>
         </header>
 

@@ -45,13 +45,13 @@ export default function DeviceSupport() {
                 Limitless Compatibility
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
-                Stream Zyminex IPTV on <br />
+                Stream Realm IPTV on <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
                   Any Device
                 </span>
               </h2>
               <p className="text-gray-400 text-lg md:text-xl leading-relaxed w-full">
-                Zyminex IPTV is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">premium IPTV viewing experience</Link> anywhere you go.
+                Realm IPTV is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">premium IPTV viewing experience</Link> anywhere you go.
               </p>
             </div>
 

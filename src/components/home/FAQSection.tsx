@@ -15,10 +15,10 @@ const faqs: FAQ[] = [
   {
     id: 1,
     category: "General",
-    question: "What is Zyminex IPTV?",
+    question: "What is Realm IPTV?",
     answer: (
       <>
-        Zyminex IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        Realm IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link
           href="/channels-list"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -39,12 +39,12 @@ const faqs: FAQ[] = [
   {
     id: 2,
     category: "General",
-    question: "Do I need a subscription to use Zyminex IPTV?",
+    question: "Do I need a subscription to use Realm IPTV?",
     answer: (
       <>
         Yes, a subscription is required. However, we offer a{" "}
         <a
-          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV."
+          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV."
           target="_blank"
           rel="noreferrer"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -65,10 +65,10 @@ const faqs: FAQ[] = [
   {
     id: 3,
     category: "Technical",
-    question: "What devices are compatible with Zyminex IPTV?",
+    question: "What devices are compatible with Realm IPTV?",
     answer: (
       <>
-        Zyminex IPTV works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
+        Realm IPTV works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
         <Link
           href="/installation"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -99,7 +99,7 @@ const faqs: FAQ[] = [
   {
     id: 5,
     category: "General",
-    question: "Can I watch sports on Zyminex IPTV?",
+    question: "Can I watch sports on Realm IPTV?",
     answer: (
       <>
         Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}

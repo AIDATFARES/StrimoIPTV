@@ -1,6 +1,6 @@
 If IPTV works normally on one device but not another, this is useful information because it means the service itself may not be the only thing to investigate. In fact, comparing the two devices can help isolate the exact cause of the problem.
 
-This comprehensive guide will help you diagnose exactly why your [**ZYMINEX IPTV service**](/) works on one screen but refuses to load, crashes, or buffers on another.
+This comprehensive guide will help you diagnose exactly why your [**REALM IPTV service**](/) works on one screen but refuses to load, crashes, or buffers on another.
 
 <cta></cta>
 
@@ -39,7 +39,7 @@ Two devices in the exact same room can have drastically different wireless perfo
 
 ## 3. Test the Problem Device With Ethernet if Supported
 
-Ethernet can be highly useful as a diagnostic test. If your IPTV service works perfectly when the device is plugged directly into the router via an Ethernet cable, but fails on Wi-Fi, the wireless connection becomes a strong suspect. Check our [**ZYMINEX installation guide**](/installation) for details on optimizing device connections.
+Ethernet can be highly useful as a diagnostic test. If your IPTV service works perfectly when the device is plugged directly into the router via an Ethernet cable, but fails on Wi-Fi, the wireless connection becomes a strong suspect. Check our [**REALM installation guide**](/installation) for details on optimizing device connections.
 
 ## 4. Compare Internet Speed and Stability
 
@@ -61,7 +61,7 @@ Operating-system differences can heavily affect compatibility. Check for softwar
 
 ## 8. Confirm That the Device Is Supported
 
-Not every IPTV player or service behaves identically across all hardware. Verify your operating system, device model, and application compatibility. You can find a list of optimized hardware on the [**ZYMINEX devices**](/installation) page.
+Not every IPTV player or service behaves identically across all hardware. Verify your operating system, device model, and application compatibility. You can find a list of optimized hardware on the [**REALM devices**](/installation) page.
 
 ## 9. Recheck the Login Information
 
@@ -69,7 +69,7 @@ Check your username, password, playlist details, and portal information. A typo 
 
 ## 10. Check the Playlist or Account Configuration
 
-The working device and the problem device may not have identical settings. Compare the playlist URL, account details, server/portal information, and refresh status. Ensure they perfectly match the details provided when you purchased your [**ZYMINEX pricing**](/pricing) plan.
+The working device and the problem device may not have identical settings. Compare the playlist URL, account details, server/portal information, and refresh status. Ensure they perfectly match the details provided when you purchased your [**REALM pricing**](/pricing) plan.
 
 ![IPTV device network connection comparison](/iptv-device-network-comparison.png)
 
@@ -124,7 +124,7 @@ Differences often reveal the cause. Use this checklist:
 
 ## 20. Contact Support After Isolating the Problem
 
-Support becomes much more useful when you can provide specific information. When you [**contact ZYMINEX support**](/contact), provide your device model, IPTV player, app version, exact problem, whether another device works, and whether all channels or only some fail. 
+Support becomes much more useful when you can provide specific information. When you [**contact REALM support**](/contact), provide your device model, IPTV player, app version, exact problem, whether another device works, and whether all channels or only some fail. 
 
 ![IPTV player and device compatibility troubleshooting](/iptv-player-device-compatibility.png)
 
@@ -171,9 +171,9 @@ Changing one variable at a time makes diagnosis much easier:
 
 If the exact same account works normally on another device, investigate local differences first. A provider-side issue becomes more plausible if multiple devices fail, multiple channels fail, the same problem occurs across different players, internet connectivity is confirmed, and the issue persists across different network conditions.
 
-## Troubleshooting ZYMINEX IPTV Across Different Devices
+## Troubleshooting REALM IPTV Across Different Devices
 
-At **ZYMINEX**, we pride ourselves on delivering a robust and highly compatible service. The **ZYMINEX IPTV service** is designed to work seamlessly across a massive range of hardware. By following this guide, you can ensure you get the absolute most out of your **ZYMINEX features**. If you ever run into a roadblock, explore the [**ZYMINEX FAQ**](/faq) or reach out to our team.
+At **REALM**, we pride ourselves on delivering a robust and highly compatible service. The **REALM IPTV service** is designed to work seamlessly across a massive range of hardware. By following this guide, you can ensure you get the absolute most out of your **REALM features**. If you ever run into a roadblock, explore the [**REALM FAQ**](/faq) or reach out to our team.
 
 ## Frequently Asked Questions
 

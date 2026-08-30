@@ -3,8 +3,8 @@ import Link from "next/link";
 import { PlayCircle, ShieldCheck, Zap, Phone, MonitorSmartphone, Globe2, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "How It Works | Zyminex IPTV",
-  description: "Learn how easy it is to set up and start streaming with Zyminex IPTV. Our 3-step process gets you watching premium live TV and VOD in minutes.",
+  title: "How It Works | Realm IPTV",
+  description: "Learn how easy it is to set up and start streaming with Realm IPTV. Our 3-step process gets you watching premium live TV and VOD in minutes.",
 };
 
 export default function HowItWorksPage() {
@@ -37,11 +37,11 @@ export default function HowItWorksPage() {
         <HowItWorksSection />
       </div>
 
-      {/* Why Choose Zyminex IPTV - Pill Grid */}
+      {/* Why Choose Realm IPTV - Pill Grid */}
       <section className="py-20 bg-[#141414] text-white relative z-10 border-t border-white/10">
         <div className="max-w-[1000px] mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-10 uppercase">
-            Why Choose <span className="text-[#36a9ff]">Zyminex IPTV</span>?
+            Why Choose <span className="text-[#36a9ff]">Realm IPTV</span>?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20zyminexiptv%20IPTV." 
+              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV." 
               target="_blank"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[#36a9ff] bg-[#141414] rounded-xl shadow-xl hover:scale-105 hover:bg-[#141414] transition-all duration-300"
             >

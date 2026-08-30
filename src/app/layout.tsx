@@ -22,24 +22,24 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
-  metadataBase: new URL("https://www.zyminexiptv.shop"),
+  title: "Realm IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+  description: "Unlock premium entertainment with Realm. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+  metadataBase: new URL("https://www.realmiptv.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
-    url: "https://www.zyminexiptv.shop",
-    siteName: "Zyminex IPTV",
+    title: "Realm IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Unlock premium entertainment with Realm. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+    url: "https://www.realmiptv.shop",
+    siteName: "Realm IPTV",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zyminex IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Unlock premium entertainment with Zyminex. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+    title: "Realm IPTV | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Unlock premium entertainment with Realm. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
   },
 };
 
@@ -64,7 +64,7 @@ export default function RootLayout({
             <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
               <Link href="/"><BrandLogo /></Link>
               <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-gray-300">
-                © 2024 zyminexiptv. Premium 4K IPTV Streaming Services. All rights reserved.
+                © 2024 realmiptv. Premium 4K IPTV Streaming Services. All rights reserved.
               </p>
               <a href="https://wa.me/213552069874" target="_blank" rel="noreferrer" className="flex max-w-[270px] items-center gap-3 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/[0.08] p-3.5 transition-colors hover:bg-[#25D366]/[0.15] group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20 transition-transform group-hover:scale-105">

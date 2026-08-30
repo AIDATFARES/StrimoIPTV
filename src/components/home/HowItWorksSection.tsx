@@ -7,7 +7,7 @@ export default function HowItWorksSection() {
       <div className="max-w-[1240px] mx-auto px-6">
 
         {/* ========================================================================= */}
-        {/* PART 1: How does it work? Zyminex IPTV Timeline */}
+        {/* PART 1: How does it work? Realm IPTV Timeline */}
         {/* ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
@@ -16,11 +16,11 @@ export default function HowItWorksSection() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
             How to Start Your <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
-              Zyminex IPTV Subscription
+              Realm IPTV Subscription
             </span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-            Getting started with Zyminex IPTV is quick and simple. Follow this 3-step process to unlock instant access to premium <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors">live TV, movies, and series</Link>.
+            Getting started with Realm IPTV is quick and simple. Follow this 3-step process to unlock instant access to premium <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors">live TV, movies, and series</Link>.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function HowItWorksSection() {
                     href="#pricing"
                     className="hover:text-[#2196f3] transition-colors"
                   >
-                    1. Choose Your Zyminex IPTV Plan
+                    1. Choose Your Realm IPTV Plan
                   </a>
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
@@ -124,7 +124,7 @@ export default function HowItWorksSection() {
                   >
                     IPTV installation guides
                   </Link>{" "}
-                  to easily set up Zyminex on your Smart TV, Firestick, Android Box, or Apple device using top-rated apps like IPTV Smarters or Tivimate.
+                  to easily set up Realm on your Smart TV, Firestick, Android Box, or Apple device using top-rated apps like IPTV Smarters or Tivimate.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function HowItWorksSection() {
                   </Link>
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Start watching instantly! Dive into our massive Zyminex IPTV{" "}
+                  Start watching instantly! Dive into our massive Realm IPTV{" "}
                   <Link
                     href="/channels"
                     className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"

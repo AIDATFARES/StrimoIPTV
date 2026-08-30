@@ -24,7 +24,7 @@ export default function SupportCtaSection() {
         <div className="flex shrink-0 flex-col gap-2.5 sm:w-40">
           <a
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wide text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all hover:bg-[#20bd5a] hover:scale-105"
-            href="https://wa.me/213552069874?text=Hello%2C%20I%20have%20a%20question%20about%20zyminexiptv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello%2C%20I%20have%20a%20question%20about%20realmiptv%20IPTV."
             rel="noreferrer"
             target="_blank"
           >
@@ -33,7 +33,7 @@ export default function SupportCtaSection() {
           </a>
           <a
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wide text-white transition-all hover:border-[#36a9ff]/50 hover:bg-[#36a9ff]/10 hover:scale-105"
-            href="mailto:support@zyminexiptv.shop"
+            href="mailto:support@realmiptv.shop"
           >
             <Mail className="h-3.5 w-3.5" />
             Send email

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Legal Disclaimer & DMCA | Zyminex IPTV",
-  description: "Legal Disclaimer and DMCA policy for Zyminex IPTV.",
+  title: "Legal Disclaimer & DMCA | Realm IPTV",
+  description: "Legal Disclaimer and DMCA policy for Realm IPTV.",
   alternates: {
     canonical: "/dmca",
   },
@@ -19,7 +19,7 @@ const sections = [
   {
     title: "Content Ownership and Hosting",
     content: [
-      "Zyminex IPTV does not possess, manage, upload, store, or distribute copyrighted materials. All streams available via your account are sourced from external parties on the public internet. Mentions of channels, logos, or trademarks are solely for identification purposes and are owned by their respective entities.",
+      "Realm IPTV does not possess, manage, upload, store, or distribute copyrighted materials. All streams available via your account are sourced from external parties on the public internet. Mentions of channels, logos, or trademarks are solely for identification purposes and are owned by their respective entities.",
     ],
   },
   {
@@ -49,13 +49,13 @@ const sections = [
   {
     title: "Limitation of Liability",
     content: [
-      "Zyminex IPTV, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, or goodwill connected to your use of the site or service.",
+      "Realm IPTV, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, or goodwill connected to your use of the site or service.",
     ],
   },
   {
     title: "Indemnification",
     content: [
-      "You agree to defend, indemnify, and shield Zyminex IPTV from any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) related to your use of the service or any infringement of this disclaimer or applicable law.",
+      "You agree to defend, indemnify, and shield Realm IPTV from any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) related to your use of the service or any infringement of this disclaimer or applicable law.",
     ],
   },
   {
@@ -100,7 +100,7 @@ export default function DmcaPage() {
           <div className="space-y-4">
             <p>Content featured on this website is meant for general informational use and does not serve as legal advice. By engaging with our site or services, you agree to this disclaimer.</p>
             <div className="rounded-xl border border-accent-500/20 bg-accent-500/10 p-5 text-sm">
-              <strong className="text-white">Important:</strong> Zyminex IPTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
+              <strong className="text-white">Important:</strong> Realm IPTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
             </div>
           </div>
 

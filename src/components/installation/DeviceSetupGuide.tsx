@@ -17,7 +17,7 @@ const faqs = [
   { question: "1. How do I install IPTV on a Smart TV?", answer: "Install a compatible player such as Smart IPTV or IPTV Smarters from your TV's app store, then add the M3U URL or Xtream credentials from your welcome email." },
   { question: "2. Where do I find my M3U URL?", answer: "Your M3U URL is included in the welcome email sent after activation. Contact support if you need it resent." },
   { question: "3. How can I reduce buffering?", answer: "Use a stable internet connection, restart your device and router, and select an appropriate quality setting for your connection." },
-  { question: "4. How do I set up Zyminex IPTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
+  { question: "4. How do I set up Realm IPTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
   { question: "5. Can I connect using a MAC address (Portal URL)?", answer: "Yes. MAG and compatible portal devices can be activated using their MAC address. Send it to our support team for assistance." },
 ];
 
@@ -59,7 +59,7 @@ export default function DeviceSetupGuide() {
           </div>
           <div>
             <h3 className="text-2xl font-black text-white sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-gray-400 font-medium">Follow these steps to configure your {device.label} for Zyminex IPTV.</p>
+            <p className="mt-1 text-gray-400 font-medium">Follow these steps to configure your {device.label} for Realm IPTV.</p>
           </div>
         </div>
         

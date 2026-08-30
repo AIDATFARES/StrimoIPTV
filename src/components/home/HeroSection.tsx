@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/step_2_generated.png"
-          alt="Zyminex IPTV Cinematic Background"
+          alt="Realm IPTV Cinematic Background"
           priority
           fill
           quality={85}
@@ -35,18 +35,18 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] font-black tracking-tighter leading-[1] drop-shadow-2xl max-w-5xl uppercase">
-          <span className="text-[#f9ebc7]">ZYMINEX IPTV - PREMIUM</span><br />
+          <span className="text-[#f9ebc7]">REALM IPTV - PREMIUM</span><br />
           <span className="text-[#36a9ff]">4K STREAMING</span>
         </h1>
 
         {/* Subtitle / Paragraph */}
         <p className="text-base sm:text-xl md:text-[22px] text-white/90 font-medium max-w-[850px] mt-8 drop-shadow-lg leading-relaxed">
-          Unlock the ultimate entertainment experience with Zyminex IPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.
+          Unlock the ultimate entertainment experience with Realm IPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.
         </p>
 
         {/* Secondary Subtitle */}
         <p className="text-sm sm:text-base font-bold text-[#ffc107] max-w-[700px] mt-6 leading-relaxed">
-          Join thousands of cord-cutters who trust Zyminex IPTV for zero-buffering 60 FPS sports playback and affordable, multi-device subscription plans.
+          Join thousands of cord-cutters who trust Realm IPTV for zero-buffering 60 FPS sports playback and affordable, multi-device subscription plans.
         </p>
 
         {/* Buttons */}
@@ -55,7 +55,7 @@ export default function HeroSection() {
             href="#pricing"
             className="group bg-[#36a9ff] text-white py-4 px-10 text-sm sm:text-base font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-[#2196f3] hover:scale-105 rounded-full uppercase"
           >
-            VIEW ZYMINEX IPTV PLANS
+            VIEW REALM IPTV PLANS
           </a>
           <a
             href="/channels"

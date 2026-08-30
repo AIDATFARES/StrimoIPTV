@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BrandLogo({ compact = false }: { compact?: boolean }) {
   return (
     <Image
-      alt="Zyminex IPTV"
+      alt="Realm IPTV"
       className={`block shrink-0 object-contain object-left drop-shadow-[0_2px_10px_rgba(54,169,255,0.4)] transition-all ${compact ? "h-9 w-28" : "h-12 w-36"}`}
       src="/logo-new.png"
       width={320}
