@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-bg-stadium.jfif"
+          src="/hero-bg-stadium.jpg"
           alt="Realm IPTV Cinematic Background"
           priority
           fill
