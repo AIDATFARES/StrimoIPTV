@@ -29,8 +29,8 @@ export default function DeviceSetupGuide() {
   return (
     <section className="mb-16 md:mb-[100px]">
       <header className="mx-auto mb-9 max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Device Setup Instructions</h2>
-        <p className="mt-3 text-base text-gray-400">Select your device to receive clear setup instructions.</p>
+        <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Device Setup Instructions</h2>
+        <p className="mt-3 text-base text-gray-600">Select your device to receive clear setup instructions.</p>
       </header>
 
       <div className="mb-7 flex flex-wrap justify-center gap-2">
@@ -39,7 +39,7 @@ export default function DeviceSetupGuide() {
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-primary-600 bg-[#36a9ff] text-white shadow-lg shadow-primary-600/30" : "border-black/15 bg-[#141414] text-gray-400 hover:border-primary-500/60 hover:text-white hover:bg-orange-50"}`} 
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-[#36a9ff] bg-[#36a9ff] text-white shadow-lg shadow-[#36a9ff]/30" : "border-black/15 bg-white text-gray-600 hover:border-[#36a9ff] hover:text-[#36a9ff]"}`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
@@ -50,26 +50,26 @@ export default function DeviceSetupGuide() {
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#36a9ff] bg-[#141414] p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#36a9ff] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
         
         {/* Device Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-white/5 pb-6 mb-8">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-50 shrink-0">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-black/5 pb-6 mb-8">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#36a9ff]/10 shrink-0">
             <DeviceIcon className="h-8 w-8 text-[#36a9ff]" />
           </div>
           <div>
-            <h3 className="text-2xl font-black text-white sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-gray-400 font-medium">Follow these steps to configure your {device.label} for Realm IPTV.</p>
+            <h3 className="text-2xl font-black text-black sm:text-3xl">{device.title}</h3>
+            <p className="mt-1 text-gray-600 font-medium">Follow these steps to configure your {device.label} for Realm IPTV.</p>
           </div>
         </div>
         
         {/* Important Note */}
         {device.note && (
-          <div className="mb-8 rounded-2xl border border-orange-200 bg-orange-50/50 p-5 flex items-start gap-4">
+          <div className="mb-8 rounded-2xl border border-[#36a9ff]/30 bg-[#36a9ff]/5 p-5 flex items-start gap-4">
             <HelpCircle className="h-6 w-6 text-[#36a9ff] shrink-0" />
             <div>
-              <h4 className="font-bold text-white mb-1">Important Note</h4>
-              <p className="text-sm leading-relaxed text-gray-300">{device.note}</p>
+              <h4 className="font-bold text-black mb-1">Important Note</h4>
+              <p className="text-sm leading-relaxed text-gray-700">{device.note}</p>
             </div>
           </div>
         )}
@@ -103,17 +103,17 @@ export default function DeviceSetupGuide() {
       </article>
 
       <div className="mx-auto mt-20 max-w-[1000px]">
-        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Installation FAQ</h2>
+        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Installation FAQ</h2>
         <div className="grid gap-5 md:grid-cols-2">
           {faqs.map((faq) => (
-            <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#141414] shadow-sm hover:border-orange-200 transition-colors" key={faq.question}>
-              <div className="bg-[#141414] border-b border-white/5 px-5 py-4 flex items-center gap-3">
+            <div className="flex flex-col rounded-2xl overflow-hidden border border-black/10 bg-white shadow-sm hover:border-[#36a9ff]/50 transition-colors" key={faq.question}>
+              <div className="bg-white border-b border-black/5 px-5 py-4 flex items-center gap-3">
                 <HelpCircle className="w-5 h-5 text-[#36a9ff] shrink-0" />
-                <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                <h3 className="text-base sm:text-lg font-bold text-black leading-snug">
                   {faq.question}
                 </h3>
               </div>
-              <div className="p-5 text-sm text-gray-300 leading-relaxed bg-[#141414] flex-1">
+              <div className="p-5 text-sm text-gray-700 leading-relaxed bg-white flex-1">
                 <p>{faq.answer}</p>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function DeviceSetupGuide() {
 
 function SetupStep({ children, number, title }: { children: React.ReactNode; number: string; title: string }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-primary-300 transition-colors">
+    <div className="flex flex-col sm:flex-row gap-6 bg-white border border-black/10 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-[#36a9ff] transition-colors">
       
       {/* Content */}
       <div className="flex flex-1 gap-5 items-start">
@@ -134,8 +134,8 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
            {number}
          </span>
          <div className="flex-1 mt-1">
-           <h4 className="text-lg font-bold text-white sm:text-xl">{title}</h4>
-           <div className="mt-3 text-sm leading-relaxed text-gray-400">
+           <h4 className="text-lg font-bold text-black sm:text-xl">{title}</h4>
+           <div className="mt-3 text-sm leading-relaxed text-gray-600">
              {children}
            </div>
          </div>
@@ -147,7 +147,7 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
 
 function CodeLine({ label, text }: { label: string; text: string }) {
   return (
-    <div className="rounded-xl bg-[#141414] border border-white/10 px-4 py-3 font-mono text-xs text-gray-300 break-all">
+    <div className="rounded-xl bg-white border border-black/10 px-4 py-3 font-mono text-xs text-gray-700 break-all">
       <span className="font-bold text-[#36a9ff] mr-2">{label}:</span> 
       {text}
     </div>

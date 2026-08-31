@@ -4,7 +4,7 @@ export default function TVMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[1250px] flex items-center justify-center">
       {/* Background Ambient Glow Behind Mockup */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-500/25 via-primary-500/30 to-purple-500/25 blur-[100px] rounded-full transform scale-125 pointer-events-none animate-pulse duration-1000" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#36a9ff]/20 via-[#145082]/25 to-[#36a9ff]/20 blur-[100px] rounded-full transform scale-125 pointer-events-none animate-pulse duration-1000" />
 
       {/* Floating Animated Container */}
       <div

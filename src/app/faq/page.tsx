@@ -26,8 +26,8 @@ const faqs: FAQItem[] = [
     answer: (
       <>
         Realm IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
-        <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">live TV channels</Link> and{" "}
-        <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">IPTV subscription plans</Link>.
+        <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live TV channels</Link> and{" "}
+        <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plans</Link>.
       </>
     ),
   },
@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
     question: "3. What channels and content are included with Realm IPTV?",
     answer: (
       <>
-        Realm IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">full channels catalog</Link>.
+        Realm IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">full channels catalog</Link>.
       </>
     ),
   },
@@ -54,7 +54,7 @@ const faqs: FAQItem[] = [
     question: "4. Can I watch live sports and PPV events on Realm IPTV?",
     answer: (
       <>
-        Realm IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">live sports section</Link>.
+        Realm IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live sports section</Link>.
       </>
     ),
   },
@@ -63,7 +63,7 @@ const faqs: FAQItem[] = [
     question: "5. Which devices can I use?",
     answer: (
       <>
-        Realm IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> to get started.
+        Realm IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> to get started.
       </>
     ),
   },
@@ -72,7 +72,7 @@ const faqs: FAQItem[] = [
     question: "1. How do I install Realm IPTV on my device?",
     answer: (
       <>
-        Start by installing a compatible IPTV player on your device. Enter the Realm IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">installation guides</Link> for detailed instructions.
+        Start by installing a compatible IPTV player on your device. Enter the Realm IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> for detailed instructions.
       </>
     ),
   },
@@ -99,7 +99,7 @@ const faqs: FAQItem[] = [
     question: "4. Why is Realm IPTV buffering or freezing?",
     answer: (
       <>
-        Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">contact support</Link> for quick assistance.
+        Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">contact support</Link> for quick assistance.
       </>
     ),
   },
@@ -108,7 +108,7 @@ const faqs: FAQItem[] = [
     question: "5. Do I need a VPN to use Realm IPTV?",
     answer: (
       <>
-        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">support team</Link> for VPN setup recommendations.
+        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link> for VPN setup recommendations.
       </>
     ),
   },
@@ -117,7 +117,7 @@ const faqs: FAQItem[] = [
     question: "1. Are there any hidden fees or contracts with Realm IPTV?",
     answer: (
       <>
-        No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
+        No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
       </>
     ),
   },
@@ -126,7 +126,7 @@ const faqs: FAQItem[] = [
     question: "2. Can I use Realm IPTV on multiple devices?",
     answer: (
       <>
-        Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">pricing page</Link>.
+        Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">pricing page</Link>.
       </>
     ),
   },
@@ -144,7 +144,7 @@ const faqs: FAQItem[] = [
     question: "1. Does Realm IPTV offer a free trial?",
     answer: (
       <>
-        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV." target="_blank" rel="noreferrer" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">free trial</a> so you can test our service before subscribing.
+        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV." target="_blank" rel="noreferrer" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">free trial</a> so you can test our service before subscribing.
       </>
     ),
   },
@@ -153,7 +153,7 @@ const faqs: FAQItem[] = [
     question: "2. Which payment methods does Realm IPTV accept?",
     answer: (
       <>
-        We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">support team</Link>.
+        We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link>.
       </>
     ),
   },
@@ -169,14 +169,7 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState<Category>("About realmiptv");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const visibleFaqs = faqs.filter((faq) => faq.category === activeCategory);
-
-  function selectCategory(category: Category) {
-    setActiveCategory(category);
-    setActiveIndex(null);
-  }
 
   function sendSupportMessage(formData: FormData) {
     const name = String(formData.get("name") || "").trim();
@@ -188,125 +181,93 @@ export default function FAQ() {
   }
 
   return (
-    <main className="flex-grow px-4 sm:px-6 pb-20 pt-12 md:pt-16 bg-[#141414]">
+    <main className="flex-grow px-4 sm:px-6 pb-20 pt-12 md:pt-16 bg-white text-black">
       <div className="mx-auto max-w-[1140px]">
         <header className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary-400">Help center</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#36a9ff]">Help center</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-tight">
             Frequently Asked Questions<br />(FAQ)
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-gray-300">
+          <p className="mx-auto mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-gray-700">
             Find answers to common questions about our IPTV service, including{" "}
-            <Link href="/pricing" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">subscriptions</Link>,{" "}
-            <Link href="/installation" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">devices</Link>, streaming quality, payments, and more. If you need further help, our{" "}
-            <Link href="/contact" className="text-primary-500 font-semibold hover:text-primary-400 transition-colors">support team</Link> is here for you.
+            <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">subscriptions</Link>,{" "}
+            <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">devices</Link>, streaming quality, payments, and more. If you need further help, our{" "}
+            <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link> is here for you.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-[250px_minmax(0,1fr)] md:gap-10">
-          <aside aria-label="FAQ categories" className="md:sticky md:top-28 md:self-start">
-            <div className="rounded-2xl border border-white/10 bg-[#141414] p-3">
-              <div className="flex gap-2 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0">
-                {categories.map(({ label, icon: Icon }) => {
-                  const isSelected = activeCategory === label;
-                  return (
-                    <button
-                      aria-pressed={isSelected}
-                      className={`flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold transition-all md:w-full ${
-                        isSelected
-                          ? "bg-primary-600 text-white shadow-lg shadow-primary-600/30"
-                          : "text-gray-400 hover:bg-[#141414]/[0.07] hover:text-white"
-                      }`}
-                      key={label}
-                      onClick={() => selectCategory(label)}
-                      type="button"
-                    >
-                      <Icon className="h-4 w-4 shrink-0" />
-                      {label}
-                    </button>
-                  );
-                })}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-up mt-8">
+          {faqs.map((faq, index) => {
+            const isOpen = activeIndex === index;
+            const contentId = `faq-item-${index}`;
+
+            return (
+              <div 
+                key={index} 
+                className="bg-gradient-to-b from-[#497598] to-[#8fb0c9] rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <button
+                  aria-controls={contentId}
+                  aria-expanded={isOpen}
+                  onClick={() => setActiveIndex(isOpen ? null : index)}
+                  className="w-full flex justify-between items-center p-5 text-left font-bold text-white focus:outline-none"
+                >
+                  <span className="text-sm md:text-base">{faq.question.replace(/^\d+\.\s*/, '')}</span>
+                  <span className={`text-white shrink-0 ml-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                    <ChevronDown className="w-5 h-5" />
+                  </span>
+                </button>
+                
+                <div 
+                  id={contentId}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="p-5 pt-0 text-sm leading-relaxed text-white/90 border-t border-white/20">
+                    {faq.answer}
+                  </div>
+                </div>
               </div>
-            </div>
-          </aside>
-
-          <section aria-live="polite" className="space-y-4">
-            <div className="mb-5 flex items-center gap-3">
-              <MonitorPlay className="h-5 w-5 text-primary-500" />
-              <h2 className="text-xl font-bold text-white">{activeCategory}</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-5">
-              {visibleFaqs.map((faq, index) => {
-                const isOpen = activeIndex === index;
-                const contentId = `faq-${activeCategory.replaceAll(" ", "-").toLowerCase()}-${index}`;
-
-                return (
-                  <article className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#141414] shadow-xl hover:border-primary-500/40 transition-colors" key={faq.question}>
-                    {/* Header Banner */}
-                    <div className="bg-[#1a1a1a] border-b border-white/10 px-5 py-4 flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-3">
-                        <HelpCircle className="w-5 h-5 text-primary-500 shrink-0" />
-                        <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
-                          {faq.question}
-                        </h3>
-                      </div>
-                      <button
-                        aria-controls={contentId}
-                        aria-expanded={isOpen}
-                        className="text-gray-400 hover:text-white transition-colors"
-                        onClick={() => setActiveIndex(isOpen ? null : index)}
-                        type="button"
-                      >
-                        <ChevronDown className={`h-5 w-5 shrink-0 text-primary-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
-                      </button>
-                    </div>
-
-                    {/* Answer Content */}
-                    <div className="p-5 sm:p-6 text-sm sm:text-base text-gray-300 leading-relaxed flex-1 bg-[#141414]" id={contentId}>
-                      <p>{faq.answer}</p>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
+            );
+          })}
         </div>
 
-        <section className="mt-20 border-t border-white/10 pt-16 sm:pt-20">
+        <section className="mt-20 border-t border-black/10 pt-16 sm:pt-20">
           <header className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white">Get in Touch with Our Support Team</h2>
-            <p className="mt-3 text-sm leading-6 text-gray-400">We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.</p>
+            <h2 className="text-3xl font-bold tracking-tight text-black">Get in Touch with Our Support Team</h2>
+            <p className="mt-3 text-sm leading-6 text-gray-600">We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.</p>
           </header>
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="mailto:support@realmiptv.shop">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-500/20 text-primary-400"><Mail className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-white">Email Us</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-400">For general inquiries and support.</span>
-                <span className="mt-3 block text-xs font-semibold text-primary-400">support@realmiptv.shop</span>
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="mailto:support@realmiptv4k.shop">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#145082]/20 text-[#36a9ff]"><Mail className="h-5 w-5" /></span>
+                <span className="mt-4 block text-base font-bold text-black">Email Us</span>
+                <span className="mt-2 block text-xs leading-5 text-gray-600">For general inquiries and support.</span>
+                <span className="mt-3 block text-xs font-semibold text-[#36a9ff]">support@realmiptv4k.shop</span>
               </a>
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center transition-colors hover:border-primary-500/50" href="https://wa.me/213552069874?text=Hello%20realmiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="https://wa.me/213552069874?text=Hello%20realmiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/20 text-[#25D366]"><MessageCircle className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-white">WhatsApp Support</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-400">Fastest way to reach us for technical issues.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#25D366]">Start Chat →</span>
+                <span className="mt-4 block text-base font-bold text-black">WhatsApp Support</span>
+                <span className="mt-2 block text-xs leading-5 text-gray-600">Fastest way to reach us for technical issues.</span>
+                <span className="mt-3 block text-xs font-semibold text-[#25D366]">Start Chat ?</span>
               </a>
-              <div className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#141414] p-5 text-center">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-gray-300"><Clock3 className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-white">Response Time</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-400">We typically reply within <strong className="text-white">2 hours</strong> during standard business hours.</span>
+              <div className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-gray-700"><Clock3 className="h-5 w-5" /></span>
+                <span className="mt-4 block text-base font-bold text-black">Response Time</span>
+                <span className="mt-2 block text-xs leading-5 text-gray-600">We typically reply within <strong className="text-black">2 hours</strong> during standard business hours.</span>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-[#141414] p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-white">Send us a message</h3>
+            <div className="rounded-2xl border border-black/10 bg-white p-6 sm:p-8">
+              <h3 className="text-xl font-bold text-black">Send us a message</h3>
               <form action={sendSupportMessage} className="mt-6 space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="block text-xs font-semibold text-gray-400">Name<input className="mt-2 w-full rounded-xl border border-white/10 bg-[#141414] px-3.5 py-3 text-sm text-white outline-none transition-colors placeholder:text-gray-400 focus:border-primary-500" name="name" placeholder="John Doe" required /></label>
-                  <label className="block text-xs font-semibold text-gray-400">Email address<input className="mt-2 w-full rounded-xl border border-white/10 bg-[#141414] px-3.5 py-3 text-sm text-white outline-none transition-colors placeholder:text-gray-400 focus:border-primary-500" name="email" placeholder="john@example.com" required type="email" /></label>
+                  <label className="block text-xs font-semibold text-gray-600">Name<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="name" placeholder="John Doe" required /></label>
+                  <label className="block text-xs font-semibold text-gray-600">Email address<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="email" placeholder="john@example.com" required type="email" /></label>
                 </div>
-                <label className="block text-xs font-semibold text-gray-400">Subject<input className="mt-2 w-full rounded-xl border border-white/10 bg-[#141414] px-3.5 py-3 text-sm text-white outline-none transition-colors placeholder:text-gray-400 focus:border-primary-500" name="subject" placeholder="How can we help?" /></label>
-                <label className="block text-xs font-semibold text-gray-400">Message<textarea className="mt-2 min-h-32 w-full resize-y rounded-xl border border-white/10 bg-[#141414] px-3.5 py-3 text-sm text-white outline-none transition-colors placeholder:text-gray-400 focus:border-primary-500" name="message" placeholder="Describe your question or issue..." required /></label>
+                <label className="block text-xs font-semibold text-gray-600">Subject<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="subject" placeholder="How can we help?" /></label>
+                <label className="block text-xs font-semibold text-gray-600">Message<textarea className="mt-2 min-h-32 w-full resize-y rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="message" placeholder="Describe your question or issue..." required /></label>
                 <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] py-3.5 text-sm font-bold text-white shadow-lg shadow-[#25D366]/30 transition-all hover:-translate-y-0.5 active:translate-y-0" type="submit"><Send className="h-4 w-4" />Send message via WhatsApp</button>
               </form>
             </div>

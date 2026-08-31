@@ -25,7 +25,7 @@ const sections = [
   {
     title: "Availability and Service Changes",
     content: [
-      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/channels">channel</Link>, event, or title.</>,
+      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/channels">channel</Link>, event, or title.</>,
     ],
   },
   {
@@ -35,7 +35,7 @@ const sections = [
     ],
   },
   {
-    title: "Third‑Party Links and Services",
+    title: "Third-Party Links and Services",
     content: [
       "Our site could have links to third-party websites, applications, or services. We do not oversee and are not responsible for the content, policies, or practices of these third-party entities. Utilizing third-party services is at your own risk.",
     ],
@@ -43,7 +43,7 @@ const sections = [
   {
     title: "No Warranties",
     content: [
-      "THE SERVICE AND WEBSITE ARE OFFERED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. THIS INCLUDES, BUT IS NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON‑INFRINGEMENT. We do not guarantee uninterrupted, error-free, or secure operation.",
+      "THE SERVICE AND WEBSITE ARE OFFERED ON AN -AS IS- AND -AS AVAILABLE- BASIS WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. THIS INCLUDES, BUT IS NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. We do not guarantee uninterrupted, error-free, or secure operation.",
     ],
   },
   {
@@ -87,35 +87,35 @@ export default function DmcaPage() {
   return (
     <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16">
       <article className="mx-auto max-w-4xl">
-        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Legal information</span>
+        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex rounded-full border border-[#36a9ff]/35 bg-[#36a9ff]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">Legal information</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white">Legal Disclaimer</span>
+            <span className="block text-black">Legal Disclaimer</span>
             <span className="mt-1 block text-[#36a9ff]">&amp; DMCA Notice.</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Last updated: {currentDate}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600">Last updated: {currentDate}</p>
         </header>
 
         <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
           <div className="space-y-4">
             <p>Content featured on this website is meant for general informational use and does not serve as legal advice. By engaging with our site or services, you agree to this disclaimer.</p>
             <div className="rounded-xl border border-accent-500/20 bg-accent-500/10 p-5 text-sm">
-              <strong className="text-white">Important:</strong> Realm IPTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
+              <strong className="text-black">Important:</strong> Realm IPTV delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
             </div>
           </div>
 
           {sections.map((section, index) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-white">{index + 1}. {section.title}</h2>
+              <h2 className="text-2xl font-bold text-black">{index + 1}. {section.title}</h2>
               {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
+              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-[#36a9ff]">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
               {section.after && <p className="mt-4">{section.after}</p>}
             </section>
           ))}
           
           <section>
-            <h2 className="text-2xl font-bold text-white">11. Contact</h2>
-            <p className="mt-4">For any inquiries, refer to our Terms of Service and <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">support</Link>.</p>
+            <h2 className="text-2xl font-bold text-black">11. Contact</h2>
+            <p className="mt-4">For any inquiries, refer to our Terms of Service and <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">support</Link>.</p>
           </section>
         </div>
       </article>

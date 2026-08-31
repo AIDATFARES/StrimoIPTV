@@ -25,26 +25,31 @@ type CreditPlan = {
 
 const creditPlans: CreditPlan[] = [
   {
-    id: "120-credits",
-    credits: 120,
-    price: 299,
+    id: "100-credits",
+    credits: 100,
+    price: 399,
   },
   {
-    id: "240-credits",
-    credits: 240,
-    price: 559,
+    id: "200-credits",
+    credits: 200,
+    price: 799,
     popular: true,
   },
   {
-    id: "360-credits",
-    credits: 360,
-    price: 799,
+    id: "300-credits",
+    credits: 300,
+    price: 1199,
     bestValue: true,
   },
   {
-    id: "600-credits",
-    credits: 600,
-    price: 1199,
+    id: "400-credits",
+    credits: 400,
+    price: 1599,
+  },
+  {
+    id: "500-credits",
+    credits: 500,
+    price: 1999,
   },
 ];
 
@@ -171,7 +176,7 @@ export default function ResellerPageContent() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#141414] py-16 sm:py-20 lg:py-24 text-format-marketing">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 text-format-marketing">
       {/* Background radial gradient */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-950/25 via-white to-transparent" />
 
@@ -179,19 +184,19 @@ export default function ResellerPageContent() {
         
         {/* HERO SECTION */}
         <header className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-primary-400">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#36a9ff]/30 bg-[#145082]/10 px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">
             <Sparkles className="h-3.5 w-3.5" />
             IPTV Reseller Program
           </span>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-white">
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-black">
             REALM IPTV <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">
               RESELLER PROGRAM
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-gray-300 sm:text-base sm:leading-8">
+          <p className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-gray-700 sm:text-base sm:leading-8">
             Our IPTV reseller program helps you meet the expectations of your customers, enabling you to provide them with the best possible solutions. Join us and enjoy dozens of benefits with our program now.
           </p>
 
@@ -209,24 +214,24 @@ export default function ResellerPageContent() {
         <div className="mt-24">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-              <span className="block text-white">Our Exclusive</span>
+              <span className="block text-black">Our Exclusive</span>
               <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Plans.</span>
             </h2>
-            <p className="mt-3 text-base font-bold text-gray-300">
+            <p className="mt-3 text-base font-bold text-gray-700">
               We provide you with the best servers at the right price
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 items-stretch">
             {creditPlans.map((plan) => (
               <article
                 key={plan.id}
-                className={`relative flex flex-col rounded-3xl bg-[#141414] p-6 shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
+                className={`relative flex flex-col rounded-3xl bg-white p-6 shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
                   plan.popular
                     ? "border-4 border-[#36a9ff] shadow-[0_10px_40px_rgba(255,107,0,0.25)] scale-102 z-10"
                     : plan.bestValue
                     ? "border-4 border-secondary-500 shadow-[0_10px_40px_rgba(16,185,129,0.2)] z-10"
-                    : "border-2 border-white/5"
+                    : "border-2 border-black/5"
                 }`}
               >
                 {plan.popular && (
@@ -235,7 +240,7 @@ export default function ResellerPageContent() {
                   </span>
                 )}
                 {plan.bestValue && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary-600 px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary-600 px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-black shadow-md">
                     Best Value
                   </span>
                 )}
@@ -244,18 +249,18 @@ export default function ResellerPageContent() {
                   <span className="text-xs font-black uppercase tracking-widest text-[#36a9ff]">
                     PREMIUM IPTV
                   </span>
-                  <h3 className="mt-1 text-2xl font-black text-white">
+                  <h3 className="mt-1 text-2xl font-black text-black">
                     {plan.credits} Credit
                   </h3>
                 </div>
 
-                <div className="my-5 rounded-2xl bg-[#141414] border border-white/5 py-4 text-center">
+                <div className="my-5 rounded-2xl bg-white border border-black/5 py-4 text-center">
                   <span className="text-4xl font-black text-[#36a9ff]">
                     ${plan.price}
                   </span>
                 </div>
 
-                <ul className="flex-grow space-y-3 border-t border-white/5 pt-4 text-xs font-semibold text-gray-400">
+                <ul className="flex-grow space-y-3 border-t border-black/5 pt-4 text-xs font-semibold text-gray-600">
                   {planFeatures.map((feature) => (
                     <li className="flex items-center gap-2" key={feature}>
                       <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-orange-100 text-[#36a9ff]">
@@ -281,7 +286,7 @@ export default function ResellerPageContent() {
         {/* ADVANTAGES OF IPTV RESELLER */}
         <div className="mt-28">
           <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-            <span className="block text-white">Advantages of</span>
+            <span className="block text-black">Advantages of</span>
             <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Program.</span>
           </h2>
 
@@ -291,15 +296,15 @@ export default function ResellerPageContent() {
               return (
                 <div
                   key={item.title}
-                  className="flex flex-col items-center text-center p-6 rounded-2xl border border-white/10 bg-[#141414]/90 backdrop-blur-md shadow-xl hover:border-primary-500/40 transition-colors"
+                  className="flex flex-col items-center text-center p-6 rounded-2xl border border-black/10 bg-white/90 backdrop-blur-md shadow-xl hover:border-[#36a9ff]/40 transition-colors"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-500 mb-5">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#145082]/15 text-[#36a9ff] mb-5">
                     <Icon className="h-8 w-8" />
                   </div>
-                  <span className="block text-sm font-extrabold uppercase tracking-wider text-white">
+                  <span className="block text-sm font-extrabold uppercase tracking-wider text-black">
                     {item.title}
                   </span>
-                  <p className="mt-3 text-xs leading-5 text-gray-400">
+                  <p className="mt-3 text-xs leading-5 text-gray-600">
                     {item.description}
                   </p>
                 </div>
@@ -311,7 +316,7 @@ export default function ResellerPageContent() {
         {/* FREQUENTLY ASKED QUESTIONS */}
         <div className="mx-auto mt-28 max-w-4xl">
           <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-            <span className="block text-white">Frequently Asked</span>
+            <span className="block text-black">Frequently Asked</span>
             <span className="mt-1 block text-[#36a9ff]">Questions & Answers.</span>
           </h2>
 
@@ -321,25 +326,25 @@ export default function ResellerPageContent() {
               return (
                 <div
                   key={faq.question}
-                  className="overflow-hidden rounded-xl border border-white/10 bg-[#141414]/90 shadow-md transition-colors hover:border-primary-500/30"
+                  className="overflow-hidden rounded-xl border border-black/10 bg-white/90 shadow-md transition-colors hover:border-[#36a9ff]/30"
                 >
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="flex w-full items-center justify-between px-6 py-4 text-left font-bold text-white transition-colors hover:bg-[#141414]/[0.03]"
+                    className="flex w-full items-center justify-between px-6 py-4 text-left font-bold text-black transition-colors hover:bg-white/[0.03]"
                   >
                     <span className="text-sm sm:text-base tracking-wide uppercase font-extrabold flex items-center gap-3">
-                      <span className="text-primary-500">▶</span>
+                      <span className="text-[#36a9ff]">?</span>
                       {faq.question}
                     </span>
                     {isOpen ? (
-                      <ChevronUp className="h-5 w-5 shrink-0 text-primary-500" />
+                      <ChevronUp className="h-5 w-5 shrink-0 text-[#36a9ff]" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 shrink-0 text-gray-400" />
+                      <ChevronDown className="h-5 w-5 shrink-0 text-gray-600" />
                     )}
                   </button>
 
                   {isOpen && (
-                    <div className="border-t border-white/10 bg-[#141414] px-6 py-4 text-sm text-gray-300 leading-relaxed">
+                    <div className="border-t border-black/10 bg-white px-6 py-4 text-sm text-gray-700 leading-relaxed">
                       {faq.answer}
                     </div>
                   )}
@@ -351,7 +356,7 @@ export default function ResellerPageContent() {
           <div className="mt-12 flex justify-center">
             <button
               onClick={() => handleOrderPanel()}
-              className="rounded-full bg-primary-600 px-10 py-4 text-base font-extrabold uppercase tracking-wider text-white shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all duration-300 hover:bg-primary-500 hover:shadow-[0_0_40px_rgba(255,107,0,0.7)] active:scale-[0.98]"
+              className="rounded-full bg-[#051f33] px-10 py-4 text-base font-extrabold uppercase tracking-wider text-white shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all duration-300 hover:bg-[#145082] hover:shadow-[0_0_40px_rgba(255,107,0,0.7)] active:scale-[0.98]"
             >
               Become Reseller
             </button>
@@ -359,9 +364,9 @@ export default function ResellerPageContent() {
         </div>
 
         {/* TRUST BADGE */}
-        <div className="mt-16 flex items-center justify-center gap-2 text-xs font-semibold text-gray-400">
-          <ShieldCheck className="h-4 w-4 text-secondary-400" />
-          <span>Official Xtream Codes Reseller Panel — 99.9% Uptime Guarantee</span>
+        <div className="mt-16 flex items-center justify-center gap-2 text-xs font-semibold text-gray-600">
+          <ShieldCheck className="h-4 w-4 text-[#36a9ff]" />
+          <span>Official Xtream Codes Reseller Panel - 99.9% Uptime Guarantee</span>
         </div>
       </div>
     </section>

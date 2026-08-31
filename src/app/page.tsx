@@ -39,10 +39,9 @@ export default function Home() {
         <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</span>
       </div>
       <BrandMarquee
-        imagesFolder="sports_new"
+        imagesFolder="chn"
         images={[
-          "Realm-sports-01.webp",
-          "Realm-sports-02.webp",
+          "imggt1.webp",
           "imggt1 (1).webp",
           "imggt1 (2).webp",
           "imggt1 (3).webp",
@@ -51,16 +50,19 @@ export default function Home() {
           "imggt1 (6).webp",
           "imggt1 (7).webp",
           "imggt1 (8).webp",
-          "imggt1.webp"
+          "imggt1 (9).webp",
+          "imggt1 (10).webp",
+          "imggt1 (11).webp",
+          "imggt1 (12).webp"
         ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-[#36a9ff]/20 bg-[#051f33]/80 hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 group"
-        imageClassName="object-cover rounded-xl"
+        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-[#36a9ff]/20 bg-white hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 group p-4"
+        imageClassName="object-contain rounded-xl drop-shadow-md"
       />
 
       {/* Channel & Installation Quick Links */}
       <div className="w-full bg-transparent py-6 px-4 text-center border-t border-[#36a9ff]/10 relative z-20">
-        <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">Realm IPTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">Realm IPTV Installation Guide</Link> for a quick start.
+        <p className="text-center text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
+          Explore the complete <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">RealMIPTV Channel List</Link> or check out our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">RealMIPTV Installation Guide</Link> to get your IPTV service running in minutes.
         </p>
       </div>
 
@@ -68,26 +70,13 @@ export default function Home() {
       <ComparisonSection />
       <DeviceSupport />
 
-      {/* Device Logos Marquee */}
-      <div className="w-full bg-transparent border-t border-[#36a9ff]/10 pt-12 pb-6 relative z-10">
-        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Supported on all your favorite devices</span>
-        <BrandMarquee
-          imagesFolder="devices"
-          images={[
-            "Amazon-Fire-tv-stick-krooz-tv.webp",
-            "Apple-TV-krooz-tv.webp",
-            "hisense-krooz-tv.webp",
-            "iptv-smarter-krooz-tv.webp",
-            "LG-smart-krooz-tv.webp",
-            "Shield-krooz-tv.webp",
-            "Smart-android-tv-krooz-tv.webp",
-            "sony-select-krooz-tv.webp",
-            "Tv-media-boxs-krooz-tv.webp",
-            "Windows-krooz-tv.webp",
-            "xbox-live-krooz-tv.webp"
-          ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-[#36a9ff]/20 rounded-2xl p-4 md:p-6 hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 shadow-sm flex items-center justify-center"
-          imageClassName="object-contain drop-shadow-sm"
+      {/* Supported Devices Banner */}
+      <div className="w-full bg-transparent pt-12 pb-6 relative z-10 flex justify-center px-4">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/Devices-1-1024x350.webp"
+          alt="Supported on all your favorite devices"
+          className="max-w-full h-auto w-full md:w-[1024px] object-contain drop-shadow-sm"
         />
       </div>
 

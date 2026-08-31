@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, Gift, Tv } from "lucide-react";
+import Image from "next/image";
 
 type PlanFeature = {
   text: string;
@@ -20,7 +21,7 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "Realm IPTV for {devices} Device{s}", included: true },
+  { text: "RealMIPTV for {devices} Device{s}", included: true },
   { text: "Uncompressed Ultra HD & 4K", included: true },
   { text: "25,000+ Premium Channels", included: true },
   { text: "100,000+ VODs (Daily Update)", included: true },
@@ -82,17 +83,17 @@ export default function PricingSection() {
         {/* Header */}
         <header className="mx-auto max-w-3xl text-center mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#36a9ff] px-4 py-1 mb-6">
-            <Gift className="h-4 w-4 text-white" />
-            <span className="text-[10px] font-bold text-white tracking-widest uppercase">
+            <Gift className="h-4 w-4 text-black" />
+            <span className="text-[10px] font-bold text-black tracking-widest uppercase">
               BEST VALUE PLANS
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
-            <span className="text-white">CHOOSE YOUR </span>
-            <span className="text-[#36a9ff]">REALM IPTV PLAN</span>
+            <span className="text-black">CHOOSE YOUR </span>
+            <span className="text-[#36a9ff]">REALMIPTV PLAN</span>
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-white/90 font-medium leading-relaxed max-w-2xl mx-auto">
-            Select your Realm IPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
+          <p className="mt-6 text-base sm:text-lg text-black/90 font-medium leading-relaxed max-w-2xl mx-auto">
+            Select your RealMIPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
           </p>
         </header>
 
@@ -100,7 +101,7 @@ export default function PricingSection() {
         <div className="mx-auto mb-16 flex flex-col items-center">
           <div className="flex items-center gap-2 mb-4">
             <Tv className="h-4 w-4 text-[#36a9ff]" />
-            <p className="text-[11px] font-bold uppercase tracking-widest text-white">Select Number of Devices</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-black">Select Number of Devices</p>
           </div>
           <div className="inline-flex rounded-full border border-[#36a9ff] p-1.5 bg-transparent shadow-[0_0_15px_rgba(54,169,255,0.2)]">
             {[1, 2, 3].map((count) => {
@@ -112,7 +113,7 @@ export default function PricingSection() {
                   className={`rounded-full px-6 py-2.5 text-xs sm:text-sm font-bold transition-all uppercase tracking-wide ${
                     selected
                       ? "bg-[#36a9ff] text-white shadow-md"
-                      : "text-white hover:text-[#36a9ff]"
+                      : "text-black hover:text-[#36a9ff]"
                   }`}
                 >
                   {count} Device{count > 1 ? "S" : ""}
@@ -154,7 +155,7 @@ export default function PricingSection() {
                 </div>
 
                 <div className="inline-flex rounded-full bg-[#36a9ff] px-4 py-1.5">
-                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
+                  <span className="text-[10px] font-bold text-black uppercase tracking-wider">
                     JUST ${monthlyPrice(plan)} / MONTH
                   </span>
                 </div>
@@ -177,7 +178,7 @@ export default function PricingSection() {
                   onClick={() => handleOrder(plan)}
                   className={`w-full py-4 text-sm font-black uppercase tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-md ${
                     plan.popular
-                      ? "bg-[#051f33] text-white hover:bg-[#082a45] hover:shadow-[#051f33]/50"
+                      ? "bg-[#051f33] text-white hover:bg-[#0a365e] hover:shadow-xl"
                       : "bg-[#36a9ff] text-white hover:bg-[#2196f3] hover:shadow-[#36a9ff]/50"
                   }`}
                 >
@@ -192,7 +193,7 @@ export default function PricingSection() {
         <div className="mx-auto mt-16 max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-full bg-[#fdf1c3] p-2 pl-6 sm:pl-8 shadow-xl border-4 border-[#36a9ff]/30">
           <div className="flex items-center gap-3">
             <div className="bg-[#36a9ff] p-2 rounded-full">
-              <Gift className="h-5 w-5 text-white" />
+              <Gift className="h-5 w-5 text-black" />
             </div>
             <h3 className="text-sm sm:text-base font-black text-[#051f33] uppercase">
               NEED FREE TRIAL 24H?
@@ -206,6 +207,17 @@ export default function PricingSection() {
           >
             TRY NOW
           </a>
+        </div>
+
+        {/* Added Image Banner */}
+        <div className="mx-auto mt-12 max-w-5xl flex justify-center px-4">
+          <Image 
+            src="/imggt1_3.webp" 
+            alt="Supported Apps and Devices" 
+            width={1200} 
+            height={300} 
+            className="w-full h-auto object-contain drop-shadow-md rounded-xl"
+          />
         </div>
 
       </div>

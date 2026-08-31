@@ -31,42 +31,25 @@ export default function Navbar() {
     const isActive = pathname === path;
     return isActive 
       ? "text-[#36a9ff] border-b-2 border-[#36a9ff] pb-1 transition-colors duration-200" 
-      : "text-gray-400 hover:text-[#36a9ff] pb-1 transition-colors duration-200 whitespace-nowrap";
+      : "text-gray-600 hover:text-[#36a9ff] pb-1 transition-colors duration-200 whitespace-nowrap";
   };
 
   const getMobileLinkClass = (path: string) => {
     const isActive = pathname === path;
     return isActive
       ? "text-[#36a9ff] py-1 font-bold"
-      : "hover:text-[#36a9ff] py-1 transition-colors text-gray-300";
+      : "hover:text-[#36a9ff] py-1 transition-colors text-gray-700";
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 flex flex-col ${
         scrolled
-          ? "bg-[#141414]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl"
-          : "bg-[#141414]/80 backdrop-blur-md"
+          ? "bg-white/95 backdrop-blur-xl border-b border-black/10 shadow-2xl"
+          : "bg-white/80 backdrop-blur-md"
       }`}
     >
-      {/* Promotional Top Bar */}
-      <div className="w-full bg-green-600 text-white py-2 overflow-hidden flex items-center shadow-sm">
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          {[...Array(6)].map((_, i) => (
-            <span key={i} className="flex items-center gap-2 px-8 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
-              🎁 Special Offer: We offer a <span className="font-extrabold underline uppercase tracking-widest">Free Trial</span> to test our service! 
-              <a 
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV." 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-block ml-2 bg-black text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold hover:bg-[#141414] hover:text-white transition-colors shadow-sm animate-button-pulse-white"
-              >
-                Claim Now
-              </a>
-            </span>
-          ))}
-        </div>
-      </div>
+
       <div className="w-full max-w-[1480px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between relative">
         
         {/* LOGO */}
@@ -79,28 +62,23 @@ export default function Navbar() {
           <Link 
             href="/" 
             onClick={handleLogoClick} 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Home
           </Link>
           <Link 
             href="/pricing" 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/pricing' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/pricing' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Pricing
           </Link>
           <Link 
             href="/installation" 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/installation' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-6 py-2 rounded-full uppercase ${pathname === '/installation' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Setup
           </Link>
-          <Link 
-            href="/blog" 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/blog' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-white hover:text-[#36a9ff] transition-colors'}`}
-          >
-            Blog
-          </Link>
+
         </nav>
 
         {/* RIGHT ACTIONS */}
@@ -109,7 +87,7 @@ export default function Navbar() {
             href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="btn-secondary-voltra px-6 py-2.5 text-sm shadow-[0_0_15px_rgba(249,235,199,0.3)] hover:shadow-[0_0_25px_rgba(249,235,199,0.5)]"
+            className="group bg-[#00e5ff] text-black font-extrabold px-6 py-2.5 text-sm transition-all duration-300 shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.6)] rounded-full uppercase hover:scale-105"
           >
             GET STARTED
           </a>
@@ -118,7 +96,7 @@ export default function Navbar() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden text-white p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors z-20"
+          className="lg:hidden text-black p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors z-20"
           aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -127,7 +105,7 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN MENU */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#141414] border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col space-y-3 font-semibold">
             <Link href="/" onClick={handleLogoClick} className={getMobileLinkClass("/")}>Home</Link>
             <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/pricing")}>Pricing</Link>
@@ -136,7 +114,7 @@ export default function Navbar() {
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/contact")}>Contact Support</Link>
             <Link href="/reseller" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/reseller")}>Reseller</Link>
           </nav>
-          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+          <div className="pt-4 border-t border-black/10 flex flex-col gap-3">
             <a
               href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV."
               target="_blank"

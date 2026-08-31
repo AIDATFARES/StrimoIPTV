@@ -1,9 +1,9 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 export default function HowItWorksSection() {
   return (
-    <section className="py-20 bg-transparent text-white relative z-10 border-b border-white/10 overflow-hidden">
+    <section className="py-20 bg-transparent text-black relative z-10 border-b border-black/10 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6">
 
         {/* ========================================================================= */}
@@ -13,13 +13,13 @@ export default function HowItWorksSection() {
           <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
             EASY IPTV SETUP
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
             How to Start Your <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
               Realm IPTV Subscription
             </span>
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-700 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
             Getting started with Realm IPTV is quick and simple. Follow this 3-step process to unlock instant access to premium <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors">live TV, movies, and series</Link>.
           </p>
         </div>
@@ -40,28 +40,28 @@ export default function HowItWorksSection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Card */}
-              <div className="bg-[#051f33]/80 backdrop-blur-sm text-slate-100 p-8 rounded-2xl shadow-xl relative border border-[#36a9ff]/20 transition-all hover:border-[#36a9ff]/50"
+              <div className="bg-[#145082] p-8 rounded-2xl shadow-lg relative transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                <h3 className="text-xl font-extrabold text-[#36a9ff] mb-3">
+                <h3 className="text-xl font-black text-white mb-3">
                   <a
                     href="#pricing"
-                    className="hover:text-[#2196f3] transition-colors"
+                    className="hover:text-[#00e5ff] transition-colors"
                   >
                     1. Choose Your Realm IPTV Plan
                   </a>
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-white/90 text-[15px] leading-relaxed">
                   Select the best IPTV subscription package for your entertainment needs from our{" "}
                   <a
                     href="#pricing"
-                    className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
+                    className="text-[#00e5ff] font-bold hover:text-white transition-colors"
                   >
                     pricing plans
                   </a>
                   . Once checkout is complete, we will email or{" "}
                   <Link
                     href="/contact"
-                    className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
+                    className="text-[#00e5ff] font-bold hover:text-white transition-colors"
                   >
                     WhatsApp
                   </Link>{" "}
@@ -70,7 +70,7 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#051f33]/50 border border-[#36a9ff]/20 shadow-xl transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
+              <div className="overflow-hidden rounded-2xl bg-gray-50/50 border border-[#36a9ff]/20 shadow-xl transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
               >
                 <Image
                   src="/step_1_generated.png"
@@ -94,7 +94,7 @@ export default function HowItWorksSection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#051f33]/50 border border-[#36a9ff]/20 shadow-xl order-2 md:order-1 transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
+              <div className="overflow-hidden rounded-2xl bg-gray-50/50 border border-[#36a9ff]/20 shadow-xl order-2 md:order-1 transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
               >
                 <Image
                   src="/step_2_generated.png"
@@ -106,21 +106,21 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Card */}
-              <div className="bg-[#051f33]/80 backdrop-blur-sm text-slate-100 p-8 rounded-2xl shadow-xl relative border border-[#36a9ff]/20 order-1 md:order-2 transition-all hover:border-[#36a9ff]/50"
+              <div className="bg-[#145082] p-8 rounded-2xl shadow-lg relative order-1 md:order-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                <h3 className="text-xl font-extrabold text-[#36a9ff] mb-3">
+                <h3 className="text-xl font-black text-white mb-3">
                   <Link
                     href="/installation"
-                    className="hover:text-[#2196f3] transition-colors"
+                    className="hover:text-[#00e5ff] transition-colors"
                   >
                     2. Install Your Streaming App
                   </Link>
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-white/90 text-[15px] leading-relaxed">
                   Use our step-by-step{" "}
                   <Link
                     href="/installation"
-                    className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
+                    className="text-[#00e5ff] font-bold hover:text-white transition-colors"
                   >
                     IPTV installation guides
                   </Link>{" "}
@@ -141,21 +141,21 @@ export default function HowItWorksSection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Card */}
-              <div className="bg-[#051f33]/80 backdrop-blur-sm text-slate-100 p-8 rounded-2xl shadow-xl relative border border-[#36a9ff]/20 transition-all hover:border-[#36a9ff]/50"
+              <div className="bg-[#145082] p-8 rounded-2xl shadow-lg relative transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                <h3 className="text-xl font-extrabold text-[#36a9ff] mb-3">
+                <h3 className="text-xl font-black text-white mb-3">
                   <Link
                     href="/channels"
-                    className="hover:text-[#2196f3] transition-colors"
+                    className="hover:text-[#00e5ff] transition-colors"
                   >
                     3. Enjoy Premium IPTV Streaming
                   </Link>
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-white/90 text-[15px] leading-relaxed">
                   Start watching instantly! Dive into our massive Realm IPTV{" "}
                   <Link
                     href="/channels"
-                    className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
+                    className="text-[#00e5ff] font-bold hover:text-white transition-colors"
                   >
                     channels catalog
                   </Link>
@@ -164,7 +164,7 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-[#051f33]/50 border border-[#36a9ff]/20 shadow-xl transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
+              <div className="overflow-hidden rounded-2xl bg-gray-50/50 border border-[#36a9ff]/20 shadow-xl transition-all hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.3)]"
               >
                 <Image
                   src="/step_3_generated.png"

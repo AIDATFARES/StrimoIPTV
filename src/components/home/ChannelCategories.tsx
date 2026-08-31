@@ -5,19 +5,19 @@ export default function ChannelCategories() {
     {
       icon: Monitor,
       title: "4K ULTRA HD STREAMING",
-      desc: "Watch every channel and live event in crisp 4K, Full HD, and HD quality. Our anti-freeze technology ensures smooth streaming on every device.",
+      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and HD. RealMIPTV anti-freeze technology ensures smooth IPTV streaming on any compatible device.",
       tags: ["4K UHD", "FULL HD", "ANTI-FREEZE"],
     },
     {
       icon: Layers,
-      title: "50,000+ LIVE CHANNELS",
-      desc: "Access 50,000+ live channels from sports, news, entertainment, kids, and more. Every broadcast is delivered in crystal-clear quality.",
+      title: "50,000+ LIVE IPTV CHANNELS",
+      desc: "Access over 50,000 live channels covering sports, news, and premium entertainment. Every broadcast on our IPTV service is delivered in crystal-clear quality.",
       tags: ["160+ COUNTRIES", "SPORTS", "NEWS", "KIDS"],
     },
     {
       icon: Film,
-      title: "200,000+ VODS",
-      desc: "Enjoy an on-demand library with movies, series, replays, highlights, and documentaries available any time, on any device.",
+      title: "200,000+ MOVIES & SERIES",
+      desc: "Explore a massive VOD library featuring the latest movies, hit series, and documentaries—available on demand with your RealMIPTV subscription.",
       tags: ["MOVIES", "SERIES", "REPLAYS", "UPDATED DAILY"],
     },
   ];
@@ -36,7 +36,7 @@ export default function ChannelCategories() {
     {
       icon: Globe2,
       title: "Works Worldwide",
-      desc: "Enjoy Realm IPTV wherever you are, on any connection.",
+      desc: "Enjoy the RealMIPTV service wherever you are, on any stable internet connection.",
     },
     {
       icon: ShieldCheck,
@@ -50,66 +50,56 @@ export default function ChannelCategories() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* Heading */}
-        <div className="mx-auto mb-16 max-w-4xl text-center">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
+        <div className="mx-auto mb-12 max-w-4xl text-center">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-[10px] tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
             Premium Features
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
+          <h2 className="text-3xl md:text-5xl font-black text-black tracking-tight leading-[1.2] animate-fade-up">
             Everything You Need for the <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
-              Ultimate Viewing Experience.
+            <span className="text-[#36a9ff]">
+              Ultimate RealMIPTV Experience.
             </span>
           </h2>
         </div>
 
         {/* Feature Grid */}
-        <div className="flex flex-col gap-6 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+        <div className="flex flex-col gap-4 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
           
           {/* Top Row: 3 Large Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {topFeatures.map((feature, idx) => {
               const Icon = feature.icon;
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#36a9ff]/20 bg-[#051f33]/80 backdrop-blur-sm p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#36a9ff]/50 hover:shadow-[0_0_30px_rgba(54,169,255,0.15)]"
+                  className="flex flex-col items-center text-center rounded-xl bg-[#145082] p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#36a9ff]/10 text-[#36a9ff] ring-1 ring-[#36a9ff]/20">
-                    <Icon className="h-7 w-7" strokeWidth={2} />
+                  <div className="mb-4 inline-flex items-center justify-center text-white">
+                    <Icon className="h-10 w-10" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mb-3 text-xl font-black uppercase text-white">{feature.title}</h3>
-                  <p className="mb-8 flex-grow text-[15px] leading-relaxed text-gray-400 font-medium">
+                  <h3 className="mb-3 text-[19px] font-black text-white">{feature.title}</h3>
+                  <p className="flex-grow text-[13px] leading-relaxed text-white/90 font-medium">
                     {feature.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {feature.tags.map((tag, tagIdx) => (
-                      <span 
-                        key={tagIdx} 
-                        className="rounded-full border border-white/10 bg-[#051f33] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               );
             })}
           </div>
 
           {/* Bottom Row: 4 Small Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {bottomFeatures.map((feature, idx) => {
               const Icon = feature.icon;
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#36a9ff]/20 bg-[#051f33]/80 backdrop-blur-sm p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#36a9ff]/50 hover:shadow-[0_0_30px_rgba(54,169,255,0.15)]"
+                  className="flex flex-col items-center text-center rounded-xl bg-[#145082] p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#36a9ff]/10 text-[#36a9ff] ring-1 ring-[#36a9ff]/20">
-                    <Icon className="h-6 w-6" strokeWidth={2} />
+                  <div className="mb-3 inline-flex items-center justify-center text-white">
+                    <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </div>
-                  <h4 className="mb-2 text-[17px] font-bold text-white">{feature.title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-400 font-medium">
+                  <h4 className="mb-2 text-[15px] font-black text-white">{feature.title}</h4>
+                  <p className="text-[12px] leading-relaxed text-white/90 font-medium">
                     {feature.desc}
                   </p>
                 </div>

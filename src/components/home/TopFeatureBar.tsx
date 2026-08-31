@@ -27,11 +27,7 @@ export default function TopFeatureBar() {
       title: "99.99% Uptime",
       desc: "Anti-Buffer 10.0",
     },
-    {
-      icon: Zap,
-      title: "60 FPS 4K Ultra HD",
-      desc: "Crystal Clear Sports",
-    },
+
     {
       icon: Headphones,
       title: "24/7 Live Support",
@@ -40,26 +36,24 @@ export default function TopFeatureBar() {
   ];
 
   return (
-    <div className="w-full pt-8 pb-4">
+    <div className="w-full">
       <div className="w-full">
-
-
-        <div className="grid grid-cols-2 gap-3 py-6 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-4">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="bg-[#141414]/90 border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 hover:border-primary-500/40 transition-all duration-300 group"
+                className="bg-[#145082] rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
               >
-                <div className="p-2.5 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-400 group-hover:scale-110 transition-transform shrink-0">
+                <div className="p-2.5 rounded-lg bg-white/10 text-[#00e5ff] group-hover:scale-110 transition-transform shrink-0">
                   <Icon className="w-5 h-5" strokeWidth={2} />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
+                  <p className="text-xs sm:text-[13px] font-black text-white leading-tight truncate">
                     {item.title}
                   </p>
-                  <p className="text-[11px] text-gray-400 truncate mt-0.5">{item.desc}</p>
+                  <p className="text-[11px] text-white/80 truncate mt-0.5">{item.desc}</p>
                 </div>
               </div>
             );
@@ -108,5 +102,5 @@ function AnimatedStat({ value, prefix, suffix }: { value: number; prefix: string
     return () => cancelAnimationFrame(frameId);
   }, [isInView, value, prefix, suffix]);
 
-  return <span className="block text-3xl font-extrabold tracking-tight text-white sm:text-4xl" ref={ref}>{prefix}0{suffix}</span>;
+  return <span className="block text-3xl font-extrabold tracking-tight text-black sm:text-4xl" ref={ref}>{prefix}0{suffix}</span>;
 }
