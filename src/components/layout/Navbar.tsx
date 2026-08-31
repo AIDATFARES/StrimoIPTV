@@ -58,27 +58,44 @@ export default function Navbar() {
         </Link>
 
         {/* Nav Links Container */}
-        <nav className="hidden lg:flex relative z-10 items-center justify-center p-1.5 border border-[#36a9ff] rounded-full bg-transparent text-sm font-bold tracking-wide">
+        <nav className="hidden xl:flex relative z-10 items-center justify-center p-1 border border-[#36a9ff] rounded-full bg-transparent text-[13px] font-bold tracking-wide">
           <Link 
             href="/" 
             onClick={handleLogoClick} 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Home
           </Link>
           <Link 
+            href="/channels" 
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/channels' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+          >
+            Channels
+          </Link>
+          <Link 
             href="/pricing" 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/pricing' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/pricing' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Pricing
           </Link>
           <Link 
             href="/installation" 
-            className={`px-6 py-2 rounded-full uppercase ${pathname === '/installation' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/installation' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
           >
             Setup
           </Link>
-
+          <Link 
+            href="/reseller" 
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/reseller' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+          >
+            Reseller
+          </Link>
+          <Link 
+            href="/blog" 
+            className={`px-4 py-2 rounded-full uppercase ${pathname === '/blog' ? 'bg-[#36a9ff] text-white shadow-[0_0_15px_rgba(54,169,255,0.4)]' : 'text-black hover:text-[#36a9ff] transition-colors'}`}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* RIGHT ACTIONS */}
@@ -108,11 +125,13 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col space-y-3 font-semibold">
             <Link href="/" onClick={handleLogoClick} className={getMobileLinkClass("/")}>Home</Link>
-            <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/pricing")}>Pricing</Link>
-            <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/how-it-works")}>How It Works</Link>
             <Link href="/channels" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/channels")}>Channels</Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/contact")}>Contact Support</Link>
+            <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/pricing")}>Pricing</Link>
+            <Link href="/installation" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/installation")}>Setup</Link>
             <Link href="/reseller" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/reseller")}>Reseller</Link>
+            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/blog")}>Blog</Link>
+            <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/how-it-works")}>How It Works</Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/contact")}>Contact Support</Link>
           </nav>
           <div className="pt-4 border-t border-black/10 flex flex-col gap-3">
             <a
