@@ -1,240 +1,105 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
-
-type FAQ = {
-  id: number;
-  category: string;
-  question: string;
-  answer: React.ReactNode;
-};
-
-const faqs: FAQ[] = [
-  {
-    id: 1,
-    category: "General",
-    question: "What is StrimoIPTV?",
-    answer: (
-      <>
-        StrimoIPTV is a premium IPTV service providing live TV channels, VOD movies, TV series, and sports in stunning 4K streaming quality. Explore our{" "}
-        <Link
-          href="/channels-list"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          live TV channels
-        </Link>{" "}
-        and{" "}
-        <a
-          href="#pricing"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          IPTV subscription plans
-        </a>
-        .
-      </>
-    ),
-  },
-  {
-    id: 2,
-    category: "General",
-    question: "Do I need a subscription to use StrimoIPTV?",
-    answer: (
-      <>
-        Yes, a subscription is required. However, we offer a{" "}
-        <a
-          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20strimoiptv%20IPTV."
-          target="_blank"
-          rel="noreferrer"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          free trial
-        </a>{" "}
-        so you can test the service before committing to our{" "}
-        <a
-          href="#pricing"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          subscription plans
-        </a>
-        .
-      </>
-    ),
-  },
-  {
-    id: 3,
-    category: "Technical",
-    question: "What devices are compatible with StrimoIPTV?",
-    answer: (
-      <>
-        StrimoIPTV works seamlessly on Android TV, Firestick, Smart TVs, smartphones, tablets, and apps like Tivimate. Check our{" "}
-        <Link
-          href="/installation"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          installation guides
-        </Link>{" "}
-        to get started.
-      </>
-    ),
-  },
-  {
-    id: 4,
-    category: "Technical",
-    question: "Can I watch on multiple devices at the same time?",
-    answer: (
-      <>
-        Yes, we offer multi-device support. You can choose an{" "}
-        <a
-          href="#pricing"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          IPTV subscription plan
-        </a>{" "}
-        that allows streaming on more than one device simultaneously. Perfect for families or shared accounts.
-      </>
-    ),
-  },
-  {
-    id: 5,
-    category: "General",
-    question: "Can I watch live sports on StrimoIPTV?",
-    answer: (
-      <>
-        Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}
-        <Link
-          href="/channels-list"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          channels catalog
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    id: 6,
-    category: "Billing",
-    question: "What payment methods do you accept?",
-    answer: (
-      <>
-        We accept PayPal, cryptocurrency (such as Bitcoin), credit cards, and instant bank transfers for quick and secure payments. Contact our{" "}
-        <Link
-          href="/contact"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          support team
-        </Link>{" "}
-        for any payment inquiries.
-      </>
-    ),
-  },
-  {
-    id: 7,
-    category: "General",
-    question: "What kind of content is included?",
-    answer: (
-      <>
-        The service includes live TV channels, sports, movies, TV series, kids&apos; content, international channels, and more – all in HD or 4K quality. Learn more in our{" "}
-        <Link
-          href="/channels"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          channels catalog
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    id: 8,
-    category: "Technical",
-    question: "Do I need a VPN?",
-    answer: (
-      <>
-        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Read our{" "}
-        <Link
-          href="/faq"
-          className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
-        >
-          FAQ knowledge base
-        </Link>{" "}
-        for further setup details.
-      </>
-    ),
-  },
-];
-
-const categories = ["General", "Technical", "Billing"];
+import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
 
 export default function FAQSection() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-  const toggleFaq = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
+  const faqs = [
+    {
+      q: "What is StrimoIPTV and how does it work?",
+      a: "StrimoIPTV is a premium television streaming service that delivers over 50,000 live TV channels and 200,000+ VOD movies directly over the internet. Instead of traditional satellite or cable, StrimoIPTV streams content securely to your Smart TV, Firestick, smartphone, or PC using high-speed cloud servers.",
+    },
+    {
+      q: "Which devices are compatible with StrimoIPTV?",
+      a: "StrimoIPTV supports virtually all connected devices, including Samsung Tizen, LG webOS Smart TVs, Amazon Firestick, Android TV boxes, Apple TV, iPhone, Android phones, Windows, Mac, MAG boxes, and web browsers via our native Web Player.",
+    },
+    {
+      q: "How do I install and set up StrimoIPTV?",
+      a: "Setting up StrimoIPTV takes under 3 minutes. Once you subscribe, you receive your Xtream Codes login credentials and M3U playlist URL via email and WhatsApp. Simply download your preferred IPTV player app (such as TiviMate, IPTV Smarters Pro, or IBO Player), enter your credentials, and start watching immediately.",
+    },
+    {
+      q: "Can I watch live sports and pay-per-view events?",
+      a: "Yes! All StrimoIPTV plans include full access to major sports networks (NFL Sunday Ticket, NBA League Pass, MLB, NHL, Premier League, Champions League, UFC PPV, F1, and Box Office events) in 4K HDR at 60 FPS with zero extra fees.",
+    },
+    {
+      q: "How fast is activation after ordering?",
+      a: "Activation is fully automated. Your login credentials and setup guide are dispatched to your email address and WhatsApp instantly upon payment confirmation.",
+    },
+    {
+      q: "Is a free trial available to test StrimoIPTV?",
+      a: "Yes, we offer trial passes so you can evaluate channel quality, stream stability, and server performance before purchasing a long-term plan. Contact support on WhatsApp to request your trial.",
+    },
+    {
+      q: "Can I use StrimoIPTV on multiple devices simultaneously?",
+      a: "Yes, depending on your selected plan. Multi-device plans support 2 to 3 simultaneous connections across different devices in your home network.",
+    },
+  ];
 
   return (
-    <section className="py-20 bg-transparent text-black relative z-10 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+    <section id="faq" className="py-24 relative z-10 border-t border-white/[0.06]">
+      <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+        
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20 animate-fade-up">
-            SUPPORT & HELP
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1] animate-fade-up">
-            Frequently Asked <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
-              Questions (FAQ)
-            </span>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>FREQUENTLY ASKED QUESTIONS</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
+            Got <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Questions?</span> We Have Answers
           </h2>
+          <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
+            Everything you need to know about StrimoIPTV setup, compatibility, and streaming services.
+          </p>
         </div>
 
-        {/* 2-Column FAQ Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
-          {faqs.map((faq) => {
-            const isExpanded = expandedId === faq.id;
-            
+        {/* Accordion List */}
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIdx === idx;
             return (
-              <div 
-                key={faq.id} 
-                className="bg-gradient-to-b from-[#497598] to-[#8fb0c9] rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+              <div
+                key={idx}
+                className="strimo-card rounded-xl overflow-hidden transition-all duration-200"
               >
                 <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full flex justify-between items-center p-5 text-left font-bold text-white focus:outline-none"
+                  onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-[#F8FAFC] text-base sm:text-lg hover:text-[#60A5FA] transition-colors"
+                  aria-expanded={isOpen}
                 >
-                  <span className="text-sm md:text-base">{faq.question}</span>
-                  <span className={`text-white shrink-0 ml-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-                    <ChevronDown className="w-5 h-5" />
-                  </span>
+                  <span>{faq.q}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-cyan-400 shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
-                
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="p-5 pt-0 text-sm leading-relaxed text-white/90 border-t border-white/20">
-                    {faq.answer}
+
+                {isOpen && (
+                  <div className="px-5 pb-5 text-sm text-[#A7B0C0] leading-relaxed border-t border-white/5 pt-3 animate-in fade-in duration-200">
+                    {faq.a}
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          <Link
-            href="/faq"
-            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#36a9ff] text-white font-bold text-xs sm:text-sm hover:bg-[#2196f3] transition-all duration-300 shadow-lg"
+        {/* Support CTA Link */}
+        <div className="mt-12 text-center text-sm text-[#A7B0C0]">
+          Still have questions?{" "}
+          <a
+            href="https://wa.me/213552069874?text=Hello,%20I%20have%20a%20question%20about%20StrimoIPTV."
+            target="_blank"
+            rel="noreferrer"
+            className="text-cyan-400 font-bold hover:underline inline-flex items-center gap-1"
           >
-            <span>View Complete FAQ Knowledge Base</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+            <MessageSquare className="w-3.5 h-3.5" /> Speak with 24/7 Live Support
+          </a>
         </div>
+
       </div>
     </section>
   );

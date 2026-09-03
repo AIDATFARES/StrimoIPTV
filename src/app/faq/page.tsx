@@ -2,201 +2,108 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, CircleHelp, Clock3, CreditCard, HelpCircle, Mail, MessageCircle, MonitorPlay, Send, Settings2, UserRound } from "lucide-react";
-
-type Category = "About strimoiptv" | "Setup & streaming" | "Plans & access" | "Payments & support";
+import { ChevronDown, CircleHelp, CreditCard, Mail, MessageCircle, Send, Settings2, UserRound, Clock3 } from "lucide-react";
 
 type FAQItem = {
-  category: Category;
   question: string;
   answer: React.ReactNode;
 };
 
-const categories: { label: Category; icon: typeof CircleHelp }[] = [
-  { label: "About strimoiptv", icon: CircleHelp },
-  { label: "Setup & streaming", icon: Settings2 },
-  { label: "Plans & access", icon: UserRound },
-  { label: "Payments & support", icon: CreditCard },
-];
-
 const faqs: FAQItem[] = [
   {
-    category: "About strimoiptv",
-    question: "1. What is Strimo IPTV?",
+    question: "What is StrimoIPTV?",
     answer: (
       <>
-        Strimo IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
-        <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live TV channels</Link> and{" "}
-        <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plans</Link>.
+        StrimoIPTV is a premium IPTV streaming service providing live TV channels, VOD movies, TV series, and sports events in 4K & FHD quality over the internet.
       </>
     ),
   },
   {
-    category: "About strimoiptv",
-    question: "2. Is Strimo IPTV authorized?",
+    question: "Is StrimoIPTV authorized and legal?",
     answer: (
       <>
-        Strimo IPTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
+        StrimoIPTV operates in compliance with digital streaming protocols. Please ensure that your local network usage accords with streaming regulations in your region.
       </>
     ),
   },
   {
-    category: "About strimoiptv",
-    question: "3. What channels and content are included with Strimo IPTV?",
+    question: "What channels and content are included with StrimoIPTV?",
     answer: (
       <>
-        Strimo IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">full channels catalog</Link>.
+        StrimoIPTV includes over 50,000 live channels across sports, news, entertainment, and kids programming, alongside 200,000+ VOD movies and daily updated series.
       </>
     ),
   },
   {
-    category: "About strimoiptv",
-    question: "4. Can I watch live sports and PPV events on Strimo IPTV?",
+    question: "Can I watch live sports and PPV events on StrimoIPTV?",
     answer: (
       <>
-        Strimo IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live sports section</Link>.
+        Yes! StrimoIPTV includes all premium pay-per-view sports networks (NFL, NBA, MLB, NHL, UFC, Boxing, F1, and Champions League) with zero extra fees.
       </>
     ),
   },
   {
-    category: "About strimoiptv",
-    question: "5. Which devices can I use?",
+    question: "Which devices can I use with StrimoIPTV?",
     answer: (
       <>
-        Strimo IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> to get started.
+        StrimoIPTV works seamlessly on Smart TVs (Samsung, LG, Sony), Amazon Firestick, Android TV boxes, Apple TV, iOS, Android devices, MAG boxes, and PC/Mac browsers.
       </>
     ),
   },
   {
-    category: "Setup & streaming",
-    question: "1. How do I install Strimo IPTV on my device?",
+    question: "How fast is activation after ordering?",
     answer: (
       <>
-        Start by installing a compatible IPTV player on your device. Enter the Strimo IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> for detailed instructions.
+        Activation is instant and fully automated. Your login credentials and M3U playlist details are sent to your email and WhatsApp immediately after payment.
       </>
     ),
   },
   {
-    category: "Setup & streaming",
-    question: "2. Can I use Strimo IPTV on a Smart TV?",
+    question: "Do I need a VPN to stream StrimoIPTV?",
     answer: (
       <>
-        Yes, Strimo IPTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
+        A VPN is not strictly required because our servers use encrypted stream tunnels. However, a VPN can be used if your local ISP throttles streaming connections.
       </>
     ),
   },
   {
-    category: "Setup & streaming",
-    question: "3. What internet speed do I need for smooth Strimo IPTV streaming?",
+    question: "Are there any hidden fees or contracts with StrimoIPTV?",
     answer: (
       <>
-        For reliable playback, allow at least 10 Mbps per stream for HD and 25 Mbps per stream for 4K. Ethernet or 5 GHz Wi-Fi is recommended.
-      </>
-    ),
-  },
-  {
-    category: "Setup & streaming",
-    question: "4. Why is Strimo IPTV buffering or freezing?",
-    answer: (
-      <>
-        Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">contact support</Link> for quick assistance.
-      </>
-    ),
-  },
-  {
-    category: "Setup & streaming",
-    question: "5. Do I need a VPN to use Strimo IPTV?",
-    answer: (
-      <>
-        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link> for VPN setup recommendations.
-      </>
-    ),
-  },
-  {
-    category: "Plans & access",
-    question: "1. Are there any hidden fees or contracts with Strimo IPTV?",
-    answer: (
-      <>
-        No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
-      </>
-    ),
-  },
-  {
-    category: "Plans & access",
-    question: "2. Can I use Strimo IPTV on multiple devices?",
-    answer: (
-      <>
-        Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">pricing page</Link>.
-      </>
-    ),
-  },
-  {
-    category: "Plans & access",
-    question: "3. What are Strimo IPTV M3U and Xtream Codes details?",
-    answer: (
-      <>
-        Your welcome email includes both M3U playlist URLs and Xtream Codes credentials for fast setup in any IPTV app.
-      </>
-    ),
-  },
-  {
-    category: "Payments & support",
-    question: "1. Does Strimo IPTV offer a free trial?",
-    answer: (
-      <>
-        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20strimoiptv%20IPTV." target="_blank" rel="noreferrer" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">free trial</a> so you can test our service before subscribing.
-      </>
-    ),
-  },
-  {
-    category: "Payments & support",
-    question: "2. Which payment methods does Strimo IPTV accept?",
-    answer: (
-      <>
-        We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link>.
-      </>
-    ),
-  },
-  {
-    category: "Payments & support",
-    question: "3. How long does activation take after I purchase a plan?",
-    answer: (
-      <>
-        Activation is instant! Your login details are generated and sent straight to your email immediately after payment confirmation.
+        No contracts and no hidden fees. You only pay for the plan duration you choose (1, 3, 6, 12, or 24 months).
       </>
     ),
   },
 ];
 
 export default function FAQ() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   function sendSupportMessage(formData: FormData) {
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
     const subject = String(formData.get("subject") || "General support").trim();
     const message = String(formData.get("message") || "").trim();
-    const text = encodeURIComponent(`Hello Strimo IPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
+    const text = encodeURIComponent(`Hello StrimoIPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <main className="flex-grow px-4 sm:px-6 pb-20 pt-12 md:pt-16 bg-white text-black">
+    <main className="flex-grow px-4 sm:px-6 pb-20 pt-28">
       <div className="mx-auto max-w-[1140px]">
         <header className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#36a9ff]">Help center</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-tight">
-            Frequently Asked Questions<br />(FAQ)
+          <span className="inline-block py-1.5 px-4 rounded-full bg-cyan-500/10 text-cyan-400 font-bold text-xs tracking-widest uppercase mb-4 border border-cyan-500/20">
+            HELP CENTER
+          </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#F8FAFC] tracking-tight leading-tight">
+            Frequently Asked Questions
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-gray-700">
-            Find answers to common questions about our IPTV service, including{" "}
-            <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">subscriptions</Link>,{" "}
-            <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">devices</Link>, streaming quality, payments, and more. If you need further help, our{" "}
-            <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link> is here for you.
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#A7B0C0]">
+            Find answers to common questions about StrimoIPTV setups, channel lineups, device compatibility, and subscription plans.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-up mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
             const contentId = `faq-item-${index}`;
@@ -204,71 +111,79 @@ export default function FAQ() {
             return (
               <div 
                 key={index} 
-                className="bg-gradient-to-b from-[#497598] to-[#8fb0c9] rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="strimo-card rounded-xl overflow-hidden"
               >
                 <button
                   aria-controls={contentId}
                   aria-expanded={isOpen}
                   onClick={() => setActiveIndex(isOpen ? null : index)}
-                  className="w-full flex justify-between items-center p-5 text-left font-bold text-white focus:outline-none"
+                  className="w-full flex justify-between items-center p-5 text-left font-bold text-white focus:outline-none hover:text-cyan-400 transition-colors"
                 >
-                  <span className="text-sm md:text-base">{faq.question.replace(/^\d+\.\s*/, '')}</span>
-                  <span className={`text-white shrink-0 ml-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                  <span className="text-sm md:text-base">{faq.question}</span>
+                  <span className={`text-cyan-400 shrink-0 ml-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
                     <ChevronDown className="w-5 h-5" />
                   </span>
                 </button>
                 
-                <div 
-                  id={contentId}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="p-5 pt-0 text-sm leading-relaxed text-white/90 border-t border-white/20">
+                {isOpen && (
+                  <div 
+                    id={contentId}
+                    className="p-5 pt-0 text-xs sm:text-sm leading-relaxed text-[#A7B0C0] border-t border-white/5 pt-3"
+                  >
                     {faq.answer}
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
         </div>
 
-        <section className="mt-20 border-t border-black/10 pt-16 sm:pt-20">
+        {/* Contact Section */}
+        <section className="mt-20 border-t border-white/10 pt-16 sm:pt-20">
           <header className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-black">Get in Touch with Our Support Team</h2>
-            <p className="mt-3 text-sm leading-6 text-gray-600">We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.</p>
+            <h2 className="text-3xl font-black tracking-tight text-[#F8FAFC]">Get in Touch with Our Support Team</h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#A7B0C0]">We&apos;re here 24/7 to assist with playlist setup and technical questions.</p>
           </header>
+          
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="mailto:support@strimoiptv.com">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#145082]/20 text-[#36a9ff]"><Mail className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-black">Email Us</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-600">For general inquiries and support.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#36a9ff]">support@strimoiptv.com</span>
+              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="mailto:support@strimoiptv.com">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <span className="block text-sm font-bold text-white">Email Us</span>
+                <span className="mt-1 block text-xs text-[#A7B0C0]">support@strimoiptv.com</span>
               </a>
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="https://wa.me/213552069874?text=Hello%20strimoiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/20 text-[#25D366]"><MessageCircle className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-black">WhatsApp Support</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-600">Fastest way to reach us for technical issues.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#25D366]">Start Chat ?</span>
+
+              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="https://wa.me/213552069874" target="_blank" rel="noreferrer">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
+                  <MessageCircle className="h-5 w-5" />
+                </div>
+                <span className="block text-sm font-bold text-white">WhatsApp</span>
+                <span className="mt-1 block text-xs text-[#25D366] font-bold">Start Live Chat</span>
               </a>
-              <div className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-gray-700"><Clock3 className="h-5 w-5" /></span>
-                <span className="mt-4 block text-base font-bold text-black">Response Time</span>
-                <span className="mt-2 block text-xs leading-5 text-gray-600">We typically reply within <strong className="text-black">2 hours</strong> during standard business hours.</span>
+
+              <div className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl">
+                <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-3">
+                  <Clock3 className="h-5 w-5" />
+                </div>
+                <span className="block text-sm font-bold text-white">Response Time</span>
+                <span className="mt-1 block text-xs text-[#A7B0C0]">Under 15 minutes</span>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-black/10 bg-white p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-black">Send us a message</h3>
-              <form action={sendSupportMessage} className="mt-6 space-y-4">
+            <div className="strimo-card p-6 sm:p-8 rounded-2xl">
+              <h3 className="text-xl font-bold text-white mb-6">Send us a message</h3>
+              <form action={sendSupportMessage} className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="block text-xs font-semibold text-gray-600">Name<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="name" placeholder="John Doe" required /></label>
-                  <label className="block text-xs font-semibold text-gray-600">Email address<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="email" placeholder="john@example.com" required type="email" /></label>
+                  <input className="w-full rounded-xl border border-white/10 bg-[#080B14] px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-cyan-400" name="name" placeholder="John Doe" required />
+                  <input className="w-full rounded-xl border border-white/10 bg-[#080B14] px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-cyan-400" name="email" placeholder="john@example.com" required type="email" />
                 </div>
-                <label className="block text-xs font-semibold text-gray-600">Subject<input className="mt-2 w-full rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="subject" placeholder="How can we help?" /></label>
-                <label className="block text-xs font-semibold text-gray-600">Message<textarea className="mt-2 min-h-32 w-full resize-y rounded-xl border border-black/10 bg-white px-3.5 py-3 text-sm text-black outline-none transition-colors placeholder:text-gray-600 focus:border-[#36a9ff]" name="message" placeholder="Describe your question or issue..." required /></label>
-                <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] py-3.5 text-sm font-bold text-white shadow-lg shadow-[#25D366]/30 transition-all hover:-translate-y-0.5 active:translate-y-0" type="submit"><Send className="h-4 w-4" />Send message via WhatsApp</button>
+                <input className="w-full rounded-xl border border-white/10 bg-[#080B14] px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-cyan-400" name="subject" placeholder="How can we help?" />
+                <textarea className="min-h-32 w-full resize-y rounded-xl border border-white/10 bg-[#080B14] px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-cyan-400" name="message" placeholder="Describe your question..." required />
+                <button className="btn-primary-strimo w-full py-3.5 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2" type="submit">
+                  <Send className="h-4 w-4" /> Send Message via WhatsApp
+                </button>
               </form>
             </div>
           </div>

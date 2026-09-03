@@ -1,14 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { CheckCircle2, Gift, Tv, Headphones, HelpCircle, MonitorSmartphone, ShieldCheck, Sparkles, Zap, CreditCard, Bitcoin, Wallet } from "lucide-react";
-
-type PlanFeature = {
-  text: string;
-  included: boolean;
-};
+import { CheckCircle2, Gift, Tv, Headphones, HelpCircle, MonitorSmartphone, ShieldCheck, Sparkles, Zap, CreditCard, Bitcoin, Wallet, ArrowRight } from "lucide-react";
 
 type Plan = {
   id: string;
@@ -21,16 +15,16 @@ type Plan = {
   buttonText: string;
 };
 
-const commonFeatures: PlanFeature[] = [
-  { text: "strimo subscription for {devices} Device{s}", included: true },
-  { text: "Uncompressed Ultra HD & 4K", included: true },
-  { text: "25,000+ Premium Channels", included: true },
-  { text: "100,000+ VODs (Daily Update)", included: true },
-  { text: "Premium Sports & PPV Pass", included: true },
-  { text: "Full EPG & 7-Day Catch-up", included: true },
-  { text: "Advanced Anti-Freeze VIP", included: true },
-  { text: "VPN Included Free", included: true },
-  { text: "Direct WhatsApp VIP Support", included: true },
+const commonFeatures = [
+  "StrimoIPTV subscription for {devices} Device{s}",
+  "Uncompressed Ultra HD & 4K Streaming",
+  "50,000+ Premium Live International Channels",
+  "200,000+ VOD Movies & Series (Daily Updates)",
+  "All Premium Sports Passes & PPV Events",
+  "Full Electronic Program Guide (EPG)",
+  "Advanced Anti-Freeze Cloud Server Infrastructure",
+  "Free VPN Compatibility Built-in",
+  "Direct 24/7 WhatsApp VIP Technical Support",
 ];
 
 const plans: Plan[] = [
@@ -38,7 +32,7 @@ const plans: Plan[] = [
     id: "3-months",
     name: "3 MONTHS",
     badge: "STARTER",
-    price: 35,
+    price: 29.99,
     durationLabel: "3 Months",
     months: 3,
     buttonText: "SELECT 3 MONTHS",
@@ -46,8 +40,8 @@ const plans: Plan[] = [
   {
     id: "12-months",
     name: "12 MONTHS",
-    badge: "ULTIMATE",
-    price: 69.99,
+    badge: "MOST POPULAR",
+    price: 64.99,
     durationLabel: "12 Months",
     months: 12,
     popular: true,
@@ -57,7 +51,7 @@ const plans: Plan[] = [
     id: "6-months",
     name: "6 MONTHS",
     badge: "VALUE",
-    price: 49.99,
+    price: 44.99,
     durationLabel: "6 Months",
     months: 6,
     buttonText: "SELECT 6 MONTHS",
@@ -65,31 +59,19 @@ const plans: Plan[] = [
 ];
 
 const includedFeatures = [
-  { icon: Tv, title: "+50,000 Channels", text: "Explore live channels from around the world, including sports, news and entertainment." },
-  { icon: MonitorSmartphone, title: "200,000+ VODs", text: "Enjoy +120,000 Films & Series and a massive, regularly refreshed video-on-demand library." },
-  { icon: Zap, title: "Anti-freeze Technology", text: "Optimized streaming technology helps deliver a smoother experience at busy times." },
-  { icon: Headphones, title: "24/7 Support", text: "The Strimo IPTV support team is here to help with setup and streaming questions." },
-  { icon: Sparkles, title: "Fast Setup", text: "Your Strimo IPTV details are sent after payment so you can start setting up quickly." },
-  { icon: CreditCard, title: "TV Guide (EPG)", text: "Browse your channel schedule more easily with an electronic programme guide." },
+  { icon: Tv, title: "+50,000 Live Channels", text: "Explore global channels across sports, news, documentaries, and premium entertainment." },
+  { icon: MonitorSmartphone, title: "200,000+ VODs", text: "Enjoy cinema blockbusters, daily updated TV series, and multi-audio tracks." },
+  { icon: Zap, title: "Anti-Freeze Technology", text: "Cloud server load balancing ensures 99.9% uptime and zero buffering during peak hours." },
+  { icon: Headphones, title: "24/7 Support", text: "Dedicated technical assistance available on WhatsApp around the clock." },
+  { icon: Sparkles, title: "Instant Activation", text: "Login credentials and setup guides dispatched immediately upon payment." },
+  { icon: CreditCard, title: "TV Guide (EPG)", text: "Complete electronic program guide with 7-day catchup and event reminders." },
 ];
 
 const billingQuestions = [
-  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact Strimo IPTV support</Link> if you need help before purchasing.</> },
-  { question: "2. Is my payment protected?", answer: "Please use the official Strimo IPTV payment process and never share payment details through an unverified link or message." },
-  { question: "3. Will my subscription renew automatically?", answer: <>Renewal details are provided when you order. If you have any questions about your subscription period or renewal, <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">contact support</Link> before your plan expires.</> },
-  { question: "4. Can I change my plan or number of connections?", answer: <>Yes. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact the support team</Link> with your order email and the plan or connection change you need, and they will advise on the available options.</> },
-];
-
-const planComparison = [
-  { feature: "LIVE CHANNELS", m3: "15,000+", m12: "25,000+", m6: "18,000+" },
-  { feature: "VOD LIBRARY", m3: "60,000+", m12: "100,000+", m6: "80,000+" },
-  { feature: "4K STREAMING", m3: "Yes", m12: "Yes", m6: "Yes" },
-  { feature: "SPORTS PPV", m3: "Basic", m12: "All Included", m6: "Premium" },
-  { feature: "EPG GUIDE", m3: "Standard", m12: "Full 7-Day", m6: "Full" },
-  { feature: "ANTI-FREEZE TECH", m3: "Standard", m12: "VIP Advanced", m6: "Pro" },
-  { feature: "VPN INCLUDED", m3: "No", m12: "Yes", m6: "No" },
-  { feature: "MULTI-SCREEN", m3: "1 Device ($35)", m12: "3 Devices ($150)", m6: "2 Devices ($80)" },
-  { feature: "SUPPORT", m3: "Standard", m12: "VIP Priority", m6: "Priority" },
+  { question: "1. Which payment methods can I use?", answer: "We support Credit/Debit Cards, PayPal, Bitcoin, and Crypto (USDT). Contact support if you need assistance during checkout." },
+  { question: "2. Is my payment protected?", answer: "Yes, all transactions are processed through encrypted 256-bit SSL gateways for maximum security." },
+  { question: "3. Will my subscription renew automatically?", answer: "No automatic charges. We will send you a renewal reminder before your plan expires so you remain in total control." },
+  { question: "4. Can I change my plan or number of connections?", answer: "Yes! Simply contact our support team on WhatsApp with your account details to add connections or upgrade your plan." },
 ];
 
 export default function PricingPageContent() {
@@ -99,42 +81,38 @@ export default function PricingPageContent() {
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to purchase the ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to purchase the StrimoIPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section className="relative overflow-hidden bg-transparent py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         
-        {/* Header */}
+        {/* Page Header */}
         <header className="mx-auto max-w-3xl text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#36a9ff] px-4 py-1 mb-6">
-            <Gift className="h-4 w-4 text-black" />
-            <span className="text-[10px] font-bold text-black tracking-widest uppercase">
-              BEST VALUE PLANS
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-cyan-500/20 px-4 py-1 mb-6">
+            <Gift className="h-4 w-4 text-cyan-400" />
+            <span className="text-xs font-bold text-cyan-400 tracking-widest uppercase">
+              TRANSPARENT PLANS & PRICING
             </span>
           </div>
-          <h1 className="mt-6 text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
-            <span className="block text-black">STRIMO IPTV</span>
-            <span className="mt-1 block text-[#36a9ff]">SUBSCRIPTION PLANS</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#F8FAFC]">
+            STRIMOIPTV <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">SUBSCRIPTION PLANS</span>
           </h1>
-          <p className="mx-auto mt-6 text-base sm:text-lg text-black/90 font-medium leading-relaxed max-w-2xl">
-            Select your subscription duration. Enjoy larger discounts on longer plans, and share the ultimate entertainment experience across multiple devices simultaneously with Strimo.
-          </p>
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-gray-600">
-            Need help getting started? Visit our <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/channels">channel list</Link> before you order.
+          <p className="mx-auto mt-6 text-base sm:text-lg text-[#A7B0C0] font-normal leading-relaxed max-w-2xl">
+            Choose your subscription duration. Enjoy larger discounts on longer plans, and stream simultaneously across multiple devices.
           </p>
         </header>
 
         {/* Device Selector */}
         <div className="mx-auto mb-16 flex flex-col items-center">
           <div className="flex items-center gap-2 mb-4">
-            <Tv className="h-4 w-4 text-[#36a9ff]" />
-            <p className="text-[11px] font-bold uppercase tracking-widest text-black">Select Number of Devices</p>
+            <Tv className="h-4 w-4 text-cyan-400" />
+            <p className="text-xs font-bold uppercase tracking-widest text-[#A7B0C0]">Select Number of Devices</p>
           </div>
-          <div className="inline-flex rounded-full border border-[#36a9ff] p-1.5 bg-transparent shadow-[0_0_15px_rgba(54,169,255,0.2)]">
+          <div className="inline-flex rounded-full border border-white/10 p-1.5 bg-[#0D111B]">
             {[1, 2, 3].map((count) => {
               const selected = devices === count;
               return (
@@ -143,11 +121,11 @@ export default function PricingPageContent() {
                   onClick={() => setDevices(count)}
                   className={`rounded-full px-6 py-2.5 text-xs sm:text-sm font-bold transition-all uppercase tracking-wide ${
                     selected
-                      ? "bg-[#36a9ff] text-white shadow-md"
-                      : "text-black hover:text-[#36a9ff]"
+                      ? "btn-primary-strimo"
+                      : "text-[#A7B0C0] hover:text-white"
                   }`}
                 >
-                  {count} Device{count > 1 ? "S" : ""}
+                  {count} Device{count > 1 ? "s" : ""}
                 </button>
               );
             })}
@@ -155,65 +133,67 @@ export default function PricingPageContent() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch pt-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch">
           {plans.map((plan) => (
             <article
               key={plan.id}
-              className={`relative flex flex-col rounded-2xl bg-[#fdf1c3] p-8 text-left transition-transform duration-300 border-[6px] border-[#36a9ff] ${
-                plan.popular ? "md:scale-105 z-10 shadow-[0_0_40px_rgba(54,169,255,0.6)]" : "hover:-translate-y-2 shadow-xl"
+              className={`relative flex flex-col rounded-2xl p-8 text-left transition-all duration-300 ${
+                plan.popular
+                  ? "strimo-featured-card md:scale-105 z-10"
+                  : "strimo-card"
               }`}
             >
-              {/* Card Header Row */}
+              {/* Header */}
               <div className="flex items-center justify-between mb-4">
-                <span className="block text-[#36a9ff] font-black uppercase tracking-widest text-sm">
+                <span className="block text-cyan-400 font-extrabold uppercase tracking-widest text-xs">
                   {plan.badge}
                 </span>
-                <div className="flex items-center gap-2">
-                  {plan.popular && (
-                    <span className="bg-[#36a9ff] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                      MOST POPULAR
-                    </span>
-                  )}
-                  <Tv className="h-5 w-5 text-[#36a9ff]" />
-                </div>
+                {plan.popular && (
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    MOST POPULAR
+                  </span>
+                )}
               </div>
 
               <div className="pb-6">
-                <h3 className="text-[28px] font-black text-[#051f33] uppercase leading-none mb-4">{plan.name}</h3>
+                <h3 className="text-2xl font-black text-[#F8FAFC] uppercase mb-4">{plan.name}</h3>
                 
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-[46px] font-black tracking-tighter text-[#051f33] leading-none">${priceFor(plan)}</span>
+                <div className="flex items-baseline gap-1 mb-3">
+                  <span className="text-5xl font-black tracking-tight text-white">${priceFor(plan)}</span>
                 </div>
 
-                <div className="inline-flex rounded-full bg-[#36a9ff] px-4 py-1.5">
-                  <span className="text-[10px] font-bold text-black uppercase tracking-wider">
+                <div className="inline-flex rounded-full bg-cyan-500/10 border border-cyan-500/20 px-3 py-1">
+                  <span className="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">
                     JUST ${monthlyPrice(plan)} / MONTH
                   </span>
                 </div>
               </div>
 
-              <ul className="mt-6 mb-8 flex-grow space-y-3.5">
-                {commonFeatures.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-[18px] w-[18px] shrink-0 text-[#36a9ff] fill-white" />
-                    <span className="text-xs sm:text-[13px] font-bold text-[#051f33]">
-                      {feature.text.replace('{devices}', devices.toString()).replace('{s}', devices > 1 ? 's' : '')}
+              <div className="my-4 border-t border-white/10" />
+
+              <ul className="my-4 flex-grow space-y-3">
+                {commonFeatures.map((featureText, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5 text-xs text-[#A7B0C0]">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-cyan-400 mt-0.5" />
+                    <span>
+                      {featureText.replace('{devices}', devices.toString()).replace('{s}', devices > 1 ? 's' : '')}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-auto pt-4">
+              <div className="mt-8 pt-4">
                 <button
                   type="button"
                   onClick={() => handleOrder(plan)}
-                  className={`w-full py-4 text-sm font-black uppercase tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-md ${
+                  className={`w-full py-4 text-xs font-extrabold uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 ${
                     plan.popular
-                      ? "bg-[#051f33] text-white hover:bg-[#0a365e] hover:shadow-xl"
-                      : "bg-[#36a9ff] text-white hover:bg-[#2196f3] hover:shadow-[#36a9ff]/50"
+                      ? "btn-primary-strimo"
+                      : "btn-secondary-strimo"
                   }`}
                 >
-                  {plan.buttonText}
+                  <span>{plan.buttonText}</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </article>
@@ -221,167 +201,69 @@ export default function PricingPageContent() {
         </div>
 
         {/* Free Trial Banner */}
-        <div className="mx-auto mt-16 max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-full bg-[#fdf1c3] p-2 pl-6 sm:pl-8 shadow-xl border-4 border-[#36a9ff]/30">
-          <div className="flex items-center gap-3">
-            <div className="bg-[#36a9ff] p-2 rounded-full">
-              <Gift className="h-5 w-5 text-black" />
+        <div className="mx-auto mt-16 max-w-3xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-[#0D111B] p-6 border border-white/10">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl bg-blue-600/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center shrink-0">
+              <Gift className="h-5 w-5" />
             </div>
-            <h3 className="text-sm sm:text-base font-black text-[#051f33] uppercase">
-              NEED FREE TRIAL 24H?
-            </h3>
+            <div>
+              <h3 className="text-base font-bold text-white uppercase">Want to test StrimoIPTV first?</h3>
+              <p className="text-xs text-[#A7B0C0]">Request a free trial pass to evaluate our 4K servers on your device.</p>
+            </div>
           </div>
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial."
+            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20pass."
             target="_blank"
             rel="noreferrer"
-            className="bg-[#36a9ff] hover:bg-[#2196f3] text-white text-sm font-black px-10 py-3.5 rounded-full uppercase transition-all shadow-md hover:scale-105 whitespace-nowrap"
+            className="btn-primary-strimo px-8 py-3 text-xs uppercase tracking-wider whitespace-nowrap font-extrabold"
           >
-            TRY NOW
+            GET FREE TRIAL
           </a>
         </div>
 
-        {/* Added Image Banner */}
-        <div className="mx-auto mt-12 max-w-5xl flex justify-center px-4">
-          <Image 
-            src="/imggt1_3.webp" 
-            alt="Supported Apps and Devices" 
-            width={1200} 
-            height={300} 
-            className="w-full h-auto object-contain drop-shadow-md rounded-xl"
-          />
-        </div>
-
-        {/* Bottom Security Banner */}
-        <div className="mx-auto mt-16 max-w-4xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl bg-gray-50 p-6 shadow-sm border border-[#36a9ff]/20 border-l-4 border-l-[#36a9ff]">
-            <div>
-              <h3 className="text-lg font-bold text-black">Secure Payments & Instant Access</h3>
-              <p className="mt-1 text-sm text-gray-600 font-medium">Pay safely using Crypto, Credit Card, or PayPal. Your details are encrypted instantly.</p>
-            </div>
-            <div className="flex shrink-0 items-center gap-4 text-gray-600">
-              <CreditCard className="h-7 w-7" strokeWidth={1.5} />
-              <Bitcoin className="h-7 w-7" strokeWidth={1.5} />
-              <Wallet className="h-7 w-7" strokeWidth={1.5} />
-            </div>
-          </div>
-        </div>
-
-        {/* Plan Comparison Table */}
-        <div className="mt-32 max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-             <h2 className="text-3xl md:text-[42px] font-black uppercase tracking-tight text-black mb-4">
-               COMPARE <span className="text-[#36a9ff]">STRIMO PLANS</span>
-             </h2>
-             <p className="text-[#ffc107] font-bold text-sm tracking-widest uppercase">FIND THE PERFECT PLAN FOR YOUR STREAMING NEEDS</p>
-          </div>
-
-          <div className="bg-[#fdf1c3] rounded-[2rem] border-[4px] border-[#36a9ff] p-4 sm:p-8 relative overflow-hidden shadow-[0_0_40px_rgba(54,169,255,0.2)]">
-            
-            {/* Desktop Center Column Dark Background */}
-            <div className="absolute top-0 bottom-0 left-[50%] w-[25%] bg-gray-50 shadow-2xl rounded-2xl z-0 hidden md:block" />
-            
-            <div className="overflow-x-auto relative z-10">
-              <table className="w-full text-left min-w-[700px] border-collapse relative">
-                <thead>
-                  <tr>
-                    <th className="py-6 px-4 text-[#051f33] font-black uppercase text-sm tracking-widest w-1/4 border-b border-[#051f33]/10">FEATURE</th>
-                    <th className="py-6 px-4 text-[#36a9ff] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10">3 MONTHS</th>
-                    <th className="py-6 px-4 text-[#ffc107] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10 md:border-b md:border-black/10 md:bg-transparent bg-gray-50 md:rounded-t-2xl rounded-t-2xl">12 MONTHS</th>
-                    <th className="py-6 px-4 text-[#36a9ff] font-black uppercase text-sm tracking-widest text-center w-1/4 border-b border-[#051f33]/10">6 MONTHS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {planComparison.map((row, idx) => (
-                    <tr key={idx}>
-                      <td className={`py-5 px-4 font-bold text-[#051f33] text-[13px] uppercase ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
-                        {row.feature}
-                      </td>
-                      <td className={`py-5 px-4 text-center font-bold text-[#051f33]/80 text-[13px] ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
-                        {row.m3}
-                      </td>
-                      <td className={`py-5 px-4 text-center font-bold text-[#ffc107] text-[13px] md:bg-transparent bg-gray-50 
-                        ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10 md:border-b md:border-black/10' : 'md:border-b-0 rounded-b-2xl'}`}>
-                        {row.m12}
-                      </td>
-                      <td className={`py-5 px-4 text-center font-bold text-[#051f33]/80 text-[13px] ${idx !== planComparison.length - 1 ? 'border-b border-[#051f33]/10' : ''}`}>
-                        {row.m6}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <section className="mt-32">
-          {/* Section Header */}
+        {/* Features Grid */}
+        <section className="mt-28">
           <div className="text-center mb-14">
-            <span className="inline-block py-1 px-4 rounded-full bg-[#36a9ff]/10 border border-[#36a9ff]/30 text-[#36a9ff] text-xs font-bold tracking-widest uppercase mb-5">
-              Premium Features
+            <span className="inline-block py-1 px-4 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+              INCLUDED WITH ALL PLANS
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-black leading-tight">
-              Everything You Need for the{" "}
-              <span className="block text-[#36a9ff]">Ultimate Viewing Experience.</span>
+            <h2 className="text-3xl md:text-5xl font-black text-[#F8FAFC]">
+              Everything You Need for <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ultimate Streaming</span>
             </h2>
           </div>
 
-          {/* Top Row — first 3 features as large cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-            {includedFeatures.slice(0, 3).map(({ icon: Icon, title, text }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {includedFeatures.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
-                className="bg-[#145082] rounded-2xl p-8 flex flex-col gap-4 hover:bg-[#1a6098] transition-colors duration-300 group shadow-lg"
+                className="strimo-card p-6 rounded-2xl flex flex-col gap-3"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="w-6 h-6 text-white" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-white font-extrabold text-base tracking-wide uppercase">{title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Row — remaining features as smaller cards */}
-          <div className={`grid grid-cols-2 gap-5 ${includedFeatures.slice(3).length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
-            {includedFeatures.slice(3).map(({ icon: Icon, title, text }) => (
-              <div
-                key={title}
-                className="bg-[#145082] rounded-2xl p-6 flex flex-col gap-3 hover:bg-[#1a6098] transition-colors duration-300 group shadow-lg"
-              >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="w-5 h-5 text-white" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-white font-bold text-sm tracking-wide uppercase">{title}</h3>
-                <p className="text-white/60 text-xs leading-relaxed">{text}</p>
+                <h3 className="text-white font-bold text-base">{title}</h3>
+                <p className="text-[#A7B0C0] text-xs leading-relaxed">{text}</p>
               </div>
             ))}
           </div>
         </section>
 
+        {/* Billing FAQ */}
         <section className="mx-auto mt-24 max-w-4xl">
-          <h2 className="text-center text-3xl font-black text-black uppercase drop-shadow-sm">Billing &amp; Subscription FAQ</h2>
+          <h2 className="text-center text-3xl font-black text-white uppercase">Billing FAQ</h2>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
             {billingQuestions.map((item) => (
-              <div className="flex flex-col rounded-xl overflow-hidden border border-black/10 bg-gray-50/80 backdrop-blur-sm shadow-sm hover:border-[#36a9ff]/50 transition-colors" key={item.question}>
-                <div className="border-b border-black/5 px-5 py-4 flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-[#36a9ff] shrink-0 mt-0.5" />
-                  <h3 className="text-base sm:text-lg font-bold text-black leading-snug">
-                    {item.question}
-                  </h3>
-                </div>
-                <div className="p-5 text-sm text-gray-600 leading-relaxed flex-1 font-medium">
-                  <p>{item.answer}</p>
-                </div>
+              <div className="strimo-card p-6 rounded-xl space-y-2" key={item.question}>
+                <h3 className="text-base font-bold text-white flex items-center gap-2">
+                  <HelpCircle className="w-4 h-4 text-cyan-400 shrink-0" />
+                  {item.question}
+                </h3>
+                <p className="text-xs text-[#A7B0C0] leading-relaxed">{item.answer}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <div className="mt-16 flex items-center justify-center gap-2 text-sm text-gray-600">
-          <ShieldCheck className="h-5 w-5 text-[#36a9ff]" />
-          <span className="font-semibold text-black">Secure ordering</span> and friendly Strimo IPTV support.
-        </div>
       </div>
     </section>
   );

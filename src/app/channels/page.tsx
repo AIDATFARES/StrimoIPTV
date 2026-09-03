@@ -9,16 +9,12 @@ import {
   Monitor, 
   Newspaper, 
   Trophy, 
-  Tv, 
-  Zap, 
-  CirclePlay,
-  Radio
+  Radio,
+  CirclePlay
 } from "lucide-react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import BrandMarquee from "@/components/home/BrandMarquee";
 
-// Category Overview Cards (matching reference image)
 const categoryCards = [
   {
     icon: Trophy,
@@ -95,118 +91,96 @@ const categoryCards = [
 
 export default function ChannelsPage() {
   return (
-    <main className="min-h-screen bg-white text-black pt-24 pb-24 relative overflow-hidden">
-      {/* Background Decorative Glow */}
-      <div className="absolute top-[10%] left-[5%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(112,0,255,0.06)_0%,transparent_65%)] rounded-full pointer-events-none z-0" />
-      <div className="absolute top-[40%] right-[5%] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(255,0,189,0.04)_0%,transparent_65%)] rounded-full pointer-events-none z-0" />
-
+    <main className="min-h-screen pt-28 pb-24 relative overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
         
         {/* Header Banner */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex rounded-full border border-[#36a9ff]/30 bg-[#36a9ff]/5 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff] mb-6"
-          >
-            <Radio className="w-3.5 h-3.5 mr-2 text-[#36a9ff] animate-pulse inline" />
-            <span>+50,000 CHANNELS · +120,000 FILMS &amp; SERIES · 200,000+ VODS</span>
-          </motion.div>
+          <div className="inline-flex rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-cyan-400 mb-6">
+            <Radio className="w-3.5 h-3.5 mr-2 text-cyan-400 animate-pulse inline" />
+            <span>50,000+ LIVE CHANNELS · 200,000+ VOD MOVIES</span>
+          </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight"
-          >
-            <span className="block text-black">Popular Strimo IPTV</span>
-            <span className="mt-1 block text-[#36a9ff]">Live Channels &amp; VOD.</span>
-          </motion.h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#F8FAFC]">
+            StrimoIPTV <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Live Channels & VOD</span>
+          </h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-gray-700 leading-relaxed"
-          >
-            Browse our full channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K &amp; HD quality from over 150+ countries.
-          </motion.p>
+          <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-[#A7B0C0] leading-relaxed">
+            Browse our full channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K & HD quality from over 150+ countries.
+          </p>
         </div>
 
-        {/* SECTION 1: Category Cards Grid (Matching User Reference Image) */}
+        {/* Category Cards Grid */}
         <section className="mb-20">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {categoryCards.map((category, index) => {
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {categoryCards.map((category) => {
               const Icon = category.icon;
 
               return (
-                <motion.article
+                <article
                   key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: index * 0.05 }}
-                  className="relative flex flex-col items-center min-h-[240px] rounded-xl bg-[#145082] p-8 shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                  className="strimo-card p-6 rounded-2xl flex flex-col justify-between relative group"
                 >
-                  <Icon className="h-10 w-10 text-white mb-4" strokeWidth={2} />
-
-                  {/* Optional Popular Tag */}
                   {category.tag && (
-                    <span className="absolute right-3 top-3 rounded-full bg-[#36a9ff] px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider text-white shadow-sm">
+                    <span className="absolute right-4 top-4 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider text-cyan-400">
                       {category.tag}
                     </span>
                   )}
 
-                  <h2 className="text-center text-xl font-extrabold text-white tracking-wide mb-4">
-                    {category.title}
-                  </h2>
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                      <Icon className="h-6 w-6" />
+                    </div>
 
-                  <ul className="w-full space-y-2.5 mb-6 text-left">
-                    {category.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-200 leading-tight">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#36a9ff]" strokeWidth={2.5} />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <h2 className="text-xl font-bold text-[#F8FAFC] tracking-wide mb-4">
+                      {category.title}
+                    </h2>
 
-                  <div className="w-full mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Total Available</span>
-                    <span className="text-xs font-black text-white">{category.count}</span>
+                    <ul className="w-full space-y-2.5 mb-6">
+                      {category.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-xs text-[#A7B0C0] leading-tight">
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-400" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </motion.article>
+
+                  <div className="w-full pt-4 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#667085]">Total Available</span>
+                    <span className="text-xs font-bold text-cyan-400">{category.count}</span>
+                  </div>
+                </article>
               );
             })}
           </div>
         </section>
 
-        {/* SECTION: Channel Brand Marquee Strip */}
-        <section className="mb-16 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
+        {/* Marquee Strip */}
+        <section className="mb-16 rounded-2xl overflow-hidden border border-white/5">
           <BrandMarquee />
         </section>
 
-
-
-        {/* SECTION 3: CTA Bottom Box */}
-        <section className="mt-16 bg-[#36a9ff]/5 rounded-3xl border-2 border-[#36a9ff]/20 p-8 sm:p-12 text-center shadow-lg relative overflow-hidden">
+        {/* Bottom CTA */}
+        <section className="strimo-card p-8 sm:p-12 text-center rounded-3xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto">
-            <CirclePlay className="w-10 h-10 text-[#36a9ff] mx-auto mb-4 animate-bounce" />
-            <h2 className="text-3xl font-black uppercase text-black">Ready to start watching?</h2>
-            <p className="mt-3 text-gray-600 text-sm sm:text-base leading-relaxed">
-              Choose your subscription plan to receive instant access credentials on WhatsApp within minutes.
+            <CirclePlay className="w-10 h-10 text-cyan-400 mx-auto mb-4 animate-bounce" />
+            <h2 className="text-3xl font-black text-[#F8FAFC]">Ready to start watching?</h2>
+            <p className="mt-3 text-[#A7B0C0] text-sm sm:text-base leading-relaxed">
+              Choose your subscription plan to receive instant activation credentials via email and WhatsApp.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/pricing"
-                className="px-8 py-4 rounded-full bg-black text-white font-black text-sm uppercase tracking-wider hover:bg-[#36a9ff] transition-colors"
+                className="btn-primary-strimo px-8 py-3.5 text-xs uppercase tracking-wider font-extrabold"
               >
-                View IPTV Subscription Plans
+                View Subscription Plans
               </Link>
               <a
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20strimoiptv%20IPTV."
+                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20StrimoIPTV."
                 target="_blank"
                 rel="noreferrer"
-                className="px-8 py-4 rounded-full bg-white border-2 border-black/10 text-black font-black text-sm uppercase tracking-wider hover:border-[#36a9ff] transition-colors"
+                className="btn-secondary-strimo px-8 py-3.5 text-xs uppercase tracking-wider font-semibold"
               >
                 Get Free Trial via WhatsApp
               </a>

@@ -23,14 +23,14 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "StrimoIPTV | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Unlock premium entertainment with StrimoIPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+  description: "Experience premium IPTV streaming with StrimoIPTV. Access 50,000+ live international channels, 200,000 VOD movies, and live 4K sports with anti-freeze server technology and instant automated setup.",
   metadataBase: new URL("https://www.strimoiptv.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "StrimoIPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Unlock premium entertainment with StrimoIPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+    description: "Experience premium IPTV streaming with StrimoIPTV. Access 50,000+ live international channels, 200,000 VOD movies, and live 4K sports with anti-freeze server technology and instant automated setup.",
     url: "https://www.strimoiptv.com",
     siteName: "StrimoIPTV",
     locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "StrimoIPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Unlock premium entertainment with StrimoIPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device activation.",
+    description: "Experience premium IPTV streaming with StrimoIPTV. Access 50,000+ live international channels, 200,000 VOD movies, and live 4K sports with anti-freeze server technology and instant automated setup.",
   },
 };
 
@@ -49,86 +49,87 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`light ${inter.variable} ${geist.variable}`}>
-      <head>
-      </head>
-      <body className="bg-[#050b14] text-gray-100 font-body-lg min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-black">
-        {/* Navbar Component */}
+    <html lang="en" className={`dark ${inter.variable} ${geist.variable}`}>
+      <head />
+      <body className="global-grid-bg text-[#F8FAFC] min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-black">
+        {/* Header Navigation */}
         <Navbar />
 
         <div className="flex-grow flex flex-col">{children}</div>
 
         {/* Footer */}
-        <footer className="w-full mt-auto border-t border-cyan-500/20 bg-[#03070e]">
-          <div className="grid max-w-[1400px] grid-cols-2 gap-x-4 gap-y-12 px-6 py-16 sm:grid-cols-4 sm:gap-x-8 sm:px-10 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] xl:gap-10 xl:px-12 mx-auto">
-            <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
-              <Link href="/" className="inline-block"><BrandLogo /></Link>
-              <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-gray-400">
-                © 2026 StrimoIPTV. Premium 4K IPTV Streaming Services. All rights reserved.
-              </p>
-              <a href="https://wa.me/213552069874" target="_blank" rel="noreferrer" className="flex max-w-[270px] items-center gap-3 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/[0.08] p-3.5 transition-colors hover:bg-[#25D366]/[0.15] group">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-[0_8px_30px_rgba(30,20,60,0.06)] shadow-[#25D366]/20 transition-transform group-hover:scale-105">
-                  <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                  </svg>
+        <footer className="w-full mt-auto border-t border-white/[0.08] bg-[#05070D]">
+          <div className="max-w-[1400px] mx-auto px-6 py-16 lg:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+              
+              {/* Brand Column */}
+              <div className="lg:col-span-2 space-y-4">
+                <Link href="/" className="inline-block">
+                  <BrandLogo />
+                </Link>
+                <p className="text-sm text-[#A7B0C0] max-w-sm leading-relaxed">
+                  StrimoIPTV is a leading global IPTV platform providing high-bitrate live television, 4K sports, and VOD entertainment with 99.9% server stability.
+                </p>
+                <div className="pt-2 text-xs text-[#667085]">
+                  © 2026 STRIMOIPTV. All rights reserved.
                 </div>
-                <span>
-                  <span className="block text-[10px] font-bold uppercase tracking-widest text-[#25D366]">Fast support</span>
-                  <span className="block whitespace-nowrap text-base font-bold text-white">WhatsApp</span>
-                </span>
-              </a>
-              <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400"><span className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" /> All servers online · 99.9% uptime</p>
+              </div>
+
+              {/* Product Column */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Product</h4>
+                <ul className="space-y-2.5 text-sm text-[#A7B0C0]">
+                  <li><Link href="/#pricing" className="hover:text-[#60A5FA] transition-colors">Plans & Pricing</Link></li>
+                  <li><Link href="/#devices" className="hover:text-[#60A5FA] transition-colors">Supported Devices</Link></li>
+                  <li><Link href="/#sports" className="hover:text-[#60A5FA] transition-colors">Sports Channels</Link></li>
+                  <li><Link href="/channels" className="hover:text-[#60A5FA] transition-colors">Channel List</Link></li>
+                </ul>
+              </div>
+
+              {/* Support Column */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Support</h4>
+                <ul className="space-y-2.5 text-sm text-[#A7B0C0]">
+                  <li><Link href="/installation" className="hover:text-[#60A5FA] transition-colors">Install Guide</Link></li>
+                  <li><Link href="/faq" className="hover:text-[#60A5FA] transition-colors">FAQ</Link></li>
+                  <li><Link href="/contact" className="hover:text-[#60A5FA] transition-colors">Contact Us</Link></li>
+                  <li>
+                    <a 
+                      href="https://wa.me/213552069874" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="hover:text-[#60A5FA] transition-colors flex items-center gap-1.5"
+                    >
+                      <span>WhatsApp Support</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Company & Legal Column */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Company</h4>
+                <ul className="space-y-2.5 text-sm text-[#A7B0C0]">
+                  <li><Link href="/blog" className="hover:text-[#60A5FA] transition-colors">Blog & Guides</Link></li>
+                  <li><Link href="/privacy-policy" className="hover:text-[#60A5FA] transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="/refund-policy" className="hover:text-[#60A5FA] transition-colors">Refund Policy</Link></li>
+                  <li><Link href="/dmca" className="hover:text-[#60A5FA] transition-colors">DMCA Disclaimer</Link></li>
+                </ul>
+              </div>
+
             </div>
-            
-            <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-white"><span className="border-b-2 border-cyan-400 pb-1.5">NAVIGATION</span></p>
-              <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/">Home</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/pricing">Pricing</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/how-it-works">How It Works</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/channels">Channels</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/reseller">Reseller</Link></li>
-              </ul>
-            </div>
-            
-            <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-white"><span className="border-b-2 border-cyan-400 pb-1.5">SERVICE</span></p>
-              <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/pricing">Get Started</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/contact">Contact Support</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/faq">FAQ</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/installation">Setup Guide</Link></li>
-              </ul>
-            </div>
-            
-            <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-white"><span className="border-b-2 border-cyan-400 pb-1.5">LEGAL</span></p>
-              <ul className="space-y-3 text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/privacy-policy">Privacy Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/refund-policy">Refund Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-cyan-400" href="/dmca">DMCA</Link></li>
-              </ul>
-            </div>
-            
-            <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-white"><span className="border-b-2 border-cyan-400 pb-1.5">PAYMENT</span></p>
-              <ul className="space-y-3 text-sm text-gray-400">
-                <li>PayPal</li>
-                <li>Credit Card</li>
-                <li>Bitcoin</li>
-                <li>USDT / Crypto</li>
-              </ul>
-            </div>
-            
-            <div className="col-span-2 mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 text-xs text-gray-400 sm:col-span-4 md:flex-row md:items-center md:justify-between xl:col-span-5">
-              <div className="flex flex-wrap gap-3">
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-400/20" href="/privacy-policy">Privacy Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-400/20" href="/refund-policy">Refund Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-400/20" href="/dmca">DMCA</Link>
+
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-[#667085] gap-4">
+              <div>High Performance 4K Cloud Streaming Infrastructure</div>
+              <div className="flex items-center gap-4">
+                <Link href="/privacy-policy" className="hover:text-[#A7B0C0] transition-colors">Privacy</Link>
+                <Link href="/refund-policy" className="hover:text-[#A7B0C0] transition-colors">Refunds</Link>
+                <Link href="/dmca" className="hover:text-[#A7B0C0] transition-colors">DMCA</Link>
               </div>
             </div>
           </div>
         </footer>
+
         <WhatsAppButton />
       </body>
     </html>
