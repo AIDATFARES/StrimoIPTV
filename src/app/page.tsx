@@ -7,6 +7,7 @@ import SportsSection from "@/components/home/SportsSection";
 import DeviceSupport from "@/components/home/DeviceSupport";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import FAQSection from "@/components/home/FAQSection";
+import LatestArticlesSection from "@/components/home/LatestArticlesSection";
 import SupportCtaSection from "@/components/home/SupportCtaSection";
 import FinalCtaSection from "@/components/home/FinalCtaSection";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <DeviceSupport />
       <HowItWorksSection />
       <FAQSection />
+      <LatestArticlesSection />
       <SupportCtaSection />
       <FinalCtaSection />
     </main>

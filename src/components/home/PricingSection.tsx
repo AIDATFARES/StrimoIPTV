@@ -20,8 +20,8 @@ export default function PricingSection() {
     },
     {
       name: "3 Months",
-      price: "$29.99",
-      period: "Billed $29.99 every 3 Months",
+      price: "$35.00",
+      period: "Billed $35.00 every 3 Months (Save 22%)",
       popular: false,
       features: [
         "Over 50,000+ Live Channels",
@@ -33,12 +33,12 @@ export default function PricingSection() {
         "Instant Email & WhatsApp Setup",
         "7-Day Money Back Guarantee",
       ],
-      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%203-Month%20Plan%20($29.99).",
+      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%203-Month%20Plan%20($35.00).",
     },
     {
       name: "6 Months",
-      price: "$44.99",
-      period: "Billed $44.99 every 6 Months",
+      price: "$49.99",
+      period: "Billed $49.99 every 6 Months (Save 44%)",
       popular: false,
       features: [
         "Over 50,000+ Live Channels",
@@ -50,12 +50,12 @@ export default function PricingSection() {
         "Instant Email & WhatsApp Setup",
         "VIP Priority Support 24/7",
       ],
-      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%206-Month%20Plan%20($44.99).",
+      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%206-Month%20Plan%20($49.99).",
     },
     {
       name: "1 Year",
-      price: "$64.99",
-      period: "Billed $64.99 yearly (Save 60%)",
+      price: "$69.99",
+      period: "Billed $69.99 yearly (Save 61%)",
       popular: true,
       badge: "MOST POPULAR",
       features: [
@@ -69,12 +69,12 @@ export default function PricingSection() {
         "Free EPG Guide Updates",
         "VIP Priority Support 24/7",
       ],
-      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%201-Year%20Most%20Popular%20Plan%20($64.99).",
+      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%201-Year%20Most%20Popular%20Plan%20($69.99).",
     },
     {
       name: "2 Years",
-      price: "$99.99",
-      period: "Billed $99.99 every 24 Months",
+      price: "$120.00",
+      period: "Billed $120.00 every 24 Months",
       popular: false,
       features: [
         "Over 50,000+ Live Channels",
@@ -87,7 +87,7 @@ export default function PricingSection() {
         "Free Adult Content Switch",
         "Lifetime VIP Technical Support",
       ],
-      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%202-Year%20Best%20Value%20Plan%20($99.99).",
+      whatsappText: "Hello,%20I%20want%20to%20subscribe%20to%20the%20StrimoIPTV%202-Year%20Best%20Value%20Plan%20($120.00).",
     },
   ];
 
@@ -99,13 +99,13 @@ export default function PricingSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
             <Zap className="w-3.5 h-3.5" />
-            <span>TRANSPARENT PRICING</span>
+            <span>FLEXIBLE STRIMOIPTV SUBSCRIPTIONS</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
-            Choose Your <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">IPTV Plan</span>
+            Choose Your <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">StrimoIPTV Plan</span>
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            Simple, flexible pricing plans with instant activation and no hidden fees or contracts.
+            Transparent pricing options with instant automated activation, 50,000+ live channels, 200,000+ VODs, and zero contract commitments.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ export default function PricingSection() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href={`https://wa.me/213552069874?text=${plan.whatsappText}`}
+                  href={`https://wa.me/447882781998?text=${plan.whatsappText}`}
                   target="_blank"
                   rel="noreferrer"
                   className={`w-full py-3.5 text-xs font-extrabold uppercase tracking-wider rounded-full flex items-center justify-center gap-2 transition-all ${
@@ -171,13 +171,13 @@ export default function PricingSection() {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-base font-bold text-white">100% Risk-Free Guarantee</h4>
-              <p className="text-xs text-[#A7B0C0] mt-0.5">Satisfied with our 4K servers or request immediate technical support within 7 days.</p>
+              <h4 className="text-base font-bold text-white">100% Risk-Free StrimoIPTV Guarantee</h4>
+              <p className="text-xs text-[#A7B0C0] mt-0.5">Enjoy premium 4K IPTV streaming or request assistance from our 24/7 technical team within 7 days.</p>
             </div>
           </div>
 
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20have%20a%20question%20about%20StrimoIPTV%20pricing."
+            href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20StrimoIPTV%20pricing."
             target="_blank"
             rel="noreferrer"
             className="btn-secondary-strimo px-6 py-2.5 text-xs whitespace-nowrap"

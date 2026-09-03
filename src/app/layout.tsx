@@ -24,14 +24,19 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "StrimoIPTV | #1 Premium 4K IPTV Subscription Service 2026",
   description: "Experience premium IPTV streaming with StrimoIPTV. Access 50,000+ live international channels, 200,000 VOD movies, and live 4K sports with anti-freeze server technology and instant automated setup.",
-  metadataBase: new URL("https://www.strimoiptv.com"),
+  metadataBase: new URL("https://www.strimoiptv4k.shop"),
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "StrimoIPTV | #1 Premium 4K IPTV Subscription Service 2026",
     description: "Experience premium IPTV streaming with StrimoIPTV. Access 50,000+ live international channels, 200,000 VOD movies, and live 4K sports with anti-freeze server technology and instant automated setup.",
-    url: "https://www.strimoiptv.com",
+    url: "https://www.strimoiptv4k.shop",
     siteName: "StrimoIPTV",
     locale: "en_US",
     type: "website",
@@ -71,7 +76,7 @@ export default function RootLayout({
                   StrimoIPTV is a leading global IPTV platform providing high-bitrate live television, 4K sports, and VOD entertainment with 99.9% server stability.
                 </p>
                 <div className="pt-2 text-xs text-[#667085]">
-                  © 2026 STRIMOIPTV. All rights reserved.
+                  © 2026 STRIMOIPTV (www.strimoiptv4k.shop). All rights reserved.
                 </div>
               </div>
 
@@ -79,10 +84,10 @@ export default function RootLayout({
               <div className="space-y-4">
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">Product</h4>
                 <ul className="space-y-2.5 text-sm text-[#A7B0C0]">
-                  <li><Link href="/#pricing" className="hover:text-[#60A5FA] transition-colors">Plans & Pricing</Link></li>
-                  <li><Link href="/#devices" className="hover:text-[#60A5FA] transition-colors">Supported Devices</Link></li>
-                  <li><Link href="/#sports" className="hover:text-[#60A5FA] transition-colors">Sports Channels</Link></li>
+                  <li><Link href="/pricing" className="hover:text-[#60A5FA] transition-colors">Plans &amp; Pricing</Link></li>
                   <li><Link href="/channels" className="hover:text-[#60A5FA] transition-colors">Channel List</Link></li>
+                  <li><Link href="/how-it-works" className="hover:text-[#60A5FA] transition-colors">How It Works</Link></li>
+                  <li><Link href="/reseller" className="hover:text-[#60A5FA] transition-colors">Reseller Panel</Link></li>
                 </ul>
               </div>
 
@@ -95,7 +100,7 @@ export default function RootLayout({
                   <li><Link href="/contact" className="hover:text-[#60A5FA] transition-colors">Contact Us</Link></li>
                   <li>
                     <a 
-                      href="https://wa.me/213552069874" 
+                      href="https://wa.me/447882781998" 
                       target="_blank" 
                       rel="noreferrer" 
                       className="hover:text-[#60A5FA] transition-colors flex items-center gap-1.5"
@@ -110,7 +115,7 @@ export default function RootLayout({
               <div className="space-y-4">
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">Company</h4>
                 <ul className="space-y-2.5 text-sm text-[#A7B0C0]">
-                  <li><Link href="/blog" className="hover:text-[#60A5FA] transition-colors">Blog & Guides</Link></li>
+                  <li><Link href="/blog" className="hover:text-[#60A5FA] transition-colors">Blog &amp; Guides</Link></li>
                   <li><Link href="/privacy-policy" className="hover:text-[#60A5FA] transition-colors">Privacy Policy</Link></li>
                   <li><Link href="/refund-policy" className="hover:text-[#60A5FA] transition-colors">Refund Policy</Link></li>
                   <li><Link href="/dmca" className="hover:text-[#60A5FA] transition-colors">DMCA Disclaimer</Link></li>

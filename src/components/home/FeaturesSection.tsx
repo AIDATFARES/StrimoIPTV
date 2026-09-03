@@ -1,54 +1,71 @@
-import { Tv, Zap, Monitor, Sparkles, Shield, Clock, Globe, Settings, Award } from "lucide-react";
+import Link from "next/link";
+import { Tv, Zap, Monitor, Sparkles, Shield, Clock, Globe, Settings, Award, ArrowRight } from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
     {
       icon: Tv,
-      title: "Large Channel Selection",
-      description: "Access over 50,000 live international TV channels and 200,000 VOD movies updated daily.",
+      title: "50,000+ IPTV Channels",
+      description: "Access over 50,000 live international IPTV channels and 200,000 VOD movies updated daily with StrimoIPTV.",
       accent: "from-blue-500 to-cyan-500",
+      link: "/channels",
+      linkText: "View Channels Lineup",
     },
     {
       icon: Award,
-      title: "4K / UHD Quality",
-      description: "Stream premium sports and cinema content in true 4K HDR and high-frame-rate 60 FPS clarity.",
+      title: "True 4K / UHD Clarity",
+      description: "Stream premium live sports and cinema content in true 4K HDR and high-frame-rate 60 FPS clarity.",
       accent: "from-cyan-500 to-purple-500",
+      link: "/pricing",
+      linkText: "Check 4K Plans",
     },
     {
       icon: Zap,
-      title: "Fast Anti-Freeze Streaming",
-      description: "Powered by 99.9% uptime cloud architecture and anti-buffering load balancing servers.",
+      title: "Anti-Freeze IPTV Servers",
+      description: "Powered by 99.9% uptime cloud architecture with anti-buffering load balancing for smooth playback.",
       accent: "from-purple-500 to-blue-500",
+      link: "/how-it-works",
+      linkText: "How It Works",
     },
     {
       icon: Monitor,
-      title: "Multi-Device Support",
-      description: "Watch effortlessly on Smart TVs, Firestick, Android, iOS, Windows, Mac, and MAG boxes.",
+      title: "Universal Device Support",
+      description: "Watch StrimoIPTV effortlessly on Smart TVs, Firestick, Android, iOS, Windows PC, Mac, and MAG boxes.",
       accent: "from-blue-500 to-indigo-500",
+      link: "/installation",
+      linkText: "Setup Guides",
     },
     {
       icon: Sparkles,
-      title: "Instant Activation",
-      description: "Get your automated login credentials delivered instantly via email & WhatsApp within seconds.",
+      title: "Instant Account Activation",
+      description: "Receive your automated StrimoIPTV login credentials delivered instantly via email & WhatsApp within seconds.",
       accent: "from-cyan-400 to-blue-500",
+      link: "/pricing",
+      linkText: "Instant Order",
     },
     {
       icon: Clock,
-      title: "24/7 Dedicated Support",
-      description: "Our technical team is available around the clock to assist you with setup and diagnostics.",
+      title: "24/7 Expert IPTV Support",
+      description: "Our dedicated technical team is available around the clock to assist with player setup and live diagnostics.",
       accent: "from-purple-400 to-pink-500",
+      link: "/contact",
+      linkText: "Get Technical Help",
     },
     {
       icon: Globe,
-      title: "Worldwide Access",
-      description: "Stream your favorite sports and shows anywhere in the world without geo-restrictions.",
+      title: "Global Unrestricted Streaming",
+      description: "Stream your favorite international TV channels and sports anywhere in the world with StrimoIPTV.",
       accent: "from-indigo-500 to-cyan-400",
+      link: "/channels",
+      linkText: "Explore Lineup",
     },
     {
       icon: Settings,
-      title: "Easy Setup Process",
-      description: "Simple step-by-step guides for IPTV Smarters, TiviMate, XCIPTV, and IBO Player.",
+      title: "Simple Player Integration",
+      description: "Enjoy seamless setup instructions for TiviMate, IPTV Smarters Pro, XCIPTV, and IBO Player.",
       accent: "from-blue-400 to-purple-500",
+      link: "/installation",
+      linkText: "App Tutorials",
     },
   ];
 
@@ -59,13 +76,13 @@ export default function FeaturesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-            <span>WHY STRIMOIPTV</span>
+            <span>WHY CHOOSE STRIMOIPTV</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
-            Engineered for <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ultimate Entertainment</span>
+            Engineered for <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ultimate IPTV Entertainment</span>
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            Discover why thousands of users trust StrimoIPTV for high-speed, buffer-free global television streaming.
+            Discover why thousands of households choose StrimoIPTV for high-speed, buffer-free global television streaming and 4K cinema.
           </p>
         </div>
 
@@ -92,6 +109,16 @@ export default function FeaturesSection() {
                   <p className="text-sm text-[#A7B0C0] mt-3 leading-relaxed">
                     {item.description}
                   </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-white/5">
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors uppercase tracking-wider"
+                  >
+                    <span>{item.linkText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             );

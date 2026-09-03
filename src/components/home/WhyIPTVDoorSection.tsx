@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Bolt, Clapperboard, Globe2, Layers3, Monitor, ShieldCheck, Smartphone } from "lucide-react";
@@ -23,7 +23,7 @@ export default function WhyIPTVFiestaSection() {
       <div className="mx-auto mb-14 max-w-3xl text-center">
         <span className="inline-flex rounded-full border border-[#36a9ff]/35 bg-[#36a9ff]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">PREMIUM FEATURES</span>
         <h2 className="mt-6 text-4xl font-black leading-[0.98] tracking-tight text-black sm:text-5xl"><span className="block">Everything You Need for the</span><span className="mt-1 block text-[#36a9ff]">Ultimate Strimo IPTV Experience.</span></h2>
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600">Strimo IPTV delivers premium live television, thrilling sports events, and on-demand entertainment seamlessly—on any supported device, anywhere.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600">Strimo IPTV delivers premium live television, thrilling sports events, and on-demand entertainment seamlessly�on any supported device, anywhere.</p>
       </div>
 
       <div className="grid gap-5 md:grid-cols-3">

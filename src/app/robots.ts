@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.strimoiptv.com/sitemap.xml',
+    sitemap: 'https://www.strimoiptv4k.shop/sitemap.xml',
   };
 }

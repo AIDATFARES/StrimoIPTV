@@ -107,7 +107,7 @@ export default function ChannelsPage() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-[#A7B0C0] leading-relaxed">
-            Browse our complete channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K &amp; HD quality from over 150+ countries.
+            Explore the complete StrimoIPTV channel lineup featuring live sports, 4K movies, global news, premium entertainment, and on-demand series from over 150+ countries. Check our <Link href="/pricing" className="text-cyan-400 hover:underline font-semibold">subscription plans</Link> or <Link href="/installation" className="text-cyan-400 hover:underline font-semibold">setup guides</Link> to start watching.
           </p>
         </div>
 
@@ -165,23 +165,33 @@ export default function ChannelsPage() {
           <BrandMarquee />
         </section>
 
+        {/* Quick Links Bar */}
+        <div className="mb-16 p-6 rounded-2xl bg-[#0D111B] border border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-bold text-[#A7B0C0]">
+          <span>Need help setting up these channels on your device?</span>
+          <div className="flex items-center gap-4">
+            <Link href="/installation" className="text-cyan-400 hover:underline">Device Setup Guide →</Link>
+            <Link href="/faq" className="text-cyan-400 hover:underline">Frequently Asked Questions →</Link>
+            <Link href="/reseller" className="text-cyan-400 hover:underline">Reseller Program →</Link>
+          </div>
+        </div>
+
         {/* Bottom CTA */}
         <section className="strimo-card p-8 sm:p-12 text-center rounded-3xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto">
             <CirclePlay className="w-10 h-10 text-cyan-400 mx-auto mb-4 animate-bounce" />
-            <h2 className="text-3xl font-black text-[#F8FAFC]">Ready to start watching?</h2>
+            <h2 className="text-3xl font-black text-[#F8FAFC]">Ready to Experience StrimoIPTV Live TV?</h2>
             <p className="mt-3 text-[#A7B0C0] text-sm sm:text-base leading-relaxed">
-              Choose your subscription plan to receive instant activation credentials via email and WhatsApp.
+              Select your preferred StrimoIPTV subscription plan to receive instant activation credentials via email and WhatsApp within seconds.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/pricing"
                 className="btn-primary-strimo px-8 py-3.5 text-xs uppercase tracking-wider font-extrabold"
               >
-                View Subscription Plans
+                View StrimoIPTV Plans
               </Link>
               <a
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20StrimoIPTV."
+                href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20StrimoIPTV."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-secondary-strimo px-8 py-3.5 text-xs uppercase tracking-wider font-semibold"

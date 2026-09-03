@@ -11,6 +11,7 @@ type Plan = {
   price: number;
   durationLabel: string;
   months: number;
+  savingsBadge?: string;
   popular?: boolean;
   buttonText: string;
 };
@@ -32,34 +33,47 @@ const plans: Plan[] = [
     id: "3-months",
     name: "3 MONTHS",
     badge: "STARTER",
-    price: 29.99,
+    price: 35.00,
     durationLabel: "3 Months",
     months: 3,
+    savingsBadge: "Save 22%",
     buttonText: "SELECT 3 MONTHS",
-  },
-  {
-    id: "12-months",
-    name: "12 MONTHS",
-    badge: "MOST POPULAR",
-    price: 64.99,
-    durationLabel: "12 Months",
-    months: 12,
-    popular: true,
-    buttonText: "GET 12 MONTHS",
   },
   {
     id: "6-months",
     name: "6 MONTHS",
     badge: "VALUE",
-    price: 44.99,
+    price: 49.99,
     durationLabel: "6 Months",
     months: 6,
+    savingsBadge: "Save 44%",
     buttonText: "SELECT 6 MONTHS",
+  },
+  {
+    id: "12-months",
+    name: "12 MONTHS",
+    badge: "MOST POPULAR",
+    price: 69.99,
+    durationLabel: "12 Months",
+    months: 12,
+    savingsBadge: "Save 61%",
+    popular: true,
+    buttonText: "GET 12 MONTHS",
+  },
+  {
+    id: "24-months",
+    name: "24 MONTHS",
+    badge: "BEST VALUE",
+    price: 120.00,
+    durationLabel: "24 Months",
+    months: 24,
+    savingsBadge: "Save 70%",
+    buttonText: "SELECT 24 MONTHS",
   },
 ];
 
 const includedFeatures = [
-  { icon: Tv, title: "+50,000 Live Channels", text: "Explore global channels across sports, news, documentaries, and premium entertainment." },
+  { icon: Tv, title: "+50,000 Live Channels", text: "Explore global IPTV channels across sports, news, documentaries, and premium entertainment." },
   { icon: MonitorSmartphone, title: "200,000+ VODs", text: "Enjoy cinema blockbusters, daily updated TV series, and multi-audio tracks." },
   { icon: Zap, title: "Anti-Freeze Technology", text: "Cloud server load balancing ensures 99.9% uptime and zero buffering during peak hours." },
   { icon: Headphones, title: "24/7 Support", text: "Dedicated technical assistance available on WhatsApp around the clock." },
@@ -83,7 +97,7 @@ export default function PricingPageContent() {
     const text = encodeURIComponent(
       `Hello! I would like to purchase the StrimoIPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
-    window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/447882781998?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -95,14 +109,14 @@ export default function PricingPageContent() {
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-cyan-500/20 px-4 py-1 mb-6">
             <Gift className="h-4 w-4 text-cyan-400" />
             <span className="text-xs font-bold text-cyan-400 tracking-widest uppercase">
-              TRANSPARENT PLANS & PRICING
+              TRANSPARENT PLANS &amp; PRICING
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#F8FAFC]">
             STRIMOIPTV <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">SUBSCRIPTION PLANS</span>
           </h1>
           <p className="mx-auto mt-6 text-base sm:text-lg text-[#A7B0C0] font-normal leading-relaxed max-w-2xl">
-            Choose your subscription duration. Enjoy larger discounts on longer plans, and stream simultaneously across multiple devices.
+            Choose your StrimoIPTV subscription plan. Enjoy bigger savings on 6-month and 12-month packages with simultaneous multi-device connection options.
           </p>
         </header>
 
@@ -133,11 +147,11 @@ export default function PricingPageContent() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 items-stretch">
           {plans.map((plan) => (
             <article
               key={plan.id}
-              className={`relative flex flex-col rounded-2xl p-8 text-left transition-all duration-300 ${
+              className={`relative flex flex-col rounded-2xl p-6 text-left transition-all duration-300 ${
                 plan.popular
                   ? "strimo-featured-card md:scale-105 z-10"
                   : "strimo-card"
@@ -158,14 +172,22 @@ export default function PricingPageContent() {
               <div className="pb-6">
                 <h3 className="text-2xl font-black text-[#F8FAFC] uppercase mb-4">{plan.name}</h3>
                 
-                <div className="flex items-baseline gap-1 mb-3">
+                <div className="flex items-baseline gap-2 mb-3">
                   <span className="text-5xl font-black tracking-tight text-white">${priceFor(plan)}</span>
+                  <span className="text-xs text-[#A7B0C0] font-medium">/ {plan.durationLabel}</span>
                 </div>
 
-                <div className="inline-flex rounded-full bg-cyan-500/10 border border-cyan-500/20 px-3 py-1">
-                  <span className="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">
-                    JUST ${monthlyPrice(plan)} / MONTH
-                  </span>
+                <div className="flex items-center gap-2">
+                  <div className="inline-flex rounded-full bg-cyan-500/10 border border-cyan-500/20 px-3 py-1">
+                    <span className="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">
+                      JUST ${monthlyPrice(plan)} / MONTH
+                    </span>
+                  </div>
+                  {plan.savingsBadge && (
+                    <span className="text-[10px] font-extrabold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                      {plan.savingsBadge}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -212,7 +234,7 @@ export default function PricingPageContent() {
             </div>
           </div>
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20pass."
+            href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20pass."
             target="_blank"
             rel="noreferrer"
             className="btn-primary-strimo px-8 py-3 text-xs uppercase tracking-wider whitespace-nowrap font-extrabold"
@@ -228,7 +250,7 @@ export default function PricingPageContent() {
               INCLUDED WITH ALL PLANS
             </span>
             <h2 className="text-3xl md:text-5xl font-black text-[#F8FAFC]">
-              Everything You Need for <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ultimate Streaming</span>
+              Everything You Need for <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Ultimate IPTV Streaming</span>
             </h2>
           </div>
 

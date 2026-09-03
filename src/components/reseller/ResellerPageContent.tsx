@@ -53,7 +53,7 @@ const creditPlans: CreditPlan[] = [
 ];
 
 const planFeatures = [
-  "1 Credit = 1 Month IPTV Subscription",
+  "1 Credit = 1 Month StrimoIPTV Subscription",
   "Free Trial Creation Everyday",
   "Custom Channel Category Groups",
   "Pay-As-You-Go Credit System",
@@ -98,7 +98,7 @@ const resellerFaqs = [
   {
     question: "CAN I RENEW A CLIENT SUBSCRIPTION?",
     answer:
-      "Yes! You can extend or renew any client subscription directly from your reseller dashboard with a single click.",
+      "Yes! You can extend or renew any client subscription directly from your StrimoIPTV reseller dashboard with a single click.",
   },
   {
     question: "CAN I MODIFY CLIENT LINES OR PLAYLIST FORMATS?",
@@ -134,7 +134,7 @@ export default function ResellerPageContent() {
       ? `Hello! I would like to order the StrimoIPTV Reseller Panel with ${plan.credits} Credits for $${plan.price}.`
       : `Hello! I am interested in becoming a StrimoIPTV Reseller and would like to request panel access.`;
     window.open(
-      `https://wa.me/213552069874?text=${encodeURIComponent(message)}`,
+      `https://wa.me/447882781998?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer"
     );
@@ -143,7 +143,7 @@ export default function ResellerPageContent() {
   const handleFreeTrial = () => {
     const message = `Hello! I am interested in testing a StrimoIPTV Reseller Panel demo account.`;
     window.open(
-      `https://wa.me/213552069874?text=${encodeURIComponent(message)}`,
+      `https://wa.me/447882781998?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener,noreferrer"
     );
@@ -157,7 +157,7 @@ export default function ResellerPageContent() {
         <header className="relative mx-auto max-w-4xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-cyan-400">
             <Sparkles className="h-3.5 w-3.5" />
-            IPTV RESELLER PROGRAM
+            STRIMOIPTV RESELLER PROGRAM
           </span>
 
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#F8FAFC]">
@@ -168,7 +168,7 @@ export default function ResellerPageContent() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-[#A7B0C0]">
-            Launch your own profitable IPTV business today. Get access to our high-margin Xtream Codes reseller control panel, zero-buffer 4K servers, and 24/7 technical support.
+            Launch your own profitable IPTV business today. Get access to our high-margin Xtream Codes reseller control panel, zero-buffer 4K servers, non-expiring credits, and 24/7 technical support.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
@@ -189,7 +189,7 @@ export default function ResellerPageContent() {
               Reseller <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Credit Packages</span>
             </h2>
             <p className="mt-3 text-base text-[#A7B0C0]">
-              High profit margins with non-expiring credits and automated panel activation.
+              High profit margins with non-expiring credits and automated StrimoIPTV panel activation.
             </p>
           </div>
 
@@ -287,7 +287,7 @@ export default function ResellerPageContent() {
         {/* RESELLER FAQ */}
         <div className="mx-auto mt-28 max-w-4xl">
           <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight text-[#F8FAFC]">
-            Reseller <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">FAQ</span>
+            StrimoIPTV Reseller <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">FAQ</span>
           </h2>
 
           <div className="mt-10 space-y-3">

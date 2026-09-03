@@ -14,7 +14,7 @@ const faqs: FAQItem[] = [
     question: "What is StrimoIPTV?",
     answer: (
       <>
-        StrimoIPTV is a premium IPTV streaming service providing live TV channels, VOD movies, TV series, and sports events in 4K & FHD quality over the internet.
+        StrimoIPTV is a premium IPTV streaming service providing live TV channels, VOD movies, TV series, and sports events in 4K &amp; FHD quality over the internet.
       </>
     ),
   },
@@ -54,7 +54,7 @@ const faqs: FAQItem[] = [
     question: "How fast is activation after ordering?",
     answer: (
       <>
-        Activation is instant and fully automated. Your login credentials and M3U playlist details are sent to your email and WhatsApp immediately after payment.
+        Activation is instant and fully automated. Your StrimoIPTV login credentials and M3U playlist details are sent to your email and WhatsApp immediately after payment.
       </>
     ),
   },
@@ -70,7 +70,7 @@ const faqs: FAQItem[] = [
     question: "Are there any hidden fees or contracts with StrimoIPTV?",
     answer: (
       <>
-        No contracts and no hidden fees. You only pay for the plan duration you choose (1, 3, 6, 12, or 24 months).
+        No contracts and no hidden fees. You only pay for the StrimoIPTV plan duration you choose (1, 3, 6, 12, or 24 months).
       </>
     ),
   },
@@ -85,7 +85,7 @@ export default function FAQ() {
     const subject = String(formData.get("subject") || "General support").trim();
     const message = String(formData.get("message") || "").trim();
     const text = encodeURIComponent(`Hello StrimoIPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
-    window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/447882781998?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -93,7 +93,7 @@ export default function FAQ() {
       <div className="mx-auto max-w-[1140px]">
         <header className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
           <span className="inline-block py-1.5 px-4 rounded-full bg-cyan-500/10 text-cyan-400 font-bold text-xs tracking-widest uppercase mb-4 border border-cyan-500/20">
-            HELP CENTER
+            STRIMOIPTV HELP CENTER
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#F8FAFC] tracking-tight leading-tight">
             Frequently Asked Questions
@@ -141,21 +141,21 @@ export default function FAQ() {
         {/* Contact Section */}
         <section className="mt-20 border-t border-white/10 pt-16 sm:pt-20">
           <header className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-black tracking-tight text-[#F8FAFC]">Get in Touch with Our Support Team</h2>
+            <h2 className="text-3xl font-black tracking-tight text-[#F8FAFC]">Get in Touch with StrimoIPTV Support</h2>
             <p className="mt-3 text-sm leading-relaxed text-[#A7B0C0]">We&apos;re here 24/7 to assist with playlist setup and technical questions.</p>
           </header>
           
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="mailto:support@strimoiptv.com">
+              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="mailto:support@strimoiptv4k.shop">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3">
                   <Mail className="h-5 w-5" />
                 </div>
                 <span className="block text-sm font-bold text-white">Email Us</span>
-                <span className="mt-1 block text-xs text-[#A7B0C0]">support@strimoiptv.com</span>
+                <span className="mt-1 block text-xs text-[#A7B0C0]">support@strimoiptv4k.shop</span>
               </a>
 
-              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="https://wa.me/213552069874" target="_blank" rel="noreferrer">
+              <a className="strimo-card p-5 text-center flex flex-col items-center justify-center rounded-2xl" href="https://wa.me/447882781998" target="_blank" rel="noreferrer">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
                   <MessageCircle className="h-5 w-5" />
                 </div>

@@ -23,6 +23,14 @@ export default function Blog() {
         </p>
       </header>
 
+      {/* Empty State */}
+      {blogPosts.length === 0 && (
+        <section className="text-center py-20 strimo-card rounded-2xl mb-16">
+          <p className="text-xl font-bold text-white mb-2">No Articles Available Right Now</p>
+          <p className="text-sm text-[#A7B0C0]">New IPTV streaming guides and tutorials are coming soon!</p>
+        </section>
+      )}
+
       {/* Featured Post */}
       {featuredPost && (
         <section className="mb-20">

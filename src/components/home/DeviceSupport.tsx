@@ -1,4 +1,5 @@
-import { Tv, Flame, Smartphone, Laptop, Monitor, Tablet, HardDrive, Globe, Check } from "lucide-react";
+import Link from "next/link";
+import { Tv, Flame, Smartphone, Laptop, Monitor, Tablet, HardDrive, Globe, Check, ArrowRight } from "lucide-react";
 
 export default function DeviceSupport() {
   const devices = [
@@ -6,7 +7,7 @@ export default function DeviceSupport() {
     { name: "Amazon Firestick", desc: "Fire TV Stick 4K Max, Cube, All Generations", icon: Flame, tag: "1-Click Sideload" },
     { name: "Android TV / Box", desc: "NVIDIA Shield, Chromecast, Android 8+", icon: Monitor, tag: "TiviMate Compatible" },
     { name: "Apple TV & iOS", desc: "Apple TV 4K, iPhone, iPad (IPTVX, GSE)", icon: Smartphone, tag: "AirPlay 2 Supported" },
-    { name: "Windows PC & Mac", desc: "Web Player, VLC, IPTV Smarters Pro", icon: Laptop, tag: "Browser Native" },
+    { name: "Windows PC & Mac", desc: "Browser Web Player, VLC, IPTV Smarters Pro", icon: Laptop, tag: "Browser Native" },
     { name: "MAG & Formuler", desc: "MAG 322/424/524, Z10/Z11 Stalker Portal", icon: HardDrive, tag: "MAC Address Portal" },
   ];
 
@@ -17,13 +18,13 @@ export default function DeviceSupport() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-            <span>UNIVERSAL COMPATIBILITY</span>
+            <span>UNIVERSAL IPTV COMPATIBILITY</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
-            Watch on <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Any Device</span>
+            Watch StrimoIPTV on <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Any Device</span>
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            StrimoIPTV works seamlessly across all major operating systems, smart televisions, and streaming players.
+            StrimoIPTV works seamlessly across all major operating systems, smart televisions, Firestick, and third-party IPTV player apps. View our detailed <Link href="/installation" className="text-cyan-400 hover:underline font-semibold">IPTV Installation Tutorials</Link>.
           </p>
         </div>
 
@@ -55,13 +56,31 @@ export default function DeviceSupport() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-semibold text-emerald-400">
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span>Tested 100% Buffer-Free</span>
+                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-emerald-400">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span>Tested 100% Buffer-Free</span>
+                  </div>
+                  <Link
+                    href="/installation"
+                    className="text-cyan-400 hover:text-cyan-300 font-bold transition-colors"
+                  >
+                    Setup Guide →
+                  </Link>
                 </div>
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/installation"
+            className="btn-primary-strimo px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider inline-flex items-center gap-2"
+          >
+            <span>Open All Installation Tutorials</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
       </div>

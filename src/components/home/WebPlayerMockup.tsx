@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Search, Star, Play, Volume2, Sliders } from "lucide-react";
 
@@ -35,7 +36,7 @@ export default function WebPlayerMockup() {
             </div>
             {/* Fake URL Bar */}
             <div className="w-full bg-[#111621] px-3 py-1 rounded-md text-[11px] font-mono text-[#667085] flex items-center gap-1.5 border border-white/5 truncate">
-              <span className="text-emerald-400 text-[10px]">https://</span>web.strimoiptv.com/player
+              <span className="text-emerald-400 text-[10px]">https://</span>web.strimoiptv4k.shop/player
             </div>
           </div>
 
@@ -128,15 +129,15 @@ export default function WebPlayerMockup() {
 
             {/* Video Canvas Area */}
             <div className="relative aspect-video bg-black rounded-lg overflow-hidden border border-white/10 flex items-center justify-center group/screen">
+              {/* User Image Screen Content */}
+              <Image
+                src="/web-player-screen.webp"
+                alt="StrimoIPTV Web Player Stream"
+                fill
+                className="object-cover object-center brightness-95 group-hover/screen:scale-105 transition-transform duration-700"
+              />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none z-10" />
-              
-              <div className="relative z-20 text-center">
-                <div className="w-10 h-10 rounded-full bg-cyan-400 text-black flex items-center justify-center mx-auto mb-2 shadow-[0_0_15px_rgba(6,182,212,0.6)] cursor-pointer hover:scale-110 transition-transform">
-                  <Play className="w-5 h-5 fill-black translate-x-[1px]" />
-                </div>
-                <div className="text-xs font-black text-white">Stream Active · 4K 60FPS</div>
-                <div className="text-[10px] text-cyan-400 font-medium">Bitrate: 25.4 Mbps (Zero Lag)</div>
-              </div>
 
               {/* Bottom Video Controls Overlay */}
               <div className="absolute bottom-2 left-2 right-2 z-20 flex items-center justify-between text-[10px] text-gray-300">

@@ -4,20 +4,20 @@ export default function HowItWorksSection() {
   const steps = [
     {
       number: "01",
-      title: "Choose Your Plan",
-      description: "Select your preferred subscription period (1, 3, 6, 12, or 24 Months) that best fits your entertainment needs.",
+      title: "Select Your StrimoIPTV Plan",
+      description: "Choose your preferred subscription tier (1, 3, 6, 12, or 24 Months) that best fits your household streaming needs.",
       icon: CreditCard,
     },
     {
       number: "02",
-      title: "Receive Your Details",
-      description: "Get your automated login credentials, M3U playlist link, and Xtream Codes API key delivered instantly via email and WhatsApp.",
+      title: "Receive Automated Credentials",
+      description: "Get your login credentials, Xtream Codes API key, and M3U playlist link delivered instantly via email and WhatsApp.",
       icon: Mail,
     },
     {
       number: "03",
-      title: "Start Watching",
-      description: "Log into your IPTV application (Smarters, TiviMate, IBO, etc.) or Web Player and enjoy unlimited 4K streaming instantly.",
+      title: "Start 4K Streaming",
+      description: "Log into your preferred player app (TiviMate, Smarters Pro, IBO) or StrimoIPTV Web Player and enjoy live TV instantly.",
       icon: PlayCircle,
     },
   ];
@@ -29,13 +29,13 @@ export default function HowItWorksSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-            <span>GET STARTED IN 3 STEPS</span>
+            <span>SIMPLE 3-STEP SETUP</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
             How <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">StrimoIPTV</span> Works
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            Fast, automated setup in less than 3 minutes.
+            Fast, automated subscription setup with instant credentials delivery in under 3 minutes.
           </p>
         </div>
 

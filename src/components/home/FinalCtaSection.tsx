@@ -12,15 +12,15 @@ export default function FinalCtaSection() {
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-cyan-400 border border-cyan-500/20 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span>UNLIMITED 4K ENTERTAINMENT AWAITS</span>
+              <span>UNLIMITED 4K IPTV ENTERTAINMENT</span>
             </div>
 
             <h2 className="text-4xl sm:text-6xl font-black tracking-tight text-[#F8FAFC] leading-tight">
-              Ready to Upgrade Your <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">TV Experience?</span>
+              Ready to Upgrade Your <span className="bg-gradient-to-r from-[#38BDF8] to-[#818CF8] bg-clip-text text-transparent">IPTV Experience?</span>
             </h2>
 
             <p className="text-base sm:text-xl text-[#A7B0C0] mt-6 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of satisfied subscribers watching live sports, movies, and TV shows in 4K HDR. Instant activation in less than 3 minutes.
+              Join thousands of satisfied StrimoIPTV subscribers watching live sports, movies, and TV shows in 4K HDR. Instant account activation in under 3 minutes.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
@@ -28,18 +28,18 @@ export default function FinalCtaSection() {
                 href="#pricing"
                 className="btn-primary-strimo px-9 py-4 text-sm font-extrabold uppercase tracking-wider flex items-center gap-2"
               >
-                <span>Start Streaming</span>
+                <span>Get StrimoIPTV Access</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </a>
 
               <a
-                href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20StrimoIPTV."
+                href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20StrimoIPTV."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-secondary-strimo px-9 py-4 text-sm font-semibold flex items-center gap-2"
               >
                 <Tv className="w-4 h-4 text-cyan-400" />
-                <span>Request Free Trial</span>
+                <span>Request Trial Pass</span>
               </a>
             </div>
           </div>

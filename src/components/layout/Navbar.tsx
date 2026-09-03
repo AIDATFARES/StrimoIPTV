@@ -78,7 +78,7 @@ export default function Navbar() {
         {/* RIGHT ACTION BUTTON */}
         <div className="hidden sm:flex items-center gap-4 shrink-0 z-20">
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20get%20started%20with%20StrimoIPTV."
+            href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20get%20started%20with%20StrimoIPTV."
             target="_blank"
             rel="noreferrer"
             className="rounded-full bg-cyan-400 hover:bg-cyan-300 text-black text-xs font-black uppercase tracking-wider px-7 py-3 shadow-[0_0_22px_rgba(6,182,212,0.6)] hover:shadow-[0_0_32px_rgba(6,182,212,0.95)] transition-all duration-300 active:scale-[0.98]"
@@ -125,7 +125,7 @@ export default function Navbar() {
           </nav>
           <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20get%20started%20with%20StrimoIPTV."
+              href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20get%20started%20with%20StrimoIPTV."
               target="_blank"
               rel="noreferrer"
               className="w-full text-center py-3.5 rounded-full bg-cyan-400 text-black text-xs font-black uppercase tracking-wider shadow-[0_0_20px_rgba(6,182,212,0.6)]"

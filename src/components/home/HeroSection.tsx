@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck, Zap, Tv, Play, CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
+import { ShieldCheck, Zap, Tv, Play, CheckCircle2, Sparkles, ArrowRight, Flame } from "lucide-react";
 import IPTVHeroMockup from "./IPTVHeroMockup";
 
 export default function HeroSection() {
@@ -19,54 +19,56 @@ export default function HeroSection() {
 
             {/* Main H1 Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-[68px] font-black tracking-tight leading-[1.05] text-[#F8FAFC]">
-              Premium IPTV Streaming{" "}
+              StrimoIPTV — Premium 4K IPTV Service Built for{" "}
               <span className="bg-gradient-to-r from-[#60A5FA] via-cyan-400 to-[#A78BFA] bg-clip-text text-transparent">
-                Built for Live TV
+                Live TV, Sports &amp; Cinema
               </span>
-              , Sports & Entertainment
             </h1>
 
             {/* Supporting Paragraph */}
             <p className="text-base sm:text-lg lg:text-xl text-[#A7B0C0] font-normal mt-6 max-w-[620px] leading-relaxed">
-              Stream over 50,000 live international channels, 200,000 VOD movies, and high-bitrate live sports in ultra-crisp 4K HDR. Enjoy anti-buffer stability and instant multi-device setup.
+              Experience high-performance IPTV streaming with StrimoIPTV. Access over <Link href="/channels" className="text-cyan-400 hover:underline font-semibold">50,000 live international channels</Link>, 200,000+ VOD movies, and high-bitrate live sports in ultra-crisp 4K/FHD with zero-freeze server stability.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs with Animations */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-9 w-full sm:w-auto">
               <a
-                href="#pricing"
-                className="btn-primary-strimo px-8 py-4 text-sm uppercase tracking-wider font-extrabold flex items-center justify-center gap-2 shadow-lg"
+                href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%2024-hour%20free%20trial%20for%20StrimoIPTV."
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary-strimo btn-shimmer-effect btn-pulse-glow px-8 py-4 text-xs sm:text-sm uppercase tracking-widest font-black flex items-center justify-center gap-2.5 group shadow-xl"
               >
-                <span>Start Your IPTV Trial</span>
-                <ArrowRight className="w-4 h-4" />
+                <Sparkles className="w-4 h-4 text-[#060810] animate-pulse shrink-0" />
+                <span>START 24H FREE TRIAL</span>
+                <ArrowRight className="w-4 h-4 text-[#060810] group-hover:translate-x-1.5 transition-transform duration-300 shrink-0" />
               </a>
 
-              <a
-                href="#devices"
-                className="btn-secondary-strimo px-8 py-4 text-sm font-semibold flex items-center justify-center gap-2"
+              <Link
+                href="/pricing"
+                className="btn-secondary-strimo px-8 py-4 text-xs sm:text-sm uppercase tracking-widest font-extrabold flex items-center justify-center gap-2.5 group"
               >
-                <Tv className="w-4 h-4 text-[#60A5FA]" />
-                <span>Supported Devices</span>
-              </a>
+                <Tv className="w-4 h-4 text-cyan-400 group-hover:scale-125 transition-transform duration-300 shrink-0" />
+                <span>VIEW ALL IPTV PLANS</span>
+              </Link>
             </div>
 
             {/* Trust / Benefit Points */}
             <div className="grid grid-cols-2 sm:flex items-center gap-5 mt-10 pt-8 border-t border-white/[0.08] w-full text-xs font-semibold text-[#A7B0C0]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>4K Ultra HD</span>
+                <span>4K Ultra HD Streaming</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>Multi-Device</span>
+                <Link href="/installation" className="hover:text-cyan-400 transition-colors">Multi-Device Compatibility</Link>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>Fast Activation</span>
+                <Link href="/how-it-works" className="hover:text-cyan-400 transition-colors">Instant Automated Setup</Link>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>24/7 Support</span>
+                <Link href="/contact" className="hover:text-cyan-400 transition-colors">24/7 StrimoIPTV Support</Link>
               </div>
             </div>
 

@@ -13,11 +13,11 @@ export default function SupportCtaSection() {
             </div>
 
             <h3 className="text-3xl lg:text-4xl font-black text-[#F8FAFC] tracking-tight">
-              Need Help with <span className="text-cyan-400">Setup</span> or Technical Diagnostics?
+              Need Help with <span className="text-cyan-400">StrimoIPTV Setup</span> or Technical Diagnostics?
             </h3>
 
             <p className="text-[#A7B0C0] text-base mt-3 leading-relaxed">
-              Our expert technical support team is available 24/7 on WhatsApp to assist with playlist installation, app configuration, device synchronization, and channel troubleshooting.
+              Our expert technical support team is available 24/7 on WhatsApp to assist with playlist installation, app configuration, device synchronization, and StrimoIPTV channel troubleshooting.
             </p>
 
             <div className="grid grid-cols-2 sm:flex items-center gap-6 mt-6 text-xs text-white font-semibold">
@@ -34,7 +34,7 @@ export default function SupportCtaSection() {
 
           <div className="shrink-0">
             <a
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20technical%20assistance%20with%20StrimoIPTV."
+              href="https://wa.me/447882781998?text=Hello,%20I%20need%20technical%20assistance%20with%20StrimoIPTV."
               target="_blank"
               rel="noreferrer"
               className="btn-primary-strimo px-8 py-4 text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 shadow-xl"

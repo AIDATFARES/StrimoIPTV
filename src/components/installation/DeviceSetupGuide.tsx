@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Apple, Box, ChevronDown, Download, HelpCircle, Monitor, Satellite, Smartphone, Tv } from "lucide-react";
 import { useState } from "react";
 
@@ -29,7 +30,7 @@ export default function DeviceSetupGuide() {
     <section className="mb-16 md:mb-24 pt-28">
       <header className="mx-auto mb-10 max-w-3xl text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-          <span>SETUP & INSTALLATION</span>
+          <span>SETUP &amp; INSTALLATION</span>
         </div>
         <h1 className="text-3xl font-black tracking-tight text-[#F8FAFC] sm:text-5xl">
           Device Setup <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Instructions</span>
@@ -91,14 +92,14 @@ export default function DeviceSetupGuide() {
           </SetupStep>
           
           <SetupStep number="2" title="Configure Playlist">
-            Launch the app, open its Settings menu, and enter the M3U URL or Xtream Codes credentials supplied in your welcome email.
+            Launch the app, open its Settings menu, and enter the M3U URL or Xtream Codes credentials supplied in your welcome email after ordering your <Link href="/pricing" className="text-cyan-400 hover:underline font-bold">StrimoIPTV subscription</Link>.
             <div className="mt-4">
               <CodeLine label="M3U URL" text="Use the secure playlist URL from your welcome email" />
             </div>
           </SetupStep>
           
           <SetupStep number="3" title="Start Watching">
-            Save settings and allow a few seconds for the EPG guide and channel list to populate. Enjoy 4K HDR live television streaming!
+            Save settings and allow a few seconds for the EPG guide and <Link href="/channels" className="text-cyan-400 hover:underline font-bold">50,000+ live channel list</Link> to populate. Enjoy 4K HDR live television streaming!
           </SetupStep>
         </div>
       </article>
@@ -116,6 +117,9 @@ export default function DeviceSetupGuide() {
               <p className="text-xs text-[#A7B0C0] leading-relaxed">{faq.answer}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center text-xs text-[#A7B0C0]">
+          Have more questions? Read our full <Link href="/faq" className="text-cyan-400 hover:underline font-bold">FAQ Knowledge Base</Link> or <Link href="/contact" className="text-cyan-400 hover:underline font-bold">Contact StrimoIPTV Support</Link>.
         </div>
       </div>
     </section>

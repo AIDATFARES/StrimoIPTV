@@ -1,4 +1,5 @@
-import { Trophy, Flame, Play, Shield, Circle, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { Trophy, Flame, Play, Shield, Circle, Sparkles, ArrowRight } from "lucide-react";
 
 export default function SportsSection() {
   const leagues = [
@@ -14,7 +15,7 @@ export default function SportsSection() {
       name: "NBA Basketball",
       channel: "NBA League Pass 4K",
       badge: "ULTRA HD",
-      desc: "Stream all out-of-market games, court-side cameras, and play-by-play coverage.",
+      desc: "Stream all out-of-market games, court-side cameras, and play-by-play coverage with StrimoIPTV.",
       accent: "from-purple-600 via-blue-500 to-cyan-500",
       icon: "🏀",
     },
@@ -38,7 +39,7 @@ export default function SportsSection() {
       name: "MLB Baseball",
       channel: "MLB Extra Innings HD",
       badge: "ALL GAMES",
-      desc: "Follow your favorite team through all 162 regular season games and World Series broadcasts.",
+      desc: "Follow your team through all 162 regular season games and World Series broadcasts live.",
       accent: "from-indigo-600 via-purple-500 to-blue-500",
       icon: "⚾",
     },
@@ -60,13 +61,13 @@ export default function SportsSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-[#A78BFA] border border-purple-500/20 mb-4">
             <Trophy className="w-3.5 h-3.5" />
-            <span>THE HOME OF LIVE SPORTS</span>
+            <span>LIVE IPTV SPORTS NETWORK</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
-            Never Miss a <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Game or Fight</span>
+            Stream Every <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Game &amp; PPV Event</span> with StrimoIPTV
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            StrimoIPTV includes all premium pay-per-view sports networks, regional sports passes, and global tournament broadcasts with zero extra charges.
+            StrimoIPTV gives you unlimited access to premium pay-per-view sports networks, regional sports passes, and international 4K tournament streams with zero add-on fees. Explore our full <Link href="/channels" className="text-cyan-400 hover:underline font-semibold">IPTV channel lineup</Link> or pick a <Link href="/pricing" className="text-cyan-400 hover:underline font-semibold">subscription package</Link>.
           </p>
         </div>
 
@@ -102,12 +103,25 @@ export default function SportsSection() {
 
               <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#A7B0C0]">
                 <span>Anti-Freeze Server</span>
-                <span className="text-cyan-400 font-bold flex items-center gap-1">
+                <Link
+                  href="/pricing"
+                  className="text-cyan-400 font-bold flex items-center gap-1 hover:text-cyan-300 transition-colors"
+                >
                   Watch Live <Play className="w-3 h-3 fill-current" />
-                </span>
+                </Link>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/channels"
+            className="btn-secondary-strimo px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider inline-flex items-center gap-2"
+          >
+            <span>View All Sports Channels &amp; Passes</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
       </div>

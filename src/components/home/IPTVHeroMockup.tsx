@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Play, Tv, Shield, Zap, Search, Radio, Film, Trophy, Circle, Volume2, Maximize2, Settings } from "lucide-react";
 import { useState } from "react";
 
@@ -7,7 +8,7 @@ export default function IPTVHeroMockup() {
   const [activeCategory, setActiveCategory] = useState("Sports 4K");
 
   const channels = [
-    { name: "ESPN 1 Ultra 4K", category: "Sports 4K", epg: "Live: Premier League - Man City vs Arsenal", quality: "4K 60FPS", icon: "⚽" },
+    { name: "ESPN 1 Ultra 4K", category: "Sports 4K", epg: "Live: Premier League Matchday", quality: "4K 60FPS", icon: "⚽" },
     { name: "Sky Sports Main Event", category: "Sports 4K", epg: "Live: Champions League Night", quality: "UHD", icon: "🏆" },
     { name: "TNT Sports 1 HD", category: "Sports 4K", epg: "Live: UEFA Europa Matchday", quality: "1080p", icon: "🥊" },
     { name: "HBO Cinema 4K", category: "Movies", epg: "Movie: Dune - Part Two (2024)", quality: "4K HDR", icon: "🎬" },
@@ -41,21 +42,23 @@ export default function IPTVHeroMockup() {
 
         {/* Video Player Display Screen */}
         <div className="relative aspect-video bg-black overflow-hidden flex items-center justify-center">
+          {/* Real Screen Image */}
+          <Image
+            src="/hero-player-screen.webp"
+            alt="StrimoIPTV Live Broadcast Stream"
+            fill
+            className="object-cover object-center brightness-95 group-hover:scale-105 transition-transform duration-700"
+            priority
+          />
+
           {/* Simulated Video Frame Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D111B] via-transparent to-black/40 z-10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0D111B] via-transparent to-black/30 z-10 pointer-events-none" />
           
-          {/* Simulated Sports Stadium Graphic */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-cyan-950/40 to-black mix-blend-screen opacity-90" />
-          
-          {/* Screen Content Graphics */}
-          <div className="relative z-20 text-center px-4">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white text-[11px] font-black px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-lg">
+          {/* Screen Content Badge */}
+          <div className="absolute top-3 left-3 z-20">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white text-[10px] sm:text-[11px] font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-lg">
               <Circle className="w-2 h-2 fill-white animate-ping" /> LIVE MATCH 60FPS
             </div>
-            <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight drop-shadow-md">
-              MAN CITY <span className="text-cyan-400">VS</span> ARSENAL
-            </h4>
-            <p className="text-xs text-gray-300 font-medium mt-1">UEFA Champions League · Stadium Camera 1 (4K HDR)</p>
           </div>
 
           {/* On-Screen EPG Bar */}
@@ -70,7 +73,7 @@ export default function IPTVHeroMockup() {
                   <span className="text-[9px] bg-blue-500/20 text-blue-300 border border-blue-400/20 px-1.5 rounded">60 FPS</span>
                 </div>
                 <div className="text-[11px] text-[#A7B0C0] truncate max-w-[200px] sm:max-w-[280px]">
-                  Next: Post-Match Analysis & Highlights
+                  Next: Post-Match Analysis &amp; Highlights
                 </div>
               </div>
             </div>
@@ -85,7 +88,7 @@ export default function IPTVHeroMockup() {
         {/* EPG / Channel Selector List */}
         <div className="p-3 bg-[#080B14]">
           <div className="flex items-center justify-between mb-2 px-1">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#A7B0C0]">EPG TV GUIDE & LIVE CHANNELS</span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#A7B0C0]">EPG TV GUIDE &amp; LIVE CHANNELS</span>
             <span className="text-[11px] text-cyan-400 font-semibold cursor-pointer">View All 50,000+</span>
           </div>
 

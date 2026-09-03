@@ -7,13 +7,13 @@ export default function Contact() {
     <main className="flex-grow pt-28 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
       <div className="mx-auto mb-14 max-w-3xl text-center">
         <span className="inline-block py-1.5 px-4 rounded-full bg-cyan-500/10 text-cyan-400 font-bold text-xs tracking-widest uppercase mb-6 border border-cyan-500/20">
-          24/7 SUPPORT CENTER
+          24/7 STRIMOIPTV SUPPORT CENTER
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#F8FAFC]">
           Get in Touch with <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">StrimoIPTV</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#A7B0C0]">
-          We&apos;re here to help you get the best streaming experience. Send us a message and our technical team will respond quickly.
+          We are here to assist with subscription setup, device configuration, or channel inquiries. Send us a message and our technical team will respond quickly.
         </p>
       </div>
 
@@ -25,12 +25,12 @@ export default function Contact() {
               <Mail className="w-6 h-6" />
             </div>
             <h2 className="font-bold text-xl text-white mb-2">Email Support</h2>
-            <p className="text-xs text-[#A7B0C0] mb-6">For general inquiries and billing assistance.</p>
+            <p className="text-xs text-[#A7B0C0] mb-6">For general inquiries and account assistance.</p>
             <a
               className="text-cyan-400 font-bold text-sm hover:underline"
-              href="mailto:support@strimoiptv.com"
+              href="mailto:support@strimoiptv4k.shop"
             >
-              support@strimoiptv.com
+              support@strimoiptv4k.shop
             </a>
           </div>
 
@@ -38,13 +38,13 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
               <MessageCircle className="w-6 h-6" />
             </div>
-            <h2 className="font-bold text-xl text-white mb-2">WhatsApp Support</h2>
+            <h2 className="font-bold text-xl text-white mb-2">WhatsApp Live Support</h2>
             <p className="text-xs text-[#A7B0C0] mb-6">
               Fastest response time for instant setup help.
             </p>
             <a
               className="text-[#25D366] font-bold text-sm hover:underline flex items-center gap-1.5"
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20StrimoIPTV."
+              href="https://wa.me/447882781998?text=Hello,%20I%20need%20support%20for%20StrimoIPTV."
               target="_blank"
               rel="noreferrer"
             >

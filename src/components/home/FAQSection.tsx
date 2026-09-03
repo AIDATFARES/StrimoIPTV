@@ -9,7 +9,7 @@ export default function FAQSection() {
   const faqs = [
     {
       q: "What is StrimoIPTV and how does it work?",
-      a: "StrimoIPTV is a premium television streaming service that delivers over 50,000 live TV channels and 200,000+ VOD movies directly over the internet. Instead of traditional satellite or cable, StrimoIPTV streams content securely to your Smart TV, Firestick, smartphone, or PC using high-speed cloud servers.",
+      a: "StrimoIPTV is a premium IPTV streaming service delivering over 50,000 live TV channels and 200,000+ VOD movies directly over the internet. Instead of traditional satellite or cable, StrimoIPTV streams content securely to your Smart TV, Firestick, smartphone, or PC using high-speed cloud servers.",
     },
     {
       q: "Which devices are compatible with StrimoIPTV?",
@@ -25,15 +25,15 @@ export default function FAQSection() {
     },
     {
       q: "How fast is activation after ordering?",
-      a: "Activation is fully automated. Your login credentials and setup guide are dispatched to your email address and WhatsApp instantly upon payment confirmation.",
+      a: "Activation is fully automated. Your StrimoIPTV login credentials and setup guide are dispatched to your email address and WhatsApp instantly upon payment confirmation.",
     },
     {
-      q: "Is a free trial available to test StrimoIPTV?",
-      a: "Yes, we offer trial passes so you can evaluate channel quality, stream stability, and server performance before purchasing a long-term plan. Contact support on WhatsApp to request your trial.",
+      q: "Is a trial pass available to test StrimoIPTV?",
+      a: "Yes, we offer trial options so you can evaluate channel quality, stream stability, and server performance before purchasing a long-term plan. Contact support on WhatsApp to request your StrimoIPTV trial.",
     },
     {
       q: "Can I use StrimoIPTV on multiple devices simultaneously?",
-      a: "Yes, depending on your selected plan. Multi-device plans support 2 to 3 simultaneous connections across different devices in your home network.",
+      a: "Yes, depending on your selected plan. Multi-device StrimoIPTV plans support 2 to 3 simultaneous connections across different devices in your home network.",
     },
   ];
 
@@ -45,13 +45,13 @@ export default function FAQSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
             <HelpCircle className="w-3.5 h-3.5" />
-            <span>FREQUENTLY ASKED QUESTIONS</span>
+            <span>STRIMOIPTV HELP &amp; QUESTIONS</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
             Got <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Questions?</span> We Have Answers
           </h2>
           <p className="text-[#A7B0C0] text-base sm:text-lg mt-4">
-            Everything you need to know about StrimoIPTV setup, compatibility, and streaming services.
+            Everything you need to know about StrimoIPTV subscription plans, setup instructions, device compatibility, and 4K server performance.
           </p>
         </div>
 
@@ -91,12 +91,12 @@ export default function FAQSection() {
         <div className="mt-12 text-center text-sm text-[#A7B0C0]">
           Still have questions?{" "}
           <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20have%20a%20question%20about%20StrimoIPTV."
+            href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20StrimoIPTV."
             target="_blank"
             rel="noreferrer"
             className="text-cyan-400 font-bold hover:underline inline-flex items-center gap-1"
           >
-            <MessageSquare className="w-3.5 h-3.5" /> Speak with 24/7 Live Support
+            <MessageSquare className="w-3.5 h-3.5" /> Speak with 24/7 StrimoIPTV Support
           </a>
         </div>
 
