@@ -9,42 +9,47 @@ export default function Blog() {
   const gridPosts = blogPosts.slice(1);
 
   return (
-    <main className="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full relative z-10">
+    <main className="flex-grow pt-28 pb-24 px-5 sm:px-8 lg:px-12 max-w-[1440px] mx-auto w-full relative z-10">
       {/* Header */}
       <header className="mb-16 text-center md:text-left">
-        <h1 className="font-display-lg text-display-lg text-slate-900 mb-4 font-bold tracking-tight">Latest News &amp; Streaming Tips</h1>
-        <p className="font-body-lg text-body-lg text-slate-600 max-w-2xl mx-auto md:mx-0">
-          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your strimoiptv experience.
+        <span className="inline-block py-1.5 px-4 rounded-full bg-cyan-500/10 text-cyan-400 font-bold text-xs tracking-widest uppercase mb-4 border border-cyan-500/20">
+          STREAMING INSIGHTS &amp; GUIDES
+        </span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#F8FAFC] mb-4">
+          Latest News &amp; <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Streaming Tips</span>
+        </h1>
+        <p className="text-base sm:text-lg text-[#A7B0C0] max-w-2xl">
+          Stay updated with 4K IPTV technology, channel setup guides, app tutorials, and streaming tips for StrimoIPTV.
         </p>
       </header>
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="mb-24">
+        <section className="mb-20">
           <Link href={`/blog/${featuredPost.slug}`}>
-            <div className="bg-[#051f33] border border-[#36a9ff]/20 rounded-2xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500 shadow-2xl hover:shadow-[#36a9ff]/20 hover:border-[#36a9ff]/50">
+            <div className="strimo-featured-card rounded-2xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500">
               <div className="md:w-3/5 h-64 md:h-[450px] relative overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   alt={featuredPost.title}
                   src={featuredPost.coverImage || ""}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#051f33] to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#051f33] opacity-90 md:opacity-100"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080B14] via-[#080B14]/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#080B14]"></div>
               </div>
-              <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center z-10 relative bg-[#051f33] md:bg-transparent">
-                <span className="inline-block px-3 py-1 bg-[#36a9ff]/10 text-[#36a9ff] rounded-full font-label-caps text-[12px] font-bold tracking-widest uppercase mb-6 w-max border border-[#36a9ff]/30">
+              <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center z-10 relative bg-[#080B14] md:bg-transparent">
+                <span className="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full text-[10px] font-black tracking-widest uppercase mb-4 w-max border border-cyan-500/20">
                   {featuredPost.category}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-[#36a9ff] transition-colors leading-tight">
+                <h2 className="text-2xl md:text-3xl font-black text-[#F8FAFC] mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
                   {featuredPost.title}
                 </h2>
-                <p className="text-gray-300 text-lg mb-8 line-clamp-3 leading-relaxed">
+                <p className="text-[#A7B0C0] text-xs sm:text-sm mb-8 line-clamp-3 leading-relaxed">
                   {featuredPost.description}
                 </p>
-                <div className="flex items-center gap-4 mt-auto">
-                  <span className="text-white font-bold text-base uppercase tracking-wider">Read Article</span>
-                  <ArrowRight className="text-[#36a9ff] w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                <div className="flex items-center gap-3 mt-auto">
+                  <span className="text-cyan-400 font-extrabold text-xs uppercase tracking-wider">Read Article</span>
+                  <ArrowRight className="text-cyan-400 w-4 h-4 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </div>
@@ -56,30 +61,30 @@ export default function Blog() {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {gridPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.id}>
-            <article className="bg-[#051f33] border border-[#36a9ff]/20 rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300 h-full shadow-lg hover:shadow-[#36a9ff]/20 hover:border-[#36a9ff]/50">
-              <div className="h-56 relative overflow-hidden shrink-0">
+            <article className="strimo-card p-0 rounded-2xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-all duration-300 h-full">
+              <div className="h-52 relative overflow-hidden shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt={post.title}
                   src={post.coverImage || ""}
                 />
-                <div className="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-[#051f33] to-transparent"></div>
-                <span className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md text-white rounded-md font-bold text-[10px] tracking-widest uppercase border border-white/10">
+                <div className="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-[#0D111B] to-transparent"></div>
+                <span className="absolute top-4 left-4 px-3 py-1 bg-[#080B14]/80 backdrop-blur-md text-cyan-400 rounded-full font-extrabold text-[9px] tracking-widest uppercase border border-cyan-500/20">
                   {post.category}
                 </span>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <p className="text-xl font-bold text-white mb-3 group-hover:text-[#36a9ff] transition-colors leading-snug">
+                <h3 className="text-lg font-bold text-[#F8FAFC] mb-3 group-hover:text-cyan-400 transition-colors leading-snug">
                   {post.title}
-                </p>
-                <p className="text-sm text-gray-400 mb-6 line-clamp-2 leading-relaxed">
+                </h3>
+                <p className="text-xs text-[#A7B0C0] mb-6 line-clamp-2 leading-relaxed">
                   {post.description}
                 </p>
-                <div className="mt-auto flex items-center justify-between text-gray-500 text-xs font-semibold tracking-wider uppercase">
+                <div className="mt-auto flex items-center justify-between text-[#667085] text-[10px] font-bold tracking-wider uppercase border-t border-white/5 pt-4">
                   <span>{post.date}</span>
-                  <span className="text-[#36a9ff] flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Read <ArrowRight className="w-3 h-3" />
+                  <span className="text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Read Article <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
               </div>
@@ -89,22 +94,21 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="bg-[#051f33] border border-[#36a9ff]/20 rounded-2xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#36a9ff]/10 to-transparent opacity-50 pointer-events-none"></div>
+      <section className="strimo-card p-8 md:p-14 text-center rounded-3xl relative overflow-hidden">
         <div className="relative z-10 max-w-2xl mx-auto">
-          <Mail className="w-12 h-12 text-[#36a9ff] mb-6 mx-auto" />
-          <h2 className="text-3xl font-bold text-white mb-4">Never Miss an Update</h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Subscribe to our newsletter for the latest streaming tips, platform updates, and exclusive reseller offers delivered straight to your inbox.
+          <Mail className="w-10 h-10 text-cyan-400 mb-4 mx-auto" />
+          <h2 className="text-3xl font-black text-[#F8FAFC] mb-3">Never Miss a Streaming Update</h2>
+          <p className="text-[#A7B0C0] text-sm mb-8">
+            Subscribe for the latest IPTV streaming tips, device setup updates, and channel additions delivered straight to your inbox.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 justify-center" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col sm:flex-row gap-3 justify-center" onSubmit={(e) => e.preventDefault()}>
             <input
-              className="bg-[#031726] border border-[#36a9ff]/30 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] w-full sm:w-96 transition-all shadow-inner"
+              className="bg-[#080B14] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-cyan-400 w-full sm:w-80"
               placeholder="Enter your email address"
               type="email"
             />
             <button
-              className="bg-[#36a9ff] hover:bg-[#2196f3] text-white font-bold text-base tracking-wider uppercase px-8 py-4 rounded-lg whitespace-nowrap transition-colors shadow-lg shadow-[#36a9ff]/20"
+              className="btn-primary-strimo px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider whitespace-nowrap"
               type="submit"
             >
               Subscribe
