@@ -1,11 +1,11 @@
 import HeroSection from "@/components/home/HeroSection";
 import CategoryStrip from "@/components/home/CategoryStrip";
+import PricingSection from "@/components/home/PricingSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import WebPlayerSection from "@/components/home/WebPlayerSection";
-import HowItWorksSection from "@/components/home/HowItWorksSection";
-import DeviceSupport from "@/components/home/DeviceSupport";
 import SportsSection from "@/components/home/SportsSection";
-import PricingSection from "@/components/home/PricingSection";
+import DeviceSupport from "@/components/home/DeviceSupport";
+import HowItWorksSection from "@/components/home/HowItWorksSection";
 import FAQSection from "@/components/home/FAQSection";
 import SupportCtaSection from "@/components/home/SupportCtaSection";
 import FinalCtaSection from "@/components/home/FinalCtaSection";
@@ -15,12 +15,12 @@ export default function Home() {
     <main className="w-full overflow-hidden">
       <HeroSection />
       <CategoryStrip />
+      <PricingSection />
       <FeaturesSection />
       <WebPlayerSection />
-      <HowItWorksSection />
-      <DeviceSupport />
       <SportsSection />
-      <PricingSection />
+      <DeviceSupport />
+      <HowItWorksSection />
       <FAQSection />
       <SupportCtaSection />
       <FinalCtaSection />
