@@ -1,56 +1,69 @@
-import { Laptop, Play, CheckCircle2, ArrowRight } from "lucide-react";
+import { Laptop, CheckCircle2, ArrowRight } from "lucide-react";
 import WebPlayerMockup from "./WebPlayerMockup";
 
 export default function WebPlayerSection() {
   return (
-    <section className="py-24 relative z-10 border-t border-white/[0.06] bg-[#080B14]/40">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <section className="py-20 sm:py-28 relative z-10 border-t border-white/[0.08] bg-[#080B14]/60 backdrop-blur-sm overflow-hidden">
+      
+      {/* Radial Ambient Backlight */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
+      
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Column Copy */}
           <div className="lg:col-span-5 flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
+            
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
               <Laptop className="w-3.5 h-3.5" />
-              <span>WEB PLAYER</span>
+              <span>INSTANT WEB PLAYER</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC] leading-tight">
-              Watch Anywhere directly from your <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Browser</span>
+            <h2 className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-[#F8FAFC] leading-[1.15]">
+              Watch Anywhere directly from your <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Browser</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#A7B0C0] mt-5 leading-relaxed">
-              No downloads or app installations required. Simply log into our browser-based web player to access all 50,000+ live channels, EPG guide, and VOD cinema library instantly on any PC or Mac.
+            <p className="text-base sm:text-lg text-[#A7B0C0] mt-6 leading-relaxed font-normal">
+              No downloads or app installations required. Simply log into our browser-based web player to access all 50,000+ live channels, EPG guide, and VOD cinema library instantly on any PC, Mac, Laptop, or Tablet.
             </p>
 
-            <div className="space-y-3 mt-7 text-sm text-[#F8FAFC] font-medium">
+            {/* Bullet Points */}
+            <div className="space-y-3.5 mt-8 text-sm sm:text-base text-[#F8FAFC] font-semibold">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0" />
+                <div className="w-5 h-5 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                </div>
                 <span>Zero app installation required</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0" />
-                <span>Integrated EPG program schedule & channel search</span>
+                <div className="w-5 h-5 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                </div>
+                <span>Integrated EPG program schedule &amp; channel search</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0" />
-                <span>Adaptive HLS/HEVC 4K video player</span>
+                <div className="w-5 h-5 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
+                </div>
+                <span>Adaptive HLS/HEVC 4K ultra-low-latency player</span>
               </div>
             </div>
 
-            <div className="mt-9">
+            {/* Launch Button */}
+            <div className="mt-10">
               <a
                 href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20test%20the%20StrimoIPTV%20Web%20Player."
                 target="_blank"
                 rel="noreferrer"
-                className="btn-primary-strimo px-8 py-3.5 text-xs uppercase tracking-wider font-extrabold flex items-center gap-2"
+                className="btn-primary-strimo px-8 py-4 text-xs uppercase tracking-widest font-extrabold flex items-center gap-2.5 shadow-[0_0_25px_rgba(56,189,248,0.4)]"
               >
-                <span>Launch Web Player</span>
+                <span>LAUNCH WEB PLAYER</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Right Column: Web Player Mockup */}
+          {/* Right Column: Web Player Interactive Mockup */}
           <div className="lg:col-span-7 w-full flex justify-center">
             <WebPlayerMockup />
           </div>

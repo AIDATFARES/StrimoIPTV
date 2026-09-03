@@ -1,8 +1,8 @@
 import HeroSection from "@/components/home/HeroSection";
 import CategoryStrip from "@/components/home/CategoryStrip";
+import WebPlayerSection from "@/components/home/WebPlayerSection";
 import PricingSection from "@/components/home/PricingSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
-import WebPlayerSection from "@/components/home/WebPlayerSection";
 import SportsSection from "@/components/home/SportsSection";
 import DeviceSupport from "@/components/home/DeviceSupport";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
@@ -15,9 +15,9 @@ export default function Home() {
     <main className="w-full overflow-hidden">
       <HeroSection />
       <CategoryStrip />
+      <WebPlayerSection />
       <PricingSection />
       <FeaturesSection />
-      <WebPlayerSection />
       <SportsSection />
       <DeviceSupport />
       <HowItWorksSection />

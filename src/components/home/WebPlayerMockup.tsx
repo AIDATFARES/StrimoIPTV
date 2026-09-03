@@ -1,33 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Star, Play, Tv, Film, Radio, Sliders, Volume2, ShieldCheck, Cpu } from "lucide-react";
+import { Search, Star, Play, Volume2, Sliders } from "lucide-react";
 
 export default function WebPlayerMockup() {
-  const [selectedCategory, setSelectedCategory] = useState("Sports HD");
+  const [selectedCategory, setSelectedCategory] = useState("Sports 4K");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const categories = ["Sports HD", "Entertainment", "Movies 4K", "News Live", "Kids"];
+  const categories = ["Sports 4K", "Cinema", "News", "Kids"];
 
   const channels = [
-    { id: 1, name: "Sky Sports Main Event", category: "Sports HD", nowPlaying: "Premier League Live", isFav: true, status: "4K 60FPS" },
-    { id: 2, name: "TNT Sports 1 HD", category: "Sports HD", nowPlaying: "UEFA Champions League", isFav: true, status: "FHD" },
-    { id: 3, name: "BeIN Sports 1 Premium", category: "Sports HD", nowPlaying: "La Liga Matchday", isFav: false, status: "4K" },
-    { id: 4, name: "HBO Ultra Movies", category: "Movies 4K", nowPlaying: "Oppenheimer (2023)", isFav: false, status: "4K HDR" },
-    { id: 5, name: "Discovery Science HD", category: "Entertainment", nowPlaying: "How It's Made 2026", isFav: true, status: "FHD" },
+    { id: 1, name: "Sky Sports Main Event 4K", category: "Sports 4K", nowPlaying: "Premier League Live", isFav: true, status: "4K 60FPS" },
+    { id: 2, name: "TNT Sports 1 HD", category: "Sports 4K", nowPlaying: "UEFA Champions League", isFav: true, status: "FHD" },
+    { id: 3, name: "BeIN Sports 1 Premium", category: "Sports 4K", nowPlaying: "La Liga Matchday", isFav: false, status: "4K" },
+    { id: 4, name: "HBO Ultra Movies", category: "Cinema", nowPlaying: "Oppenheimer (2023)", isFav: false, status: "4K HDR" },
+    { id: 5, name: "Discovery Science HD", category: "News", nowPlaying: "How It's Made 2026", isFav: true, status: "FHD" },
   ];
 
   return (
-    <div className="relative w-full max-w-[680px] mx-auto group">
-      {/* Outer Glow */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600/30 via-blue-600/30 to-purple-600/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+    <div className="relative w-full max-w-[720px] mx-auto group">
+      {/* Outer Neon Cyan & Purple Ambient Glow */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-600/30 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
       {/* Browser Player Outer Frame */}
       <div className="relative bg-[#0D111B] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
         
         {/* Browser Top Navigation Bar */}
         <div className="bg-[#080B14] px-4 py-3 border-b border-white/[0.08] flex items-center justify-between">
-          <div className="flex items-center gap-3 w-full max-w-[320px]">
+          <div className="flex items-center gap-3 w-full max-w-[340px]">
             <div className="flex items-center gap-1.5 shrink-0">
               <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
@@ -40,7 +40,7 @@ export default function WebPlayerMockup() {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-bold text-[#60A5FA] bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+            <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
               WEB APP v3.0
             </span>
           </div>
@@ -70,9 +70,9 @@ export default function WebPlayerMockup() {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`text-[10px] font-bold px-2 py-1 rounded-md whitespace-nowrap transition-colors ${
+                    className={`text-[10px] font-bold px-2 py-1 rounded-md whitespace-nowrap transition-colors shrink-0 ${
                       selectedCategory === cat
-                        ? "bg-blue-600 text-white"
+                        ? "bg-cyan-500 text-black font-black"
                         : "bg-[#111621] text-[#A7B0C0] hover:text-white"
                     }`}
                   >
@@ -88,7 +88,7 @@ export default function WebPlayerMockup() {
                     key={ch.id}
                     className={`p-2 rounded-lg text-left transition-all border flex items-center justify-between cursor-pointer ${
                       ch.id === 1
-                        ? "bg-[#111621] border-cyan-500/40 text-white"
+                        ? "bg-[#111621] border-cyan-500/40 text-white shadow-sm"
                         : "bg-[#0D111B]/40 border-white/[0.03] text-[#A7B0C0] hover:border-white/10"
                     }`}
                   >
@@ -119,7 +119,7 @@ export default function WebPlayerMockup() {
             <div className="flex items-center justify-between text-xs mb-2">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-                <span className="font-extrabold text-white text-xs">Sky Sports Main Event</span>
+                <span className="font-extrabold text-white text-xs">Sky Sports Main Event 4K</span>
               </div>
               <span className="text-[10px] bg-purple-500/10 text-purple-400 border border-purple-500/20 px-2 py-0.5 rounded font-bold">
                 HEVC H.265
@@ -131,10 +131,10 @@ export default function WebPlayerMockup() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none z-10" />
               
               <div className="relative z-20 text-center">
-                <div className="w-10 h-10 rounded-full bg-blue-600/80 text-white flex items-center justify-center mx-auto mb-2 shadow-lg cursor-pointer hover:scale-110 transition-transform">
-                  <Play className="w-5 h-5 fill-white translate-x-[1px]" />
+                <div className="w-10 h-10 rounded-full bg-cyan-400 text-black flex items-center justify-center mx-auto mb-2 shadow-[0_0_15px_rgba(6,182,212,0.6)] cursor-pointer hover:scale-110 transition-transform">
+                  <Play className="w-5 h-5 fill-black translate-x-[1px]" />
                 </div>
-                <div className="text-xs font-bold text-white">Stream Active · 4K 60FPS</div>
+                <div className="text-xs font-black text-white">Stream Active · 4K 60FPS</div>
                 <div className="text-[10px] text-cyan-400 font-medium">Bitrate: 25.4 Mbps (Zero Lag)</div>
               </div>
 
