@@ -6,19 +6,18 @@ import {
   ChevronDown,
   ChevronUp,
   Headphones,
-  MonitorSmartphone,
   Server,
   ShieldCheck,
   ShoppingCart,
   Sparkles,
   Zap,
+  ArrowRight,
 } from "lucide-react";
 
 type CreditPlan = {
   id: string;
   credits: number;
   price: number;
-  oldPrice?: number;
   popular?: boolean;
   bestValue?: boolean;
 };
@@ -54,39 +53,39 @@ const creditPlans: CreditPlan[] = [
 ];
 
 const planFeatures = [
-  "Each credit hour equals 1 month",
-  "Free Trial Everyday",
-  "Customize groups",
-  "Pay As You Go!",
-  "Credits Not Expire",
-  "24/7 support",
-  "Create Sub-Resellers",
+  "1 Credit = 1 Month IPTV Subscription",
+  "Free Trial Creation Everyday",
+  "Custom Channel Category Groups",
+  "Pay-As-You-Go Credit System",
+  "Credits Never Expire",
+  "24/7 Dedicated Reseller Support",
+  "Create Unlimited Sub-Resellers",
 ];
 
 const advantages = [
   {
     icon: ShoppingCart,
-    title: "COMPATIBLE WITH ALL DEVICES",
+    title: "UNIVERSAL COMPATIBILITY",
     description:
-      "Our IPTV service is compatible with all devices: Smart TV, Android devices, MAG, Apple TV, Firestick & more.",
+      "StrimoIPTV reseller streams work seamlessly on Smart TVs, Firestick, Android Box, MAG, Apple TV, iOS, and PC.",
   },
   {
     icon: Server,
-    title: "EFFICIENT SERVERS",
+    title: "HIGH-CAPACITY SERVERS",
     description:
-      "We have large, high-capacity servers equipped with anti-freeze technology to provide you with the best quality of service.",
+      "Anti-freeze load balanced servers across North America and Europe guaranteeing 99.9% uptime for your clients.",
   },
   {
     icon: Headphones,
-    title: "EXPERT SUPPORT",
+    title: "24/7 VIP SUPPORT",
     description:
-      "Our dedicated technical support team is available 7 days a week to help you and your reseller business whenever needed.",
+      "Direct technical help for line migration, portal setup, and client troubleshooting on WhatsApp 7 days a week.",
   },
   {
     icon: Zap,
     title: "FULL CONTROL PANEL",
     description:
-      "Manage customer lines, edit channels, generate unlimited free test accounts, and create sub-resellers effortlessly.",
+      "Effortlessly manage customer lines, edit bouquet channels, issue free test trials, and track sub-reseller balances.",
   },
 ];
 
@@ -94,57 +93,32 @@ const resellerFaqs = [
   {
     question: "DOES THE CONTROL PANEL EXPIRE?",
     answer:
-      "No, your reseller control panel does not expire. Once activated, your panel remains active permanently, and your credits never expire.",
+      "No, your StrimoIPTV reseller control panel access remains active permanently, and your credit balance never expires.",
   },
   {
-    question: "CAN I RENEW A SUBSCRIPTION?",
+    question: "CAN I RENEW A CLIENT SUBSCRIPTION?",
     answer:
-      "Yes! You can easily extend or renew any client subscription directly from your Xtream reseller panel with a single click.",
+      "Yes! You can extend or renew any client subscription directly from your reseller dashboard with a single click.",
   },
   {
-    question: "CAN I CHANGE A SUBSCRIPTION FROM ONE DEVICE TO ANOTHER?",
+    question: "CAN I MODIFY CLIENT LINES OR PLAYLIST FORMATS?",
     answer:
-      "Absolutely. You can modify lines, switch device types, or update M3U playlists and Xtream Codes parameters at any time inside your dashboard.",
+      "Absolutely. You can change lines from M3U to Xtream Codes API, update MAC address portals, or edit channel groups anytime.",
   },
   {
-    question: "WHAT IF THE SUBSCRIPTION DOES NOT WORK FOR MY CLIENT?",
+    question: "HOW DO I SELL IPTV SUBSCRIPTIONS?",
     answer:
-      "Our expert support team is available 7 days a week to assist you with fast client setup, line diagnostics, and troubleshooting.",
+      "You can sell subscriptions through your website, social media pages, local contacts, or online store. You set your own prices and keep 100% of your profits.",
   },
   {
-    question: "HOW TO SELL IPTV SUBSCRIPTIONS?",
+    question: "HOW DO I CREATE A SUB-RESELLER PANEL?",
     answer:
-      "You can sell IPTV subscriptions through your website, social media channels, local network, or direct clients. You set your own pricing and keep 100% of your profit margin.",
+      "Inside your master dashboard, navigate to Sub-Reseller Management, set up a username and password, and transfer credits from your balance.",
   },
   {
-    question: "DOES YOUR IPTV SERVER SUPPORT ALL DEVICES?",
+    question: "CAN I PAUSE OR DISABLE A CLIENT LINE?",
     answer:
-      "Yes! Our servers support Smart TVs (Samsung, LG), Android TV/Boxes, Amazon Firestick, MAG boxes, Formuler, Enigma2, iOS, Windows, Mac, and Apple TV.",
-  },
-  {
-    question: "HOW CAN I ACTIVATE A MAG BOX?",
-    answer:
-      "Inside your reseller panel, select 'Add MAG Device', enter the client's MAC address (00:1A:79:XX:XX:XX), and assign their subscription package instantly.",
-  },
-  {
-    question: "CAN I STOP A SUBSCRIPTION?",
-    answer:
-      "Yes, you have complete authority to disable, pause, modify, or extend customer lines whenever necessary directly from your control panel.",
-  },
-  {
-    question: "WHAT IF A STREAM STARTS BUFFERING?",
-    answer:
-      "Our servers feature automatic load balancing and anti-freeze technology with 99.9% uptime. If a client experiences buffering, you can switch line servers or adjust stream codecs in the panel.",
-  },
-  {
-    question: "WHAT IF THE SERVER STOPS WORKING FOREVER?",
-    answer:
-      "We operate redundant multi-location server clusters across Europe and North America to guarantee continuous reliability, zero downtime, and backup streaming nodes.",
-  },
-  {
-    question: "HOW TO CREATE A PANEL FOR A SUB RESELLER?",
-    answer:
-      "Inside your master panel, navigate to 'Sub-Reseller Management', create a new account username/password, and assign credit balance from your account.",
+      "Yes, you have total administrative control to pause, disable, edit, or extend client access lines whenever necessary.",
   },
 ];
 
@@ -157,8 +131,8 @@ export default function ResellerPageContent() {
 
   const handleOrderPanel = (plan?: CreditPlan) => {
     const message = plan
-      ? `Hello! I would like to order the IPTV Reseller Panel with ${plan.credits} Credits for $${plan.price}.`
-      : `Hello! I am interested in becoming an IPTV Reseller and would like to request panel access.`;
+      ? `Hello! I would like to order the StrimoIPTV Reseller Panel with ${plan.credits} Credits for $${plan.price}.`
+      : `Hello! I am interested in becoming a StrimoIPTV Reseller and would like to request panel access.`;
     window.open(
       `https://wa.me/213552069874?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -167,7 +141,7 @@ export default function ResellerPageContent() {
   };
 
   const handleFreeTrial = () => {
-    const message = `Hello! I am interested in testing an IPTV Reseller Panel free trial account.`;
+    const message = `Hello! I am interested in testing a StrimoIPTV Reseller Panel demo account.`;
     window.open(
       `https://wa.me/213552069874?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -176,49 +150,46 @@ export default function ResellerPageContent() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 text-format-marketing">
-      {/* Background radial gradient */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-950/25 via-white to-transparent" />
-
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 text-format-marketing">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* HERO SECTION */}
         <header className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#36a9ff]/30 bg-[#145082]/10 px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-cyan-400">
             <Sparkles className="h-3.5 w-3.5" />
-            IPTV Reseller Program
+            IPTV RESELLER PROGRAM
           </span>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-black">
-            STRIMO IPTV <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200">
-              RESELLER PROGRAM
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#F8FAFC]">
+            STRIMOIPTV <br />
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              RESELLER PANEL
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-gray-700 sm:text-base sm:leading-8">
-            Our IPTV reseller program helps you meet the expectations of your customers, enabling you to provide them with the best possible solutions. Join us and enjoy dozens of benefits with our program now.
+          <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-[#A7B0C0]">
+            Launch your own profitable IPTV business today. Get access to our high-margin Xtream Codes reseller control panel, zero-buffer 4K servers, and 24/7 technical support.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={handleFreeTrial}
-              className="rounded-full bg-[#36a9ff] px-8 py-3.5 text-base font-bold text-white shadow-[0_0_25px_rgba(255,107,0,0.4)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_0_35px_rgba(255,107,0,0.6)] active:scale-[0.98]"
+              className="btn-primary-strimo px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider flex items-center gap-2"
             >
-              Free Trial
+              <span>Test Demo Panel</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </header>
 
-        {/* OUR RESELLER PLANS */}
+        {/* RESELLER CREDIT PLANS */}
         <div className="mt-24">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-              <span className="block text-black">Our Exclusive</span>
-              <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Plans.</span>
+            <h2 className="text-3xl sm:text-5xl font-black leading-tight tracking-tight text-[#F8FAFC]">
+              Reseller <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Credit Packages</span>
             </h2>
-            <p className="mt-3 text-base font-bold text-gray-700">
-              We provide you with the best servers at the right price
+            <p className="mt-3 text-base text-[#A7B0C0]">
+              High profit margins with non-expiring credits and automated panel activation.
             </p>
           </div>
 
@@ -226,46 +197,42 @@ export default function ResellerPageContent() {
             {creditPlans.map((plan) => (
               <article
                 key={plan.id}
-                className={`relative flex flex-col rounded-3xl bg-white p-6 shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
+                className={`relative flex flex-col rounded-2xl p-6 transition-all duration-300 ${
                   plan.popular
-                    ? "border-4 border-[#36a9ff] shadow-[0_10px_40px_rgba(255,107,0,0.25)] scale-102 z-10"
-                    : plan.bestValue
-                    ? "border-4 border-secondary-500 shadow-[0_10px_40px_rgba(16,185,129,0.2)] z-10"
-                    : "border-2 border-black/5"
+                    ? "strimo-featured-card scale-105 z-10"
+                    : "strimo-card"
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#36a9ff] px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md">
-                    Most Popular
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-white shadow-lg whitespace-nowrap">
+                    MOST POPULAR
                   </span>
                 )}
                 {plan.bestValue && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary-600 px-4 py-1 text-[11px] font-extrabold uppercase tracking-wider text-black shadow-md">
-                    Best Value
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500/20 border border-cyan-500/40 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-cyan-300 whitespace-nowrap">
+                    BEST VALUE
                   </span>
                 )}
 
                 <div className="text-center">
-                  <span className="text-xs font-black uppercase tracking-widest text-[#36a9ff]">
-                    PREMIUM IPTV
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-cyan-400">
+                    RESELLER CREDIT
                   </span>
-                  <h3 className="mt-1 text-2xl font-black text-black">
-                    {plan.credits} Credit
+                  <h3 className="mt-1 text-2xl font-black text-[#F8FAFC]">
+                    {plan.credits} Credits
                   </h3>
                 </div>
 
-                <div className="my-5 rounded-2xl bg-white border border-black/5 py-4 text-center">
-                  <span className="text-4xl font-black text-[#36a9ff]">
+                <div className="my-5 rounded-xl bg-[#080B14] border border-white/10 py-4 text-center">
+                  <span className="text-4xl font-black text-white">
                     ${plan.price}
                   </span>
                 </div>
 
-                <ul className="flex-grow space-y-3 border-t border-black/5 pt-4 text-xs font-semibold text-gray-600">
+                <ul className="flex-grow space-y-3 border-t border-white/5 pt-4 text-xs text-[#A7B0C0]">
                   {planFeatures.map((feature) => (
-                    <li className="flex items-center gap-2" key={feature}>
-                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-orange-100 text-[#36a9ff]">
-                        <Check className="h-3 w-3 stroke-[3]" />
-                      </span>
+                    <li className="flex items-start gap-2" key={feature}>
+                      <Check className="h-4 w-4 shrink-0 text-cyan-400 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -274,9 +241,14 @@ export default function ResellerPageContent() {
                 <button
                   type="button"
                   onClick={() => handleOrderPanel(plan)}
-                  className="mt-6 w-full rounded-2xl bg-[#36a9ff] py-3.5 text-sm font-extrabold text-white shadow-[0_4px_15px_rgba(255,107,0,0.3)] transition-all duration-300 hover:bg-orange-700 hover:shadow-[0_6px_20px_rgba(255,107,0,0.4)] active:scale-[0.98]"
+                  className={`mt-6 w-full py-3.5 text-xs font-extrabold uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 ${
+                    plan.popular
+                      ? "btn-primary-strimo"
+                      : "btn-secondary-strimo"
+                  }`}
                 >
-                  Get A Panel
+                  <span>Order Panel</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </article>
             ))}
@@ -285,26 +257,25 @@ export default function ResellerPageContent() {
 
         {/* ADVANTAGES OF IPTV RESELLER */}
         <div className="mt-28">
-          <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-            <span className="block text-black">Advantages of</span>
-            <span className="mt-1 block text-[#36a9ff]">IPTV Reseller Program.</span>
+          <h2 className="text-center text-3xl sm:text-5xl font-black leading-tight tracking-tight text-[#F8FAFC]">
+            Why Partner with <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">StrimoIPTV?</span>
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="flex flex-col items-center text-center p-6 rounded-2xl border border-black/10 bg-white/90 backdrop-blur-md shadow-xl hover:border-[#36a9ff]/40 transition-colors"
+                  className="strimo-card p-6 rounded-2xl flex flex-col items-start"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#145082]/15 text-[#36a9ff] mb-5">
-                    <Icon className="h-8 w-8" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-5">
+                    <Icon className="h-6 w-6" />
                   </div>
-                  <span className="block text-sm font-extrabold uppercase tracking-wider text-black">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-2">
                     {item.title}
-                  </span>
-                  <p className="mt-3 text-xs leading-5 text-gray-600">
+                  </h3>
+                  <p className="text-xs leading-relaxed text-[#A7B0C0]">
                     {item.description}
                   </p>
                 </div>
@@ -313,11 +284,10 @@ export default function ResellerPageContent() {
           </div>
         </div>
 
-        {/* FREQUENTLY ASKED QUESTIONS */}
+        {/* RESELLER FAQ */}
         <div className="mx-auto mt-28 max-w-4xl">
-          <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-            <span className="block text-black">Frequently Asked</span>
-            <span className="mt-1 block text-[#36a9ff]">Questions & Answers.</span>
+          <h2 className="text-center text-3xl sm:text-4xl font-black leading-tight tracking-tight text-[#F8FAFC]">
+            Reseller <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">FAQ</span>
           </h2>
 
           <div className="mt-10 space-y-3">
@@ -326,25 +296,24 @@ export default function ResellerPageContent() {
               return (
                 <div
                   key={faq.question}
-                  className="overflow-hidden rounded-xl border border-black/10 bg-white/90 shadow-md transition-colors hover:border-[#36a9ff]/30"
+                  className="strimo-card rounded-xl overflow-hidden"
                 >
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="flex w-full items-center justify-between px-6 py-4 text-left font-bold text-black transition-colors hover:bg-white/[0.03]"
+                    className="flex w-full items-center justify-between p-5 text-left font-bold text-white hover:text-cyan-400 transition-colors"
                   >
-                    <span className="text-sm sm:text-base tracking-wide uppercase font-extrabold flex items-center gap-3">
-                      <span className="text-[#36a9ff]">?</span>
+                    <span className="text-xs sm:text-sm tracking-wide uppercase font-extrabold">
                       {faq.question}
                     </span>
                     {isOpen ? (
-                      <ChevronUp className="h-5 w-5 shrink-0 text-[#36a9ff]" />
+                      <ChevronUp className="h-5 w-5 shrink-0 text-cyan-400" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 shrink-0 text-gray-600" />
+                      <ChevronDown className="h-5 w-5 shrink-0 text-cyan-400" />
                     )}
                   </button>
 
                   {isOpen && (
-                    <div className="border-t border-black/10 bg-white px-6 py-4 text-sm text-gray-700 leading-relaxed">
+                    <div className="border-t border-white/5 p-5 text-xs text-[#A7B0C0] leading-relaxed">
                       {faq.answer}
                     </div>
                   )}
@@ -356,16 +325,17 @@ export default function ResellerPageContent() {
           <div className="mt-12 flex justify-center">
             <button
               onClick={() => handleOrderPanel()}
-              className="rounded-full bg-[#051f33] px-10 py-4 text-base font-extrabold uppercase tracking-wider text-white shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all duration-300 hover:bg-[#145082] hover:shadow-[0_0_40px_rgba(255,107,0,0.7)] active:scale-[0.98]"
+              className="btn-primary-strimo px-10 py-4 text-xs font-extrabold uppercase tracking-wider flex items-center gap-2"
             >
-              Become Reseller
+              <span>Become StrimoIPTV Reseller</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         {/* TRUST BADGE */}
-        <div className="mt-16 flex items-center justify-center gap-2 text-xs font-semibold text-gray-600">
-          <ShieldCheck className="h-4 w-4 text-[#36a9ff]" />
+        <div className="mt-16 flex items-center justify-center gap-2 text-xs font-semibold text-[#A7B0C0]">
+          <ShieldCheck className="h-4 w-4 text-emerald-400" />
           <span>Official Xtream Codes Reseller Panel - 99.9% Uptime Guarantee</span>
         </div>
       </div>
