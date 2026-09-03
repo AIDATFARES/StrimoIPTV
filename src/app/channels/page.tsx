@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import BrandMarquee from "@/components/home/BrandMarquee";
+import ChannelListExplorer from "@/components/channels/ChannelListExplorer";
 
 const categoryCards = [
   {
@@ -92,7 +93,7 @@ const categoryCards = [
 export default function ChannelsPage() {
   return (
     <main className="min-h-screen pt-28 pb-24 relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
         
         {/* Header Banner */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
@@ -102,16 +103,16 @@ export default function ChannelsPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#F8FAFC]">
-            StrimoIPTV <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Live Channels & VOD</span>
+            StrimoIPTV <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">Live Channels &amp; VOD Lineup</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-[#A7B0C0] leading-relaxed">
-            Browse our full channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K & HD quality from over 150+ countries.
+            Browse our complete channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K &amp; HD quality from over 150+ countries.
           </p>
         </div>
 
         {/* Category Cards Grid */}
-        <section className="mb-20">
+        <section className="mb-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categoryCards.map((category) => {
               const Icon = category.icon;
@@ -155,6 +156,9 @@ export default function ChannelsPage() {
             })}
           </div>
         </section>
+
+        {/* Interactive Channel Explorer */}
+        <ChannelListExplorer />
 
         {/* Marquee Strip */}
         <section className="mb-16 rounded-2xl overflow-hidden border border-white/5">

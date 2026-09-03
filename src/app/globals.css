@@ -110,6 +110,20 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* Infinite Marquee Keyframe & Class */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.animate-marquee-infinite {
+  animation: marquee-scroll 25s linear infinite;
+}
+
 /* Hide scrollbar for clean category strip */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
