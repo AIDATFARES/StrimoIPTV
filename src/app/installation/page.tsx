@@ -17,10 +17,10 @@ export default function Installation() {
       <header className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
         <span className="inline-flex rounded-full border border-[#36a9ff]/35 bg-[#36a9ff]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">Installation Guide</span>
         <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-black uppercase drop-shadow-md">
-          REALM IPTV INSTALLATION GUIDE
+          STRIMO IPTV INSTALLATION GUIDE
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-6 text-gray-600">Comprehensive step-by-step instructions to configure Realm IPTV on all your devices.</p>
-        <p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-gray-600">Realm IPTV works on Smart TVs, Firestick, Android, iOS, MAG, and more. New to Realm IPTV? Check <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/pricing">Realm IPTV Pricing</Link>, or browse the <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/channels">Realm IPTV Channel List</Link> before you start.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-6 text-gray-600">Comprehensive step-by-step instructions to configure Strimo IPTV on all your devices.</p>
+        <p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-gray-600">Strimo IPTV works on Smart TVs, Firestick, Android, iOS, MAG, and more. New to Strimo IPTV? Check <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/pricing">Strimo IPTV Pricing</Link>, or browse the <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/channels">Strimo IPTV Channel List</Link> before you start.</p>
         <div className="mt-10 flex flex-wrap justify-center gap-x-9 gap-y-4 text-sm font-semibold text-gray-700">
           <span className="inline-flex items-center gap-2"><Monitor className="h-4 w-4 text-[#36a9ff]" />15+ Devices Supported</span>
           <span className="inline-flex items-center gap-2"><Clock3 className="h-4 w-4 text-[#36a9ff]" />5–15 Minutes Setup</span>
@@ -44,7 +44,7 @@ export default function Installation() {
           {/* Quick Start Cards — 3 large navy cards */}
           <div className="grid gap-5 md:grid-cols-3">
             <QuickStartCard icon={Download} step="1" title="Download App">Download and install a suitable IPTV player app on your device from the app store or the official site.</QuickStartCard>
-            <QuickStartCard icon={Link2} step="2" title="Add M3U URL">Input your Realm IPTV M3U playlist URL and EPG URL, which are included in your welcome email.</QuickStartCard>
+            <QuickStartCard icon={Link2} step="2" title="Add M3U URL">Input your Strimo IPTV M3U playlist URL and EPG URL, which are included in your welcome email.</QuickStartCard>
             <QuickStartCard icon={PlayCircle} step="3" title="Start Streaming">Gain immediate access to live channels, movies and TV shows in stunning 4K quality.</QuickStartCard>
           </div>
 

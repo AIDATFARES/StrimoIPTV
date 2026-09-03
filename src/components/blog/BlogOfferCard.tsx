@@ -18,7 +18,7 @@ export default function BlogOfferCard() {
           </div>
           
           <h3 className="text-2xl md:text-3xl font-headline-lg font-bold text-on-surface mb-2">
-            Experience <span className="text-primary">REALM IPTV</span>
+            Experience <span className="text-primary">STRIMO IPTV</span>
           </h3>
           
           <p className="text-on-surface-variant text-base md:text-lg mb-0 max-w-2xl">
@@ -31,7 +31,7 @@ export default function BlogOfferCard() {
             href="/pricing"
             className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-primary hover:bg-primary-container text-on-primary font-bold rounded-xl transition-all hover:scale-105 active:scale-95 group/btn shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.5)]"
           >
-            View REALM Plans
+            View STRIMO Plans
             <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
           </Link>
         </div>

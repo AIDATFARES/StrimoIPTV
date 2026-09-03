@@ -27,9 +27,9 @@ export default function Contact() {
             <p className="text-sm text-gray-200 mb-6 font-medium">For general inquiries and support.</p>
             <a
               className="text-[#36a9ff] font-bold hover:text-white transition-colors"
-              href="mailto:support@realmiptv4k.shop"
+              href="mailto:support@strimoiptv.com"
             >
-              support@realmiptv4k.shop
+              support@strimoiptv.com
             </a>
           </div>
 
@@ -41,7 +41,7 @@ export default function Contact() {
             </p>
             <a
               className="text-[#25D366] font-bold hover:text-white transition-colors flex items-center gap-2"
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20Realm IPTV."
+              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20Strimo IPTV."
               target="_blank"
               rel="noreferrer"
             >

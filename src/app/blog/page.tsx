@@ -14,7 +14,7 @@ export default function Blog() {
       <header className="mb-16 text-center md:text-left">
         <h1 className="font-display-lg text-display-lg text-slate-900 mb-4 font-bold tracking-tight">Latest News &amp; Streaming Tips</h1>
         <p className="font-body-lg text-body-lg text-slate-600 max-w-2xl mx-auto md:mx-0">
-          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your realmiptv experience.
+          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your strimoiptv experience.
         </p>
       </header>
 

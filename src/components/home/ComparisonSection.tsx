@@ -24,13 +24,13 @@ export default function ComparisonSection() {
             IPTV vs Cable TV
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
-            Why RealMIPTV is the <br/>
+            Why StrimoIPTV is the <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
               Ultimate Cable Alternative
             </span>
           </h2>
           <p className="text-gray-600 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
-            Discover why thousands of users are cutting the cord and switching to RealMIPTV. Our premium IPTV service offers an expansive <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">channel lineup</Link>, stunning 4K streaming quality, and reliable anti-freeze technology—all at a fraction of the cost of traditional cable TV.
+            Discover why thousands of users are cutting the cord and switching to StrimoIPTV. Our premium IPTV service offers an expansive <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">channel lineup</Link>, stunning 4K streaming quality, and reliable anti-freeze technology—all at a fraction of the cost of traditional cable TV.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export default function ComparisonSection() {
         <div className="hidden md:block relative max-w-5xl mx-auto">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-3xl border border-[#36a9ff]/30 p-8 pb-10 relative overflow-hidden">
             
-            {/* Vertical Borders for Realm IPTV Column */}
+            {/* Vertical Borders for Strimo IPTV Column */}
             <div className="absolute top-0 bottom-0 left-[25%] w-[25%] border-x border-[#36a9ff]/30 z-0"></div>
 
             {/* Table Header */}
@@ -47,7 +47,7 @@ export default function ComparisonSection() {
               
               <div className="flex flex-col items-center justify-center bg-[#36a9ff] text-white rounded-2xl py-3 shadow-[0_0_20px_rgba(54,169,255,0.4)] border border-white/40 transform -translate-y-2 relative z-20 mx-2">
                 <span className="text-[8px] uppercase tracking-widest font-black opacity-90 mb-0.5">Premium Choice</span>
-                <span className="text-[22px] font-black tracking-tight leading-none">RealMIPTV</span>
+                <span className="text-[22px] font-black tracking-tight leading-none">StrimoIPTV</span>
               </div>
               
               <div className="text-center font-black text-slate-400 uppercase tracking-widest text-xs flex items-center justify-center pb-4">Cable / Satellite</div>
@@ -72,7 +72,7 @@ export default function ComparisonSection() {
         <div className="md:hidden space-y-8">
           <div className="bg-gradient-to-br from-[#36a9ff] to-[#2196f3] rounded-3xl p-1 relative shadow-xl">
             <div className="bg-black/20 text-white rounded-[1.35rem] p-6 backdrop-blur-sm">
-              <h3 className="text-2xl font-black mb-6 text-center">RealMIPTV</h3>
+              <h3 className="text-2xl font-black mb-6 text-center">StrimoIPTV</h3>
               <div className="space-y-4">
                 {rows.map((row, idx) => (
                   <div key={idx} className="flex justify-between items-center border-b border-black/10 pb-3 last:border-0 last:pb-0">

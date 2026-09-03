@@ -15,10 +15,10 @@ const faqs: FAQ[] = [
   {
     id: 1,
     category: "General",
-    question: "What is RealMIPTV?",
+    question: "What is StrimoIPTV?",
     answer: (
       <>
-        RealMIPTV is a premium IPTV service providing live TV channels, VOD movies, TV series, and sports in stunning 4K streaming quality. Explore our{" "}
+        StrimoIPTV is a premium IPTV service providing live TV channels, VOD movies, TV series, and sports in stunning 4K streaming quality. Explore our{" "}
         <Link
           href="/channels-list"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -39,12 +39,12 @@ const faqs: FAQ[] = [
   {
     id: 2,
     category: "General",
-    question: "Do I need a subscription to use RealMIPTV?",
+    question: "Do I need a subscription to use StrimoIPTV?",
     answer: (
       <>
         Yes, a subscription is required. However, we offer a{" "}
         <a
-          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV."
+          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20strimoiptv%20IPTV."
           target="_blank"
           rel="noreferrer"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -65,10 +65,10 @@ const faqs: FAQ[] = [
   {
     id: 3,
     category: "Technical",
-    question: "What devices are compatible with RealMIPTV?",
+    question: "What devices are compatible with StrimoIPTV?",
     answer: (
       <>
-        RealMIPTV works seamlessly on Android TV, Firestick, Smart TVs, smartphones, tablets, and apps like Tivimate. Check our{" "}
+        StrimoIPTV works seamlessly on Android TV, Firestick, Smart TVs, smartphones, tablets, and apps like Tivimate. Check our{" "}
         <Link
           href="/installation"
           className="text-[#36a9ff] font-semibold hover:text-[#2196f3] transition-colors"
@@ -99,7 +99,7 @@ const faqs: FAQ[] = [
   {
     id: 5,
     category: "General",
-    question: "Can I watch live sports on RealMIPTV?",
+    question: "Can I watch live sports on StrimoIPTV?",
     answer: (
       <>
         Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}

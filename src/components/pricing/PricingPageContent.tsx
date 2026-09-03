@@ -22,7 +22,7 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "realm subscription for {devices} Device{s}", included: true },
+  { text: "strimo subscription for {devices} Device{s}", included: true },
   { text: "Uncompressed Ultra HD & 4K", included: true },
   { text: "25,000+ Premium Channels", included: true },
   { text: "100,000+ VODs (Daily Update)", included: true },
@@ -68,14 +68,14 @@ const includedFeatures = [
   { icon: Tv, title: "+50,000 Channels", text: "Explore live channels from around the world, including sports, news and entertainment." },
   { icon: MonitorSmartphone, title: "200,000+ VODs", text: "Enjoy +120,000 Films & Series and a massive, regularly refreshed video-on-demand library." },
   { icon: Zap, title: "Anti-freeze Technology", text: "Optimized streaming technology helps deliver a smoother experience at busy times." },
-  { icon: Headphones, title: "24/7 Support", text: "The Realm IPTV support team is here to help with setup and streaming questions." },
-  { icon: Sparkles, title: "Fast Setup", text: "Your Realm IPTV details are sent after payment so you can start setting up quickly." },
+  { icon: Headphones, title: "24/7 Support", text: "The Strimo IPTV support team is here to help with setup and streaming questions." },
+  { icon: Sparkles, title: "Fast Setup", text: "Your Strimo IPTV details are sent after payment so you can start setting up quickly." },
   { icon: CreditCard, title: "TV Guide (EPG)", text: "Browse your channel schedule more easily with an electronic programme guide." },
 ];
 
 const billingQuestions = [
-  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact Realm IPTV support</Link> if you need help before purchasing.</> },
-  { question: "2. Is my payment protected?", answer: "Please use the official Realm IPTV payment process and never share payment details through an unverified link or message." },
+  { question: "1. Which payment methods can I use?", answer: <>Available payment options are shown when you place your order. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact Strimo IPTV support</Link> if you need help before purchasing.</> },
+  { question: "2. Is my payment protected?", answer: "Please use the official Strimo IPTV payment process and never share payment details through an unverified link or message." },
   { question: "3. Will my subscription renew automatically?", answer: <>Renewal details are provided when you order. If you have any questions about your subscription period or renewal, <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">contact support</Link> before your plan expires.</> },
   { question: "4. Can I change my plan or number of connections?", answer: <>Yes. <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/contact">Contact the support team</Link> with your order email and the plan or connection change you need, and they will advise on the available options.</> },
 ];
@@ -117,11 +117,11 @@ export default function PricingPageContent() {
             </span>
           </div>
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
-            <span className="block text-black">REALM IPTV</span>
+            <span className="block text-black">STRIMO IPTV</span>
             <span className="mt-1 block text-[#36a9ff]">SUBSCRIPTION PLANS</span>
           </h1>
           <p className="mx-auto mt-6 text-base sm:text-lg text-black/90 font-medium leading-relaxed max-w-2xl">
-            Select your subscription duration. Enjoy larger discounts on longer plans, and share the ultimate entertainment experience across multiple devices simultaneously with Realm.
+            Select your subscription duration. Enjoy larger discounts on longer plans, and share the ultimate entertainment experience across multiple devices simultaneously with Strimo.
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-gray-600">
             Need help getting started? Visit our <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/installation">installation guide</Link> or browse the <Link className="font-semibold text-[#36a9ff] hover:text-[#2196f3]" href="/channels">channel list</Link> before you order.
@@ -270,7 +270,7 @@ export default function PricingPageContent() {
         <div className="mt-32 max-w-5xl mx-auto">
           <div className="text-center mb-10">
              <h2 className="text-3xl md:text-[42px] font-black uppercase tracking-tight text-black mb-4">
-               COMPARE <span className="text-[#36a9ff]">REALM PLANS</span>
+               COMPARE <span className="text-[#36a9ff]">STRIMO PLANS</span>
              </h2>
              <p className="text-[#ffc107] font-bold text-sm tracking-widest uppercase">FIND THE PERFECT PLAN FOR YOUR STREAMING NEEDS</p>
           </div>
@@ -380,7 +380,7 @@ export default function PricingPageContent() {
 
         <div className="mt-16 flex items-center justify-center gap-2 text-sm text-gray-600">
           <ShieldCheck className="h-5 w-5 text-[#36a9ff]" />
-          <span className="font-semibold text-black">Secure ordering</span> and friendly Realm IPTV support.
+          <span className="font-semibold text-black">Secure ordering</span> and friendly Strimo IPTV support.
         </div>
       </div>
     </section>

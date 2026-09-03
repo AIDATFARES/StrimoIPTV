@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, CircleHelp, Clock3, CreditCard, HelpCircle, Mail, MessageCircle, MonitorPlay, Send, Settings2, UserRound } from "lucide-react";
 
-type Category = "About realmiptv" | "Setup & streaming" | "Plans & access" | "Payments & support";
+type Category = "About strimoiptv" | "Setup & streaming" | "Plans & access" | "Payments & support";
 
 type FAQItem = {
   category: Category;
@@ -13,7 +13,7 @@ type FAQItem = {
 };
 
 const categories: { label: Category; icon: typeof CircleHelp }[] = [
-  { label: "About realmiptv", icon: CircleHelp },
+  { label: "About strimoiptv", icon: CircleHelp },
   { label: "Setup & streaming", icon: Settings2 },
   { label: "Plans & access", icon: UserRound },
   { label: "Payments & support", icon: CreditCard },
@@ -21,73 +21,73 @@ const categories: { label: Category; icon: typeof CircleHelp }[] = [
 
 const faqs: FAQItem[] = [
   {
-    category: "About realmiptv",
-    question: "1. What is Realm IPTV?",
+    category: "About strimoiptv",
+    question: "1. What is Strimo IPTV?",
     answer: (
       <>
-        Realm IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        Strimo IPTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live TV channels</Link> and{" "}
         <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plans</Link>.
       </>
     ),
   },
   {
-    category: "About realmiptv",
-    question: "2. Is Realm IPTV authorized?",
+    category: "About strimoiptv",
+    question: "2. Is Strimo IPTV authorized?",
     answer: (
       <>
-        Realm IPTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
+        Strimo IPTV is intended to be used in accordance with applicable laws, local regulations, and our service terms. Please ensure that the content you access and the way you use the service are permitted in your location.
       </>
     ),
   },
   {
-    category: "About realmiptv",
-    question: "3. What channels and content are included with Realm IPTV?",
+    category: "About strimoiptv",
+    question: "3. What channels and content are included with Strimo IPTV?",
     answer: (
       <>
-        Realm IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">full channels catalog</Link>.
+        Strimo IPTV includes a broad selection of live channels covering sports, news, and entertainment, along with a regularly updated on-demand library of movies and TV series. Check our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">full channels catalog</Link>.
       </>
     ),
   },
   {
-    category: "About realmiptv",
-    question: "4. Can I watch live sports and PPV events on Realm IPTV?",
+    category: "About strimoiptv",
+    question: "4. Can I watch live sports and PPV events on Strimo IPTV?",
     answer: (
       <>
-        Realm IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live sports section</Link>.
+        Strimo IPTV includes a range of live sports channels and events. Coverage can include football, NFL, NBA, UFC, and pay-per-view events. Explore our <Link href="/channels" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">live sports section</Link>.
       </>
     ),
   },
   {
-    category: "About realmiptv",
+    category: "About strimoiptv",
     question: "5. Which devices can I use?",
     answer: (
       <>
-        Realm IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> to get started.
+        Strimo IPTV works with compatible IPTV apps on Smart TVs, Android TV, Firestick, Apple TV, smartphones, tablets, and computers. Follow our <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> to get started.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "1. How do I install Realm IPTV on my device?",
+    question: "1. How do I install Strimo IPTV on my device?",
     answer: (
       <>
-        Start by installing a compatible IPTV player on your device. Enter the Realm IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> for detailed instructions.
+        Start by installing a compatible IPTV player on your device. Enter the Strimo IPTV credentials from your email. View our step-by-step <Link href="/installation" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">installation guides</Link> for detailed instructions.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "2. Can I use Realm IPTV on a Smart TV?",
+    question: "2. Can I use Strimo IPTV on a Smart TV?",
     answer: (
       <>
-        Yes, Realm IPTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
+        Yes, Strimo IPTV can be used on Smart TVs including Samsung, LG, and Android TV models using compatible IPTV players like Tivimate or Smarters.
       </>
     ),
   },
   {
     category: "Setup & streaming",
-    question: "3. What internet speed do I need for smooth Realm IPTV streaming?",
+    question: "3. What internet speed do I need for smooth Strimo IPTV streaming?",
     answer: (
       <>
         For reliable playback, allow at least 10 Mbps per stream for HD and 25 Mbps per stream for 4K. Ethernet or 5 GHz Wi-Fi is recommended.
@@ -96,7 +96,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Setup & streaming",
-    question: "4. Why is Realm IPTV buffering or freezing?",
+    question: "4. Why is Strimo IPTV buffering or freezing?",
     answer: (
       <>
         Restart your IPTV app and router. If buffering persists, check your Wi-Fi signal or <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">contact support</Link> for quick assistance.
@@ -105,7 +105,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Setup & streaming",
-    question: "5. Do I need a VPN to use Realm IPTV?",
+    question: "5. Do I need a VPN to use Strimo IPTV?",
     answer: (
       <>
         A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Contact our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link> for VPN setup recommendations.
@@ -114,7 +114,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "1. Are there any hidden fees or contracts with Realm IPTV?",
+    question: "1. Are there any hidden fees or contracts with Strimo IPTV?",
     answer: (
       <>
         No contracts and no hidden fees. Choose an <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">IPTV subscription plan</Link> with transparent pricing and instant delivery.
@@ -123,7 +123,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "2. Can I use Realm IPTV on multiple devices?",
+    question: "2. Can I use Strimo IPTV on multiple devices?",
     answer: (
       <>
         Yes! We offer multi-device subscription plans. Select the 1, 2, or 3 device option on our <Link href="/pricing" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">pricing page</Link>.
@@ -132,7 +132,7 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Plans & access",
-    question: "3. What are Realm IPTV M3U and Xtream Codes details?",
+    question: "3. What are Strimo IPTV M3U and Xtream Codes details?",
     answer: (
       <>
         Your welcome email includes both M3U playlist URLs and Xtream Codes credentials for fast setup in any IPTV app.
@@ -141,16 +141,16 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Payments & support",
-    question: "1. Does Realm IPTV offer a free trial?",
+    question: "1. Does Strimo IPTV offer a free trial?",
     answer: (
       <>
-        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20realmiptv%20IPTV." target="_blank" rel="noreferrer" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">free trial</a> so you can test our service before subscribing.
+        Yes, we offer a <a href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20strimoiptv%20IPTV." target="_blank" rel="noreferrer" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">free trial</a> so you can test our service before subscribing.
       </>
     ),
   },
   {
     category: "Payments & support",
-    question: "2. Which payment methods does Realm IPTV accept?",
+    question: "2. Which payment methods does Strimo IPTV accept?",
     answer: (
       <>
         We accept PayPal, Crypto (Bitcoin), Credit Cards, and Instant Bank Transfers. For help with payments, reach out to our <Link href="/contact" className="text-[#36a9ff] font-semibold hover:text-[#36a9ff] transition-colors">support team</Link>.
@@ -176,7 +176,7 @@ export default function FAQ() {
     const email = String(formData.get("email") || "").trim();
     const subject = String(formData.get("subject") || "General support").trim();
     const message = String(formData.get("message") || "").trim();
-    const text = encodeURIComponent(`Hello Realm IPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
+    const text = encodeURIComponent(`Hello Strimo IPTV support,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
     window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
@@ -240,13 +240,13 @@ export default function FAQ() {
           </header>
           <div className="mt-10 grid gap-8 xl:grid-cols-[278px_minmax(0,1fr)] xl:gap-10">
             <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="mailto:support@realmiptv4k.shop">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="mailto:support@strimoiptv.com">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#145082]/20 text-[#36a9ff]"><Mail className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-black">Email Us</span>
                 <span className="mt-2 block text-xs leading-5 text-gray-600">For general inquiries and support.</span>
-                <span className="mt-3 block text-xs font-semibold text-[#36a9ff]">support@realmiptv4k.shop</span>
+                <span className="mt-3 block text-xs font-semibold text-[#36a9ff]">support@strimoiptv.com</span>
               </a>
-              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="https://wa.me/213552069874?text=Hello%20realmiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
+              <a className="flex min-h-40 flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-5 text-center transition-colors hover:border-[#36a9ff]/50" href="https://wa.me/213552069874?text=Hello%20strimoiptv%20IPTV%20support%2C%20I%20need%20help." rel="noreferrer" target="_blank">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/20 text-[#25D366]"><MessageCircle className="h-5 w-5" /></span>
                 <span className="mt-4 block text-base font-bold text-black">WhatsApp Support</span>
                 <span className="mt-2 block text-xs leading-5 text-gray-600">Fastest way to reach us for technical issues.</span>

@@ -62,7 +62,7 @@ export default function Home() {
       {/* Channel & Installation Quick Links */}
       <div className="w-full bg-transparent py-6 px-4 text-center border-t border-[#36a9ff]/10 relative z-20">
         <p className="text-center text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
-          Explore the complete <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">RealMIPTV Channel List</Link> or check out our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">RealMIPTV Installation Guide</Link> to get your IPTV service running in minutes.
+          Explore the complete <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">StrimoIPTV Channel List</Link> or check out our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">StrimoIPTV Installation Guide</Link> to get your IPTV service running in minutes.
         </p>
       </div>
 
